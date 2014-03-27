@@ -34,8 +34,8 @@ import fga.mds.abcdario.R;
 
 public class NumberGame extends AbstractActivity {
 
-	private ImageView imagem_central, bt_1, bt_2, bt_voltar, bt_certo;
-	private int cont_acerto = 0, cont_erro = 0;
+	private ImageView imagem_central, bt_1, bt_2, bt_back, bt_right;
+	private int cont_hit = 0, cont_error = 0;
 	
 	private JogoController controller;
 	
@@ -45,7 +45,7 @@ public class NumberGame extends AbstractActivity {
 		setContentView(R.layout.jogo_numero);
 		
 		inicializarComponentes();
-		definirEventos();
+		defineEvents();
 	}
 	
 	@Override
@@ -53,18 +53,18 @@ public class NumberGame extends AbstractActivity {
 		
 		controller = new JogoController();
 		int[] id = new int[2];
-		int idBotao;
+		int idButon;
 		
 		imagem_central = (ImageView) findViewById(R.id.imagem_central);
 		bt_1 = (ImageView) findViewById(R.id.bt_1);
 		bt_2 = (ImageView) findViewById(R.id.bt_2);
-		bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
+		bt_back = (ImageView) findViewById(R.id.bt_voltar);
 		
 		id = controller.getModelNumero();
-		idBotao = controller.getIdBotaoNumero();
+		idButon = controller.getIdBotaoNumero();
 		
 		atualizarImagem(id[0]);
-		atualizarBotao(id[1], idBotao);
+		atualizarBotao(id[1], idButon);
 	}
 
 	private void atualizarBotao(int btModel, int bt) {
@@ -76,12 +76,12 @@ public class NumberGame extends AbstractActivity {
 			bt_1.setImageResource(btModel);
 			bt_2.setImageResource(bt);
 			
-			bt_certo = bt_1;
+			bt_right = bt_1;
 		} else{
 			bt_2.setImageResource(btModel);
 			bt_1.setImageResource(bt);
 			
-			bt_certo = bt_2;
+			bt_right = bt_2;
 		}
 	}
 
@@ -90,18 +90,18 @@ public class NumberGame extends AbstractActivity {
 	}
 
 	@Override
-	public void definirEventos() {
+	public void defineEvents() {
 		
 		
-		bt_voltar.setOnClickListener(new OnClickListener() {
+		bt_back.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 			
 				Bundle params = new Bundle();
 				Intent intent = new Intent(NumberGame.this, Score.class);
-				params.putInt("acertos" , cont_acerto);
-                params.putInt("erros" , cont_erro);
+				params.putInt("acertos" , cont_hit);
+                params.putInt("erros" , cont_error);
                 intent.putExtras(params);
                 startActivity(intent);
                 finish();
@@ -116,8 +116,8 @@ public class NumberGame extends AbstractActivity {
 				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
 						NumberGame.this);
 				
-				if(bt_1 == bt_certo){
-					cont_acerto++;
+				if(bt_1 == bt_right){
+					cont_hit++;
   	
 					alertDialogBuilder.setTitle(" ");
 
@@ -138,7 +138,7 @@ public class NumberGame extends AbstractActivity {
 					  
 
 				} else{
-					cont_erro++;
+					cont_error++;
 					
 						alertDialogBuilder.setTitle(" ");
 
@@ -169,8 +169,8 @@ public class NumberGame extends AbstractActivity {
 				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
 						NumberGame.this);
 				
-				if(bt_2 == bt_certo){
-					cont_acerto++;
+				if(bt_2 == bt_right){
+					cont_hit++;
 	  	
 						alertDialogBuilder.setTitle(" ");
 
@@ -190,7 +190,7 @@ public class NumberGame extends AbstractActivity {
 							popUpImagem.show();
 
 				} else{
-					cont_erro++;
+					cont_error++;
 			
 					alertDialogBuilder.setTitle(" ");
 
