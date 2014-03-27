@@ -34,26 +34,26 @@ import android.widget.GridLayout.LayoutParams;
 
 public class GridNumbers extends BaseAdapter{
 
-	private Context contexto;
+	private Context context;
 	
 
-    public Integer[] botoesNumeros = {
+    public Integer[] NumberButtons = {
    		R.drawable.bt_1,R.drawable.bt_2,R.drawable.bt_3,R.drawable.bt_4,R.drawable.bt_5,
    		R.drawable.bt_6,R.drawable.bt_7,R.drawable.bt_8,R.drawable.bt_9,
     };
     
     public GridNumbers(Context c){
-    	this.contexto = c;
+    	this.context = c;
     }
 	
 	@Override
 	public int getCount() {
-        return botoesNumeros.length; 
+        return NumberButtons.length; 
 	}
 
 	@Override
-	public Object getItem(int posicao) {
-    	return botoesNumeros[posicao];  
+	public Object getItem(int posicion) {
+    	return NumberButtons[posicion];  
 	}
 
 	@Override
@@ -62,10 +62,10 @@ public class GridNumbers extends BaseAdapter{
 	}
 	
 	@Override
-	public View getView(int posicao, View convertView, ViewGroup parent) {
+	public View getView(int posicion, View convertView, ViewGroup parent) {
 		
-		ImageView imageView = new ImageView(contexto);
-        imageView.setImageResource(botoesNumeros[posicao]);
+		ImageView imageView = new ImageView(context);
+        imageView.setImageResource(NumberButtons[posicion]);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setLayoutParams(new GridView.LayoutParams(LayoutParams.MATCH_PARENT,
         		LayoutParams.MATCH_PARENT));
