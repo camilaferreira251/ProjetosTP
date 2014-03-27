@@ -34,7 +34,7 @@ import fga.mds.abcdario.R;
 
 public class Learn_123 extends AbstractActivity{
 
-	private ImageView bt_voltar;
+	private ImageView bt_back;
 	private GridView gridView;
 	
     @Override
@@ -46,16 +46,16 @@ public class Learn_123 extends AbstractActivity{
 	@Override
 	public void inicializarComponentes() {
 		
-		 bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
+		 bt_back = (ImageView) findViewById(R.id.bt_voltar);
 		 gridView = (GridView) findViewById(R.id.aprender_grade);
 		 
 		 gridView.setAdapter(new GridNumbers(this));
 	}
 
 	@Override
-	public void definirEventos() {
+	public void defineEvents() {
 		
-		bt_voltar.setOnClickListener(new View.OnClickListener(){
+		bt_back.setOnClickListener(new View.OnClickListener(){
 	    	  
 	    	  public void onClick(View arg0) {			 
 	    		  startActivity(new Intent(Learn_123.this, Escolha_modo_123.class));
