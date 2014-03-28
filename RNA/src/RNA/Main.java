@@ -25,7 +25,7 @@ package RNA;
 
 
 
-import RNA.JanelaPrincipal;
+import RNA.MainWindow;
 
 public class Main {
 
