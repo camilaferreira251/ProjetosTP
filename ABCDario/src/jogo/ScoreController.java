@@ -4,7 +4,7 @@ import fga.mds.abcdario.R;
 
 public class ScoreController {
 
-	private ScorePersistencia acessarScore = ScorePersistencia.getInstance();
+	private ScorePersistence acessarScore = ScorePersistence.getInstance();
 	
 	public float calculaPorcentagemAcertos(int qtd_acertos, int qtd_erros) {
 		

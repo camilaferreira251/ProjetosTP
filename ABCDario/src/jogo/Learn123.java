@@ -32,7 +32,7 @@ import android.widget.ImageView;
 import android.widget.AdapterView.OnItemClickListener;
 import fga.mds.abcdario.R;
 
-public class Learn_123 extends AbstractActivity{
+public class Learn123 extends AbstractActivity{
 
 	private ImageView bt_back;
 	private GridView gridView;
@@ -58,7 +58,7 @@ public class Learn_123 extends AbstractActivity{
 		bt_back.setOnClickListener(new View.OnClickListener(){
 	    	  
 	    	  public void onClick(View arg0) {			 
-	    		  startActivity(new Intent(Learn_123.this, Escolha_modo_123.class));
+	    		  startActivity(new Intent(Learn123.this, Escolha_modo_123.class));
 	    	  }
 	    });
 		

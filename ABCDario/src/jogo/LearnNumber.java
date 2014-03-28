@@ -34,7 +34,7 @@ import android.widget.ImageView;
 
 public class LearnNumber extends Activity{
 
-private AprenderController controller;	
+private LearnController controller;	
 	
 	private ImageView bt_proximo, bt_anterior, bt_voltar, bt_som, imagem; 
 	private Intent it;
@@ -54,7 +54,7 @@ private AprenderController controller;
 
 	public void inicializarComponentes(String numero) {
 		
-		controller = new AprenderController();// Instanciando a controladora Aprender
+		controller = new LearnController();// Instanciando a controladora Aprender
 		
 		bt_proximo = (ImageView) findViewById(R.id.bt_proximo);
 		bt_anterior = (ImageView) findViewById(R.id.bt_anterior);

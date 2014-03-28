@@ -49,7 +49,7 @@ public class Information extends AbstractActivity {
 		backButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View view) {
-				startActivity(new Intent(Information.this, InicioActivity.class));
+				startActivity(new Intent(Information.this, FirstActivity.class));
 
 			}
 		});

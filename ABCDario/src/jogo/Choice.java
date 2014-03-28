@@ -67,7 +67,7 @@ public class Choice extends Activity {
 		backButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View view) {
-				startActivity(new Intent(Choice.this, InicioActivity.class));
+				startActivity(new Intent(Choice.this, FirstActivity.class));
 
 			}
 		});

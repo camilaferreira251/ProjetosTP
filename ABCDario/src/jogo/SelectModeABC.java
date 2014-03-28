@@ -1,4 +1,4 @@
-/*Classe SelectMode_ABC
+/*Classe SelectModeABC
  * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -30,7 +30,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
-public class SelectMode_ABC extends Activity {
+public class SelectModeABC extends Activity {
 
 	private ImageView bt_back, bt_learn, bt_play;
 
@@ -57,7 +57,7 @@ public class SelectMode_ABC extends Activity {
 		bt_back.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				startActivity(new Intent(SelectMode_ABC.this, Choice.class));
+				startActivity(new Intent(SelectModeABC.this, Choice.class));
 
 			}
 		});
@@ -67,7 +67,7 @@ public class SelectMode_ABC extends Activity {
 
 			public void onClick(View v) {
 
-				startActivity(new Intent(SelectMode_ABC.this, LearnAbc.class));
+				startActivity(new Intent(SelectModeABC.this, LearnAbc.class));
 
 			}
 
@@ -77,7 +77,7 @@ public class SelectMode_ABC extends Activity {
 
 			public void onClick(View v) {
 
-				startActivity(new Intent(SelectMode_ABC.this, GameLetter.class));
+				startActivity(new Intent(SelectModeABC.this, GameLetter.class));
 			}
 
 		});
