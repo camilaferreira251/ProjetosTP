@@ -1,4 +1,4 @@
-	/*Classe GradeLetras
+	/*Classe LettersGrid
 	 * Abcdário is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -32,7 +32,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.GridLayout.LayoutParams;
 
-public class GradeLetras extends BaseAdapter{
+public class LettersGrid extends BaseAdapter{
 
 	private Context contexto;
 	
@@ -46,7 +46,7 @@ public class GradeLetras extends BaseAdapter{
    		R.drawable.bt_y,
     };
     
-    public GradeLetras(Context c){
+    public LettersGrid(Context c){
     	this.contexto = c;
     }
 	
