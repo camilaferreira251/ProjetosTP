@@ -1,5 +1,5 @@
 /*Classe ScorePersistencia  
-	 * Abcdário is free software: you can redistribute it and / or
+	 * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -64,7 +64,7 @@ public class ScorePersistencia {
 		
 		public int getModelImagemEstrela(int nome){
 			
-				return cadastroImgEstrela.get(nome).getImg_estrela();
+				return cadastroImgEstrela.get(nome).getStarImage();
 									
 		}
 	}
