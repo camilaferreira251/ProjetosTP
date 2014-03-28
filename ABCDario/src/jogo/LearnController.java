@@ -1,4 +1,4 @@
-/*Classe AprenderController
+/*Classe LearnController
 	 * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -24,9 +24,9 @@
 package jogo;
 
 
-public class AprenderController {
+public class LearnController {
 
-	public AprenderController(){}
+	public LearnController(){}
 	
 	private AprenderPersistencia acessar = AprenderPersistencia.getInstance();
 	private LearnModel tela;
