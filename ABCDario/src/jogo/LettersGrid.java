@@ -21,7 +21,7 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo;
+package jogo; 
 
 import fga.mds.abcdario.R;
 import android.content.Context;
