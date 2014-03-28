@@ -23,12 +23,12 @@
 
 package RNA;
 
-class NeuronBP {
+class NeuronBackPropagation {
 
     private double[] deltaw = null;
     private double deltaBias = 0;
 
-    NeuronBP(int tamanho) {
+    NeuronBackPropagation(int tamanho) {
         deltaw = new double[tamanho];
 
         for (int i = 0; i < deltaw.length; i++) {
