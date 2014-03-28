@@ -22,11 +22,11 @@
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 package jogo;
 
-public class ScoreModel{
-	
-	private int amount; 
+public class ScoreModel {
+
+	private int amount;
 	private int starImage;
-	
+
 	public ScoreModel(int amount, int starImage) {
 		setStarImage(starImage);
 		setAmount(amount);
