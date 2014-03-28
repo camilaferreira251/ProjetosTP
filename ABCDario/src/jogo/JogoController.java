@@ -8,7 +8,7 @@ import java.util.List;
 
 public class JogoController {
 
-	private JogoPersistencia acessar = JogoPersistencia.getInstance();
+	private GamePersistence acessar = GamePersistence.getInstance();
 	
 	private String lista_num[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 	private String lista_letra[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
