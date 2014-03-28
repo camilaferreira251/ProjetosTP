@@ -1,4 +1,4 @@
-/*Class Funcao 
+/*Class Function 
  * RNA is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -26,7 +26,7 @@ package RNA;
 
 
 
-public abstract class Funcao {
+public abstract class Function {
     public abstract double funcao(double x);
     public abstract double derivada(double x);
 }

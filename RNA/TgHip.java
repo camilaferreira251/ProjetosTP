@@ -23,7 +23,7 @@
 
 package RNA;
 
-public class TgHip extends Funcao{
+public class TgHip extends Function{
        public final double funcao(double x) {
         return ((Math.exp(x)-Math.exp(-x))/(Math.exp(x)+Math.exp(-x)));
     }

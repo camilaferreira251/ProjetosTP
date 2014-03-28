@@ -23,7 +23,7 @@
 
 package RNA;
 
-import RNA.Funcao;
+import RNA.Function;
 import RNA.Sigmoide;
 import RNA.TgHip;
 
@@ -31,7 +31,7 @@ public class Camada {
 
     private Neuronio[] neuronios;
     private double[] saidas;
-    private Funcao f;
+    private Function f;
 
 
     Camada(int n, int conexoes,int funcao, int bias,int intervalo) {

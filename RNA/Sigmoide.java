@@ -2,7 +2,7 @@ package RNA;
 
 
 
-public class Sigmoide extends Funcao{
+public class Sigmoide extends Function{
       public final double funcao(double x) {
         return (1 / (1 + Math.exp(-x)));
     }

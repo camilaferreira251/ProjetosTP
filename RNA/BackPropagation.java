@@ -23,7 +23,7 @@
 
 package RNA;
 
-import RNA.Funcao;
+import RNA.Function;
 import RNA.Sigmoide;
 import RNA.TgHip;
 import RNA.Leitor;
@@ -32,7 +32,7 @@ public class BackPropagation {
 
     private MLP m = null;
     private CamadaBP[] camadas = null;
-    private Funcao f = null;
+    private Function f = null;
     private double txAprendizado = 0.2;
     private double momento = 0.5;
 
