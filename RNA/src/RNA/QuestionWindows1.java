@@ -26,9 +26,9 @@ package RNA;
 import RNA.Operador;
 import javax.swing.JOptionPane;
 
-public class QuestionWindow1 extends javax.swing.JDialog {
+public class QuestionWindows1 extends javax.swing.JDialog {
 
-    public QuestionWindow1(java.awt.Frame parent, boolean modal) {
+    public QuestionWindows1(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 
@@ -467,7 +467,7 @@ public class QuestionWindow1 extends javax.swing.JDialog {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         this.dispose();
-        QuestionWindow janela = new QuestionWindow(new JanelaPrincipal(), true);
+        QuestionWindows janela = new QuestionWindows(new MainWindow(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
