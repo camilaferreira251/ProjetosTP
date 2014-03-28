@@ -77,7 +77,7 @@ public class Escolha_modo_ABC extends Activity {
 
 			public void onClick(View v) {
 
-				startActivity(new Intent(Escolha_modo_ABC.this, JogoLetra.class));
+				startActivity(new Intent(Escolha_modo_ABC.this, GameLetter.class));
 			}
 
 		});
