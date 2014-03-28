@@ -1,5 +1,5 @@
 /*Class LearnAbc
-	 * Abcdario is free software: you can redistribute it and / or
+ * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -31,46 +31,47 @@ import android.widget.ImageView;
 import android.widget.AdapterView.OnItemClickListener;
 import fga.mds.abcdario.R;
 
-public class LearnAbc extends AbstractActivity{
+public class LearnAbc extends AbstractActivity {
 
 	private ImageView backButton;
-	
+
 	private GridView gridView;
-	
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.grade_letras);
-      }
-	
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.grade_letras);
+	}
+
 	@Override
 	public void initializeComponents() {
 		backButton = (ImageView) findViewById(R.id.bt_voltar);
 		gridView = (GridView) findViewById(R.id.aprender_grade);
-		   
-        gridView.setAdapter(new GradeLetras(this));
+
+		gridView.setAdapter(new GradeLetras(this));
 	}
 
 	@Override
 	public void defineEvents() {
-		backButton.setOnClickListener(new View.OnClickListener(){
-	    	  
-	    	  public void onClick(View arg0) {			 
-	    		  startActivity(new Intent(LearnAbc.this, SelectMode_ABC.class));
-	    		  
-	    	  }
-	      });
-		
+		backButton.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View arg0) {
+				startActivity(new Intent(LearnAbc.this, SelectMode_ABC.class));
+
+			}
+		});
+
 		gridView.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v,
-                    int position, long id) {
- 
-                Intent i = new Intent(getApplicationContext(), LearnLetter.class);
-                i.putExtra("id", position);
-                startActivity(i);
-            }
-        });
+			@Override
+			public void onItemClick(AdapterView<?> parent, View v,
+					int position, long id) {
+
+				Intent i = new Intent(getApplicationContext(),
+						LearnLetter.class);
+				i.putExtra("id", position);
+				startActivity(i);
+			}
+		});
 	}
 
 }

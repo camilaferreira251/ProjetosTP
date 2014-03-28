@@ -22,52 +22,34 @@
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 package jogo;
 
-import fga.mds.abcdario.R;
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import fga.mds.abcdario.R;
 
-public class Choice extends Activity {
+public class Information extends AbstractActivity {
 
-	private ImageView numbersButton, lettersBbutton, backButton;
+	private ImageView backButton;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.escolha);
+		setContentView(R.layout.informacao);
 
 		initializeComponents();
 		defineEvents();
 	}
 
 	public void initializeComponents() {
-		numbersButton = (ImageView) findViewById(R.imgV.bt_123);
-		lettersBbutton = (ImageView) findViewById(R.imgV.bt_abc);
 		backButton = (ImageView) findViewById(R.imgV.bt_voltar);
 	}
 
 	public void defineEvents() {
-		numbersButton.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View view) {
-				startActivity(new Intent(Choice.this, Escolha_modo_123.class));
-
-			}
-		});
-
-		lettersBbutton.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View view) {
-				startActivity(new Intent(Choice.this, Escolha_modo_ABC.class));
-
-			}
-		});
 
 		backButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View view) {
-				startActivity(new Intent(Choice.this, InicioActivity.class));
+				startActivity(new Intent(Information.this, InicioActivity.class));
 
 			}
 		});

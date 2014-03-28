@@ -1,5 +1,5 @@
 /*Class BaseBehavior
-	 * Abcdario is free software: you can redistribute it and / or
+ * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -25,6 +25,7 @@ package jogo;
 public interface BaseBehavior {
 
 	public void initializeComponents();
+
 	public void defineEvents();
-	
+
 }
