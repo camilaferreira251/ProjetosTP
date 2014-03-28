@@ -1,4 +1,4 @@
-	/*Classe InicioActivity
+	/*Classe FirstActivity
 	 * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -33,7 +33,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
-public class InicioActivity extends Activity {
+public class FirstActivity extends Activity {
 
 	private ImageView bt_iniciar, bt_sair, bt_sobre;
 	final Context context = this;
@@ -57,7 +57,7 @@ public class InicioActivity extends Activity {
 			
 			
 			public void onClick(View arg0) {			 
-				startActivity(new Intent(InicioActivity.this, Choice.class));
+				startActivity(new Intent(FirstActivity.this, Choice.class));
 						 
 			}
 		});
