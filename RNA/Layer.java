@@ -29,7 +29,7 @@ import RNA.TgHip;
 
 public class Camada {
 
-    private Neuronio[] neuronios;
+    private Neuron[] neuronios;
     private double[] saidas;
     private Function f;
 
@@ -41,11 +41,11 @@ public class Camada {
         else
             f=new TgHip();
         
-        neuronios = new Neuronio[n];
+        neuronios = new Neuron[n];
         saidas = new double[n];
 
         for (int i = 0; i < neuronios.length; i++) {
-            neuronios[i] = new Neuronio(conexoes,bias);
+            neuronios[i] = new Neuron(conexoes,bias);
             neuronios[i].randomizarPesos(intervalo);
         }
     }
@@ -69,7 +69,7 @@ public class Camada {
         return saidas;
     }
 
-    public Neuronio getNeuronio(int i) {
+    public Neuron getNeuronio(int i) {
         return neuronios[i];
     }
 

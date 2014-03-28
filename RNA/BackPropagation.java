@@ -140,7 +140,7 @@ public class BackPropagation {
 
         for (i = 0; i < m.getTamanho(); i++) {
             for (j = 0; j < m.getCamada(i).getTamanho(); j++) {
-                Neuronio n = m.getCamada(i).getNeuronio(j);
+                Neuron n = m.getCamada(i).getNeuronio(j);
                 for (k = 0; k < n.getTamanho(); k++) {
                     n.corrigirPeso(k, camadas[i].getNeuronioBP(j).getDeltaw(k));
                 }
