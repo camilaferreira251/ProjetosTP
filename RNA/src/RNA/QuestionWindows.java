@@ -25,9 +25,9 @@ package RNA;
 
 import RNA.Operador;
 
-public class QuestionWindow extends javax.swing.JDialog {
+public class QuestionWindows extends javax.swing.JDialog {
 
-    public QuestionWindow(java.awt.Frame parent, boolean modal) {
+    public QuestionWindows(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         simP1.setSelected(true);
@@ -638,7 +638,7 @@ public class QuestionWindow extends javax.swing.JDialog {
         }
 
         this.dispose();
-        QuestionWindow1 janela = new QuestionWindow1(new JanelaPrincipal(), true);
+        QuestionWindows1 janela = new QuestionWindows1(new MainWindow(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
