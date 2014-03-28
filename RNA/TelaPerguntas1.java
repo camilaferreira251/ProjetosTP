@@ -1,4 +1,4 @@
-/*Class TelaPerguntas1 
+/*Class QuestionWindow1 
  * RNA is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -37,12 +37,12 @@ import javax.swing.JOptionPane;
  *
  * @author Marcos
  */
-public class TelaPerguntas1 extends javax.swing.JDialog {
+public class QuestionWindow1 extends javax.swing.JDialog {
 
     /**
      * Creates new form Perguntas
      */
-    public TelaPerguntas1(java.awt.Frame parent, boolean modal) {
+    public QuestionWindow1(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 

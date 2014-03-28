@@ -645,7 +645,7 @@ public class QuestionWindow extends javax.swing.JDialog {
         }
 
         this.dispose();
-        TelaPerguntas1 janela = new TelaPerguntas1(new JanelaPrincipal(), true);
+        QuestionWindow1 janela = new QuestionWindow1(new JanelaPrincipal(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
