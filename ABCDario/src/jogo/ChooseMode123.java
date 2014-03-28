@@ -1,4 +1,4 @@
-	/*Classe EscolhaModo123
+	/*Classe ChooseMode123
 	 * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -30,7 +30,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Escolha_modo_123 extends Activity {
+public class ChooseMode123 extends Activity {
 	
 	private ImageView bt_voltar, bt_aprender, bt_jogar;
 
@@ -54,7 +54,7 @@ public class Escolha_modo_123 extends Activity {
 		bt_voltar.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				startActivity(new Intent(Escolha_modo_123.this, Choice.class));
+				startActivity(new Intent(ChooseMode123.this, Choice.class));
 				
 			}
 		});
@@ -62,7 +62,7 @@ public class Escolha_modo_123 extends Activity {
 		bt_aprender.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				startActivity(new Intent(Escolha_modo_123.this, Aprender_123.class));
+				startActivity(new Intent(ChooseMode123.this, Aprender_123.class));
 				
 			}
 		});
@@ -70,7 +70,7 @@ public class Escolha_modo_123 extends Activity {
 		bt_jogar.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				startActivity(new Intent(Escolha_modo_123.this, JogoNumero.class));
+				startActivity(new Intent(ChooseMode123.this, JogoNumero.class));
 				
 			}
 		});
