@@ -481,7 +481,7 @@ public class TelaPerguntas1 extends javax.swing.JDialog {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         this.dispose();
-        TelaPerguntas janela = new TelaPerguntas(new JanelaPrincipal(), true);
+        QuestionWindow janela = new QuestionWindow(new JanelaPrincipal(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);

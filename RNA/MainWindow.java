@@ -157,7 +157,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void botaoUtilizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoUtilizarActionPerformed
-                TelaPerguntas janela = new TelaPerguntas(new JanelaPrincipal(), true);
+                QuestionWindow janela = new QuestionWindow(new JanelaPrincipal(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
