@@ -67,7 +67,7 @@ public class Aprender_123 extends AbstractActivity{
             public void onItemClick(AdapterView<?> parent, View v,
                     int position, long id) {
  
-                Intent i = new Intent(getApplicationContext(), AprenderNumero.class);
+                Intent i = new Intent(getApplicationContext(), LearnNumber.class);
                 i.putExtra("id", position);
                 startActivity(i);
             }

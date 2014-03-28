@@ -1,4 +1,4 @@
-/*Classe AprenderNumero
+/*Classe LearnNumber
 	 * Abcdário is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -32,7 +32,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
-public class AprenderNumero extends Activity{
+public class LearnNumber extends Activity{
 
 private AprenderController controller;	
 	
@@ -95,7 +95,7 @@ private AprenderController controller;
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(AprenderNumero.this, Aprender_123.class));
+				startActivity(new Intent(LearnNumber.this, Aprender_123.class));
 			}
 		});
 		
