@@ -1,5 +1,5 @@
 /*Classe AbstractActivity
-	 * Abcdário is free software: you can redistribute it and / or
+	 * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -25,11 +25,11 @@ package jogo;
 
 import android.app.Activity;
 
-public abstract class AbstractActivity extends Activity implements ComportamentoBase {
+public abstract class AbstractActivity extends Activity implements BaseBehavior {
 
 	@Override
-	public abstract void inicializarComponentes();
+	public abstract void initializeComponents();
 
 	@Override
-	public abstract void definirEventos();
+	public abstract void defineEvents();
 }

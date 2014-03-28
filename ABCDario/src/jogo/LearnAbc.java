@@ -1,5 +1,5 @@
-	/*Classe aprender_123
-	 * Abcd�rio is free software: you can redistribute it and / or
+/*Class LearnAbc
+	 * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -20,7 +20,6 @@
      along with this program, if not, write to the Foundation of Software
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
-
 package jogo;
 
 import android.content.Intent;
@@ -32,45 +31,46 @@ import android.widget.ImageView;
 import android.widget.AdapterView.OnItemClickListener;
 import fga.mds.abcdario.R;
 
-public class Learn_123 extends AbstractActivity{
+public class LearnAbc extends AbstractActivity{
 
-	private ImageView bt_back;
+	private ImageView backButton;
+	
 	private GridView gridView;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.grade_numeros); 
+        setContentView(R.layout.grade_letras);
       }
-
+	
 	@Override
 	public void initializeComponents() {
-		
-		 bt_back = (ImageView) findViewById(R.id.bt_voltar);
-		 gridView = (GridView) findViewById(R.id.aprender_grade);
-		 
-		 gridView.setAdapter(new GridNumbers(this));
+		backButton = (ImageView) findViewById(R.id.bt_voltar);
+		gridView = (GridView) findViewById(R.id.aprender_grade);
+		   
+        gridView.setAdapter(new GradeLetras(this));
 	}
 
 	@Override
 	public void defineEvents() {
-		
-		bt_back.setOnClickListener(new View.OnClickListener(){
+		backButton.setOnClickListener(new View.OnClickListener(){
 	    	  
 	    	  public void onClick(View arg0) {			 
-	    		  startActivity(new Intent(Learn_123.this, Escolha_modo_123.class));
+	    		  startActivity(new Intent(LearnAbc.this, SelectMode_ABC.class));
+	    		  
 	    	  }
-	    });
+	      });
 		
 		gridView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                     int position, long id) {
  
-                Intent i = new Intent(getApplicationContext(), LearnNumber.class);
+                Intent i = new Intent(getApplicationContext(), LearnLetter.class);
                 i.putExtra("id", position);
                 startActivity(i);
             }
         });
 	}
+
 }

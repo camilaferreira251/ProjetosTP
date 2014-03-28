@@ -1,5 +1,5 @@
 /*Classe LearnLetter
- * 	Abcdário is free software: you can redistribute it and / or
+ * 	Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -89,13 +89,13 @@ public class LearnLetter extends Activity{
 		return letra;
 	}
 
-	public void definirEventos() {
+	public void defineEvents() {
 		
 		bt_voltar.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(LearnLetter.this, Learn_ABC.class));
+				startActivity(new Intent(LearnLetter.this, LearnAbc.class));
 			}
 		});
 		

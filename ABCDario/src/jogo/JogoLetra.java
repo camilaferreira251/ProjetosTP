@@ -21,12 +21,12 @@ public class JogoLetra extends AbstractActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.jogo_letra);
 		
-		inicializarComponentes();
-		definirEventos();
+		initializeComponents();
+		defineEvents();
 	}
 	
 	@Override
-	public void inicializarComponentes() {
+	public void initializeComponents() {
 		
 		controller = new JogoController();
 		int[] id = new int[2];
@@ -67,7 +67,7 @@ public class JogoLetra extends AbstractActivity {
 	}
 	
 	@Override
-	public void definirEventos() {
+	public void defineEvents() {
 		
 		bt_voltar.setOnClickListener(new OnClickListener() {
 			
@@ -104,7 +104,7 @@ public class JogoLetra extends AbstractActivity {
 						.setCancelable(false)
 						.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,int id) {
-								inicializarComponentes();
+								initializeComponents();
 								dialog.cancel();
 							}
 							});
@@ -125,7 +125,7 @@ public class JogoLetra extends AbstractActivity {
 							.setCancelable(false)
 							.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,int id) {
-									inicializarComponentes();
+									initializeComponents();
 									dialog.cancel();
 								}
 								});
@@ -157,7 +157,7 @@ public class JogoLetra extends AbstractActivity {
 							.setCancelable(false)
 							.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,int id) {
-									inicializarComponentes();
+									initializeComponents();
 									dialog.cancel();
 								}
 								});
@@ -177,7 +177,7 @@ public class JogoLetra extends AbstractActivity {
 						.setCancelable(false)
 						.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,int id) {
-								inicializarComponentes();
+								initializeComponents();
 								dialog.cancel();
 							}
 							});

@@ -1,5 +1,5 @@
 	/*Classe InicioActivity
-	 * Abcdário is free software: you can redistribute it and / or
+	 * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -46,13 +46,13 @@ public class InicioActivity extends Activity {
 		inicializarComponentes();
 		definirEventos();
 	}
-		public void inicializarComponentes(){
+		public void initializeComponents(){
 			bt_iniciar = (ImageView) findViewById(R.imgV.bt_iniciar);
 			bt_sair = (ImageView) findViewById(R.imgV.bt_sair);
 			bt_sobre = (ImageView) findViewById(R.imgV.bt_sobre);
 		}
 		
-		public void definirEventos(){
+		public void defineEvents(){
 		bt_iniciar.setOnClickListener(new View.OnClickListener(){			
 			
 			

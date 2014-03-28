@@ -1,5 +1,5 @@
 	/*Classe aprender_123
-	 * Abcdário is free software: you can redistribute it and / or
+	 * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -44,7 +44,7 @@ public class Aprender_123 extends AbstractActivity{
       }
 
 	@Override
-	public void inicializarComponentes() {
+	public void initializeComponents() {
 		
 		 bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
 		 gridView = (GridView) findViewById(R.id.aprender_grade);
@@ -53,7 +53,7 @@ public class Aprender_123 extends AbstractActivity{
 	}
 
 	@Override
-	public void definirEventos() {
+	public void defineEvents() {
 		
 		bt_voltar.setOnClickListener(new View.OnClickListener(){
 	    	  

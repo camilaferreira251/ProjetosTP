@@ -1,5 +1,5 @@
 /*Classe AprenderController
-	 * Abcdário is free software: you can redistribute it and / or
+	 * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -29,7 +29,7 @@ public class AprenderController {
 	public AprenderController(){}
 	
 	private AprenderPersistencia acessar = AprenderPersistencia.getInstance();
-	private AprenderModel tela;
+	private LearnModel tela;
 
 	public int[] definirLetra(String letra){
 		

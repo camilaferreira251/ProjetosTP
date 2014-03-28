@@ -1,5 +1,5 @@
 /*Classe LearnNumber
-	 * Abcdário is free software: you can redistribute it and / or
+	 * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -89,7 +89,7 @@ private AprenderController controller;
 		return numero;
 	}
 
-	public void definirEventos() {
+	public void defineEvents() {
 		
 		bt_voltar.setOnClickListener(new OnClickListener() {
 			

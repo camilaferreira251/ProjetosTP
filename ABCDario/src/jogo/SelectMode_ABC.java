@@ -1,5 +1,5 @@
 /*Classe SelectMode_ABC
- * Abcdário is free software: you can redistribute it and / or
+ * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -67,7 +67,7 @@ public class SelectMode_ABC extends Activity {
 
 			public void onClick(View v) {
 
-				startActivity(new Intent(SelectMode_ABC.this, Learn_ABC.class));
+				startActivity(new Intent(SelectMode_ABC.this, LearnAbc.class));
 
 			}
 

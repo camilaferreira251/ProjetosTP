@@ -21,7 +21,7 @@ public class Aprender_ABC extends AbstractActivity{
       }
 	
 	@Override
-	public void inicializarComponentes() {
+	public void initializeComponents() {
 		bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
 		gridView = (GridView) findViewById(R.id.aprender_grade);
 		   
@@ -29,7 +29,7 @@ public class Aprender_ABC extends AbstractActivity{
 	}
 
 	@Override
-	public void definirEventos() {
+	public void defineEvents() {
 		bt_voltar.setOnClickListener(new View.OnClickListener(){
 	    	  
 	    	  public void onClick(View arg0) {			 

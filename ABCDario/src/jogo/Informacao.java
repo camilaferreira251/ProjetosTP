@@ -14,15 +14,15 @@ private ImageView bt_voltar;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.informacao);
 		
-		inicializarComponentes();
-		definirEventos();
+		initializeComponents();
+		defineEvents();
 	}
 	
-	public void inicializarComponentes(){
+	public void initializeComponents(){
 		bt_voltar = (ImageView) findViewById(R.imgV.bt_voltar);
 	}
 	
-	public void definirEventos(){
+	public void defineEvents(){
 		
 	bt_voltar.setOnClickListener(new View.OnClickListener(){			
 		

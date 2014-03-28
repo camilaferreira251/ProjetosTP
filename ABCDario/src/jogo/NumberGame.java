@@ -1,5 +1,5 @@
 /*Classe NumberGame
- * Abcdário is free software: you can redistribute it and / or
+ * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -44,12 +44,12 @@ public class NumberGame extends AbstractActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.jogo_numero);
 		
-		inicializarComponentes();
+		initializeComponents();
 		defineEvents();
 	}
 	
 	@Override
-	public void inicializarComponentes() {	
+	public void initializeComponents() {	
 		
 		controller = new JogoController();
 		int[] id = new int[2];
@@ -127,7 +127,7 @@ public class NumberGame extends AbstractActivity {
 						.setCancelable(false)
 						.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,int id) {
-								inicializarComponentes();
+								initializeComponents();
 								dialog.cancel();
 							}
 							});
@@ -148,7 +148,7 @@ public class NumberGame extends AbstractActivity {
 							.setCancelable(false)
 							.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,int id) {
-									inicializarComponentes();
+									initializeComponents();
 									dialog.cancel();
 								}
 								});
@@ -180,7 +180,7 @@ public class NumberGame extends AbstractActivity {
 							.setCancelable(false)
 							.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,int id) {
-									inicializarComponentes();
+									initializeComponents();
 									dialog.cancel();
 								}
 								});
@@ -200,7 +200,7 @@ public class NumberGame extends AbstractActivity {
 						.setCancelable(false)
 						.setNegativeButton("Voltar",new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,int id) {
-								inicializarComponentes();
+								initializeComponents();
 								dialog.cancel();
 							}
 							});

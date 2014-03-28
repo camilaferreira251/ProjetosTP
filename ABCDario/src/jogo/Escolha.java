@@ -19,13 +19,13 @@ public class Escolha extends Activity{
 		definirEventos();
 	}
 	
-	public void inicializarComponentes(){
+	public void initializeComponents(){
 		bt_123 = (ImageView) findViewById(R.imgV.bt_123);
 		bt_abc = (ImageView) findViewById(R.imgV.bt_abc);
 		bt_voltar = (ImageView) findViewById(R.imgV.bt_voltar);
 	}
 	
-	public void definirEventos(){
+	public void defineEvents(){
 	bt_123.setOnClickListener(new View.OnClickListener(){			
 		
 		
