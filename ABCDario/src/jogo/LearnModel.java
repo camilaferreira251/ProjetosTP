@@ -1,31 +1,31 @@
 package jogo;
 
-public class AprenderModel {
+public class LearnModel {
 
-	private String nome;
-	private int imagem;
+	private String name;
+	private int image;
 	private int audio;
-	
-	public AprenderModel(String nome, int imagem, int audio){
-		this.nome = nome;
-		this.imagem = imagem;
+
+	public LearnModel(String name, int image, int audio) {
+		this.name = name;
+		this.image = image;
 		this.audio = audio;
 	}
 
 	public String getNome() {
-		return nome;
+		return name;
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.name = nome;
 	}
 
 	public int getImagem() {
-		return imagem;
+		return image;
 	}
 
 	public void setImagem(int imagem) {
-		this.imagem = imagem;
+		this.image = imagem;
 	}
 
 	public int getAudio() {
