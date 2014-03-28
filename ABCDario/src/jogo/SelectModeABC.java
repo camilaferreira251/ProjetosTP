@@ -1,5 +1,5 @@
 /*Classe SelectModeABC
- * Abcd�rio is free software: you can redistribute it and / or
+ * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -34,24 +34,21 @@ public class SelectModeABC extends Activity {
 
 	private ImageView bt_back, bt_learn, bt_play;
 
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_abc);
-
 
 		inicializarComponetes();
 		defineEvents();
 
 	}
-	
+
 	private void inicializarComponetes() {
 		bt_back = (ImageView) findViewById(R.imgV.bt_voltar);
 		bt_learn = (ImageView) findViewById(R.imgV.bt_aprender);
 		bt_play = (ImageView) findViewById(R.imgV.bt_jogar);
 	}
 
-	
 	private void defineEvents() {
 
 		bt_back.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +58,6 @@ public class SelectModeABC extends Activity {
 
 			}
 		});
-
 
 		bt_learn.setOnClickListener(new View.OnClickListener() {
 
