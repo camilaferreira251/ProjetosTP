@@ -21,17 +21,10 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-
 package RNA;
-
-
 
 import RNA.Operador;
 
-/**
- *
- * @author Marcos
- */
 public class QuestionWindow extends javax.swing.JDialog {
 
     public QuestionWindow(java.awt.Frame parent, boolean modal) {

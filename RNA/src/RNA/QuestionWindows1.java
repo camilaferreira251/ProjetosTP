@@ -21,27 +21,13 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-
 package RNA;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 import RNA.Operador;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Marcos
- */
 public class QuestionWindow1 extends javax.swing.JDialog {
 
-    /**
-     * Creates new form Perguntas
-     */
     public QuestionWindow1(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
