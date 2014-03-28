@@ -1,5 +1,5 @@
 /*Classe ScorePersistence  
-	 * Abcd�rio is free software: you can redistribute it and / or
+ * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -28,43 +28,45 @@ import fga.mds.abcdario.R;
 
 public class ScorePersistence {
 
-		private static ScorePersistence instance;
-		ArrayList<ScoreModel> cadastroImgEstrela = new ArrayList<ScoreModel>();
-		
-		private ScorePersistence(){}
-		public static ScorePersistence getInstance(){
-			if(instance == null)
-				instance = new ScorePersistence();
-			
-			return instance;
-		}
-		
-		public int criaEarmazenaArrayListDeImagens(){
-			
-			ScoreModel img_0_estrelas = new ScoreModel(0,R.drawable.img_0_estrelas);
-			ScoreModel img_1_estrela = new ScoreModel(1,R.drawable.img_1_estrela);
-			ScoreModel img_2_estrelas = new ScoreModel(2,R.drawable.img_2_estrelas);
-			ScoreModel img_3_estrelas = new ScoreModel(3,R.drawable.img_3_estrelas);
-			ScoreModel img_4_estrelas = new ScoreModel(4,R.drawable.img_4_estrelas);
-			ScoreModel img_5_estrelas = new ScoreModel(5,R.drawable.img_5_estrelas);
-		
-			cadastroImgEstrela.add(img_0_estrelas);
-			cadastroImgEstrela.add(img_1_estrela);
-			cadastroImgEstrela.add(img_2_estrelas);
-			cadastroImgEstrela.add(img_3_estrelas);
-			cadastroImgEstrela.add(img_4_estrelas);
-			cadastroImgEstrela.add(img_5_estrelas);		
-			
-			if(cadastroImgEstrela.isEmpty())
-				return -1;
-			
-			return 0;
-		
-		}
-		
-		public int getModelImagemEstrela(int nome){
-			
-				return cadastroImgEstrela.get(nome).getStarImage();
-									
-		}
+	private static ScorePersistence instance;
+	ArrayList<ScoreModel> cadastroImgEstrela = new ArrayList<ScoreModel>();
+
+	private ScorePersistence() {
 	}
+
+	public static ScorePersistence getInstance() {
+		if (instance == null)
+			instance = new ScorePersistence();
+
+		return instance;
+	}
+
+	public int criaEarmazenaArrayListDeImagens() {
+
+		ScoreModel img_0_estrelas = new ScoreModel(0, R.drawable.img_0_estrelas);
+		ScoreModel img_1_estrela = new ScoreModel(1, R.drawable.img_1_estrela);
+		ScoreModel img_2_estrelas = new ScoreModel(2, R.drawable.img_2_estrelas);
+		ScoreModel img_3_estrelas = new ScoreModel(3, R.drawable.img_3_estrelas);
+		ScoreModel img_4_estrelas = new ScoreModel(4, R.drawable.img_4_estrelas);
+		ScoreModel img_5_estrelas = new ScoreModel(5, R.drawable.img_5_estrelas);
+
+		cadastroImgEstrela.add(img_0_estrelas);
+		cadastroImgEstrela.add(img_1_estrela);
+		cadastroImgEstrela.add(img_2_estrelas);
+		cadastroImgEstrela.add(img_3_estrelas);
+		cadastroImgEstrela.add(img_4_estrelas);
+		cadastroImgEstrela.add(img_5_estrelas);
+
+		if (cadastroImgEstrela.isEmpty())
+			return -1;
+
+		return 0;
+
+	}
+
+	public int getModelImagemEstrela(int nome) {
+
+		return cadastroImgEstrela.get(nome).getStarImage();
+
+	}
+}
