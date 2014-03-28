@@ -1,4 +1,4 @@
-/*Class NeuronioBP 
+/*Class NeuronBP 
  * RNA is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -26,12 +26,12 @@ package RNA;
 
 
 
-class NeuronioBP {
+class NeuronBP {
 
     private double[] deltaw = null;
     private double deltaBias = 0;
 
-    NeuronioBP(int tamanho) {
+    NeuronBP(int tamanho) {
         deltaw = new double[tamanho];
 
         for (int i = 0; i < deltaw.length; i++) {

@@ -4,15 +4,15 @@ package RNA;
 
 class CamadaBP {
 	private double[] erros = null;
-	private NeuronioBP[] neuronios = null;
+	private NeuronBP[] neuronios = null;
 
 	CamadaBP(int tamanho, int tamanhoNeuronio) {
 		erros = new double[tamanho];
-		neuronios = new NeuronioBP[tamanho];
+		neuronios = new NeuronBP[tamanho];
 
 		for (int i=0; i < neuronios.length; i++) {
 			erros[i] = 0;
-			neuronios[i] = new NeuronioBP(tamanhoNeuronio);
+			neuronios[i] = new NeuronBP(tamanhoNeuronio);
 		}
 	}
 
@@ -24,7 +24,7 @@ class CamadaBP {
 		return erros[i];
 	}
 
-	final NeuronioBP getNeuronioBP(int i) {
+	final NeuronBP getNeuronioBP(int i) {
 		return neuronios[i];
 	}
 
