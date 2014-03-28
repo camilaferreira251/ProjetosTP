@@ -57,7 +57,7 @@ public class SelectMode_ABC extends Activity {
 		bt_back.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				startActivity(new Intent(SelectMode_ABC.this, Escolha.class));
+				startActivity(new Intent(SelectMode_ABC.this, Choice.class));
 
 			}
 		});

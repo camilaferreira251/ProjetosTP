@@ -1,5 +1,5 @@
 	/*Classe EscolhaModo123
-	 * Abcdário is free software: you can redistribute it and / or
+	 * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -54,7 +54,7 @@ public class Escolha_modo_123 extends Activity {
 		bt_voltar.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				startActivity(new Intent(Escolha_modo_123.this, Escolha.class));
+				startActivity(new Intent(Escolha_modo_123.this, Choice.class));
 				
 			}
 		});

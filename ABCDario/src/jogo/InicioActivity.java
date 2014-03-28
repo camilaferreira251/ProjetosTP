@@ -57,7 +57,7 @@ public class InicioActivity extends Activity {
 			
 			
 			public void onClick(View arg0) {			 
-				startActivity(new Intent(InicioActivity.this, Escolha.class));
+				startActivity(new Intent(InicioActivity.this, Choice.class));
 						 
 			}
 		});
