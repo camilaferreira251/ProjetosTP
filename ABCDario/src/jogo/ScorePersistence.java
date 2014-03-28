@@ -1,4 +1,4 @@
-/*Classe ScorePersistencia  
+/*Classe ScorePersistence  
 	 * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -26,15 +26,15 @@ package jogo;
 import java.util.ArrayList;
 import fga.mds.abcdario.R;
 
-public class ScorePersistencia {
+public class ScorePersistence {
 
-		private static ScorePersistencia instance;
+		private static ScorePersistence instance;
 		ArrayList<ScoreModel> cadastroImgEstrela = new ArrayList<ScoreModel>();
 		
-		private ScorePersistencia(){}
-		public static ScorePersistencia getInstance(){
+		private ScorePersistence(){}
+		public static ScorePersistence getInstance(){
 			if(instance == null)
-				instance = new ScorePersistencia();
+				instance = new ScorePersistence();
 			
 			return instance;
 		}
