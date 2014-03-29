@@ -73,7 +73,7 @@ public class SelectModeABC extends Activity {
 
 			public void onClick(View v) {
 
-				startActivity(new Intent(SelectModeABC.this, GameLetter.class));
+				startActivity(new Intent(SelectModeABC.this, LetterGame.class));
 			}
 
 		});

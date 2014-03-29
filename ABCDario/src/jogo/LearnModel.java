@@ -1,5 +1,5 @@
 /*Class LearnModel
-	 * Abcdario is free software: you can redistribute it and / or
+ * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -20,6 +20,7 @@
      along with this program, if not, write to the Foundation of Software
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
+
 package jogo;
 
 public class LearnModel {
@@ -34,20 +35,20 @@ public class LearnModel {
 		this.audio = audio;
 	}
 
-	public String getNome() {
+	public String getName() {
 		return name;
 	}
 
-	public void setNome(String nome) {
-		this.name = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public int getImagem() {
+	public int getImage() {
 		return image;
 	}
 
-	public void setImagem(int imagem) {
-		this.image = imagem;
+	public void setImage(int image) {
+		this.image = image;
 	}
 
 	public int getAudio() {
