@@ -1,4 +1,4 @@
-/* Class camada
+/* Class Layer
  * RNA is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -27,14 +27,14 @@ import RNA.Function;
 import RNA.Sigmoide;
 import RNA.TgHip;
 
-public class Camada {
+public class Layer {
 
     private Neuron[] neuronios;
     private double[] saidas;
     private Function f;
 
 
-    Camada(int n, int conexoes,int funcao, int bias,int intervalo) {
+    Layer(int n, int conexoes,int funcao, int bias,int intervalo) {
         
         if(funcao==0)
             f = new Sigmoide();
@@ -57,15 +57,15 @@ public class Camada {
         }
     }
 
-    public int getTamanho() {
+    public int getSize() {
         return neuronios.length;
     }
 
-    public double getSaida(int index) {
+    public double getOutPut(int index) {
         return saidas[index];
     }
 
-    public double[] getSaidas() {
+    public double[] getOutPuts() {
         return saidas;
     }
 

@@ -1,0 +1,90 @@
+/* Class Layer
+ * RNA is free software: you can redistribute it and / or
+
+     modify it under the terms of the GNU General Public License as
+
+     published by the Free Software Foundation (FSF), version 2 of the
+
+     License, or (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+
+     but WITHOUT ANY WARRANTY; without even the implied warranty of fitness for any
+
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. View
+
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+
+     along with this program, if not, write to the Foundation of Software
+
+     Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
+
+package RNA;
+
+import RNA.Function;
+import RNA.Sigmoide;
+import RNA.TgHip;
+
+public class Layer {
+
+    private Neuron[] neuronios;
+    private double[] saidas;
+    private Function f;
+
+
+    Layer(int n, int conexoes,int funcao, int bias,int intervalo) {
+        
+        if(funcao==0)
+            f = new Sigmoide();
+        else
+            f=new TgHip();
+        
+        neuronios = new Neuron[n];
+        saidas = new double[n];
+
+        for (int i = 0; i < neuronios.length; i++) {
+            neuronios[i] = new Neuron(conexoes,bias);
+            neuronios[i].randomizarPesos(intervalo);
+        }
+    }
+
+    void Calcular(double[] entradas) {
+
+        for (int i = 0; i < neuronios.length; i++) {
+            saidas[i] = f.funcao(rede(i, entradas));
+        }
+    }
+
+    public int getTamanho() {
+        return neuronios.length;
+    }
+
+    public double getOutPut(int index) {
+        return saidas[index];
+    }
+
+    public double[] getOutPuts() {
+        return saidas;
+    }
+
+    public Neuron getNeuronio(int i) {
+        return neuronios[i];
+    }
+
+    public int getTamanhoNeuronio() {
+        return neuronios[0].getTamanho();
+    }
+
+    private double rede(int neuronio, double[] entradas) {
+        double u = 0;
+
+        for (int i = 0; i < entradas.length; i++) {
+            u += entradas[i] * neuronios[neuronio].getPeso(i);
+        }
+        
+        u -= neuronios[neuronio].getBias();
+        return u;
+    }
+}

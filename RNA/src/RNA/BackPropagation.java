@@ -30,31 +30,31 @@ import RNA.Leitor;
 
 public class BackPropagation {
 
-    private MLP m = null;
-    private CamadaBP[] camadas = null;
+    private MultilayerPerceptron m = null;
+    private BackPropagationLayer[] camadas = null;
     private Function f = null;
     private double txAprendizado = 0.2;
     private double momento = 0.5;
 
-    public BackPropagation(MLP m) {
+    public BackPropagation(MultilayerPerceptron m) {
 
         this.m = m;
-        if (m.getTipoFuncao() == 0) {
+        if (m.getFunctionType() == 0) {
             f = new Sigmoide();
         } else {
             f = new TgHip();
         }
 
-        int tamanho = m.getTamanho();
-        camadas = new CamadaBP[tamanho];
+        int tamanho = m.getSize();
+        camadas = new BackPropagationLayer[tamanho];
 
         for (int i = 0; i < tamanho; i++) {
-            camadas[i] = new CamadaBP(m.getCamada(i).getTamanho(), 
-            		m.getCamada(i).getTamanhoNeuronio());
+            camadas[i] = new BackPropagationLayer(m.getLayer(i).getSize(), 
+            		m.getLayer(i).getTamanhoNeuronio());
         }
     }
 
-    public BackPropagation(MLP m, double txAprend, double moment) {
+    public BackPropagation(MultilayerPerceptron m, double txAprend, double moment) {
         this(m);
 
         this.txAprendizado = txAprend;
@@ -87,19 +87,19 @@ public class BackPropagation {
 
     public void treinar(double[] entrada, double[] saidaDesejada) {
 
-        m.Avancar(entrada);
+        m.Advance(entrada);
 
         backward(entrada, saidaDesejada);
     }
 
     private void calcularErrosUltimaCamada(double[] saidaDesejada) {
-        Camada c = m.getUltimaCamada();
-        CamadaBP ultima = camadas[camadas.length - 1];
+        Layer c = m.getLastLayer();
+        BackPropagationLayer ultima = camadas[camadas.length - 1];
 
-        int tamanho = ultima.getTamanho();
+        int tamanho = ultima.getSize();
 
         for (int i = 0; i < tamanho; i++) {
-            ultima.setErro(i, (saidaDesejada[i] - c.getSaida(i)) * f.derivada(c.getSaida(i)));
+            ultima.setError(i, (saidaDesejada[i] - c.getOutPut(i)) * f.derivada(c.getOutPut(i)));
         }
     }
 
@@ -107,16 +107,16 @@ public class BackPropagation {
         double erro;
 
         for (int i = camadas.length - 2; i >= 0; i--) {
-            for (int j = 0; j < camadas[i].getTamanho(); j++) {
+            for (int j = 0; j < camadas[i].getSize(); j++) {
                 erro = 0;
-                for (int k = 0; k < camadas[i + 1].getTamanho(); k++) {
+                for (int k = 0; k < camadas[i + 1].getSize(); k++) {
 
-                    double pesoNeuronio = m.getCamada(i + 1).getNeuronio(k).getPeso(j);
-                    double erroNeuronio = camadas[i + 1].getErro(k);
+                    double pesoNeuronio = m.getLayer(i + 1).getNeuronio(k).getPeso(j);
+                    double erroNeuronio = camadas[i + 1].getError(k);
                     erro += pesoNeuronio * erroNeuronio;
                 }
-                erro *= f.derivada(m.getCamada(i).getSaida(j));
-                camadas[i].setErro(j, erro);
+                erro *= f.derivada(m.getLayer(i).getOutPut(j));
+                camadas[i].setError(j, erro);
             }
         }
     }
@@ -125,21 +125,21 @@ public class BackPropagation {
         int i, j, k;
 
         for (i = 0; i < camadas.length; i++) {
-            for (j = 0; j < camadas[i].getTamanho(); j++) {
-                for (k = 0; k < camadas[i].getNeuronioBP(j).getTamanho(); k++) {
+            for (j = 0; j < camadas[i].getSize(); j++) {
+                for (k = 0; k < camadas[i].getNeuronBackPropagation(j).getSize(); k++) {
                     camadas[i].getNeuronioBP(j).setDeltaw(k, txAprendizado * entrada[k] * camadas[i].getErro(j) + momento * camadas[i].getNeuronioBP(j).getDeltaw(k));
                 }
                 camadas[i].getNeuronioBP(j).setDeltaBias(txAprendizado * (-1) * camadas[i].getErro(j) + momento * camadas[i].getNeuronioBP(j).getDeltaBias());
             }
-            entrada = m.getCamada(i).getSaidas();
+            entrada = m.getCamada(i).getOutPuts();
         }
     }
 
     private void corrigirPesos() {
         int i, j, k;
 
-        for (i = 0; i < m.getTamanho(); i++) {
-            for (j = 0; j < m.getCamada(i).getTamanho(); j++) {
+        for (i = 0; i < m.getSize(); i++) {
+            for (j = 0; j < m.getCamada(i).getSize(); j++) {
                 Neuron n = m.getCamada(i).getNeuronio(j);
                 for (k = 0; k < n.getTamanho(); k++) {
                     n.corrigirPeso(k, camadas[i].getNeuronioBP(j).getDeltaw(k));

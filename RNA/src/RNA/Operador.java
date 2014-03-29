@@ -1,11 +1,11 @@
 package RNA;
 
-import RNA.MLP;
+import RNA.MultilayerPerceptron;
 import RNA.BackPropagation;
 
 public class Operador {
     
-    public static MLP m;
+    public static MultilayerPerceptron m;
     public static Leitor leitor;
     public static double entradas[] = new double[19];
     public static final int TAMANHOTESTE = 86;
@@ -16,9 +16,9 @@ public class Operador {
         leitor = new Leitor();
         leitor.carregarArquivos();
 
-        m = new MLP(3, funcao, bias, intervalo);
+        m = new MultilayerPerceptron(3, funcao, bias, intervalo);
 
-        m.inserirCamadaEntrada(19, 19);
+        m.insertInPutLayer(19, 19);
         m.addCamada(6);
         m.addCamada(1);
 
@@ -31,7 +31,7 @@ public class Operador {
 
             for (int k = 0; k < leitor.tamanhoTreinamento; k++) {
                 b.treinar(leitor.getEntrada()[k], leitor.getSaidaDesejada()[k]);
-                saidas[k] = m.getSaida(0);
+                saidas[k] = m.getOutPut(0);
             }
             erroAux = b.calcularErro(leitor, saidas);
             calcErro = erroAux;
@@ -41,15 +41,15 @@ public class Operador {
 
 
         for (int w = 0; w < TAMANHOTESTE; w++) {
-            m.Avancar(leitor.getTesteEntrada()[w]);
+            m.Advance(leitor.getTesteEntrada()[w]);
         }
     }
 
     public static int teste() {
         int soma = 0;
         for (int w = 0; w < 86; w++) {
-            m.Avancar(leitor.getTesteEntrada()[w]);
-            if (m.getSaida(0) > 0.5) {
+            m.Advance(leitor.getTesteEntrada()[w]);
+            if (m.getOutPut(0) > 0.5) {
                 soma++;
             }
         }
@@ -57,7 +57,7 @@ public class Operador {
     }
 
     public static double operar() {
-        m.Avancar(entradas);
-        return m.getSaida(0);
+        m.Advance(entradas);
+        return m.getOutPut(0);
     }
 }

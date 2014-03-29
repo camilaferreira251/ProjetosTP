@@ -150,7 +150,7 @@ public class MainWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        JanelaTreinamento janela = new JanelaTreinamento(new MainWindow(), true,essaJanela);
+        TrainingWindow janela = new TrainingWindow(new MainWindow(), true,essaJanela);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
