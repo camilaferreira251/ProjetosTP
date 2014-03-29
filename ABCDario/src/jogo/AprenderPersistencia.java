@@ -112,7 +112,7 @@ public class AprenderPersistencia {
 			
 			LearnModel am = (LearnModel) i.next();
 			
-			String nome = am.getNome();
+			String nome = am.getName();
 			
 			if(nome.equalsIgnoreCase(letra))
 				return am;
@@ -129,7 +129,7 @@ public class AprenderPersistencia {
 			
 			LearnModel am = (LearnModel) i.next();
 			
-			String nome = am.getNome();
+			String nome = am.getName();
 			
 			if(nome.equalsIgnoreCase(numero))
 				return am;
