@@ -68,10 +68,10 @@ public class LearnLetter extends Activity{
 		id = controller.defineLetter(letter);
 		
 		defineImage(id[0]);
-		definirAudio(id[1]);
+		defineAudio(id[1]);
 	}
 
-	private void definirAudio(int id) {
+	private void defineAudio(int id) {
 		music = MediaPlayer.create(this, id);
 	}
 

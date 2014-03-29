@@ -1,4 +1,4 @@
-/*Classe LearnNumber
+/*Class LearnNumber
  * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -36,79 +36,78 @@ public class LearnNumber extends Activity {
 
 	private LearnController controller;
 
-	private ImageView bt_proximo, bt_anterior, bt_voltar, bt_som, imagem;
+	private ImageView nextButton, previousButton, backButton, soundButton, image;
 	private Intent it;
 	private Bundle params;
-	private String numero;
+	private String number;
 	private int id[] = new int[2];
-	private MediaPlayer musica;
+	private MediaPlayer music;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.aprender);
 
-		inicializarComponentes(null);
-		definirEventos();
+		initializeComponents(null);
+		defineEvents();
 	}
 
-	public void inicializarComponentes(String numero) {
+	public void initializeComponents(String number) {
 
-		controller = new LearnController();// Instanciando a controladora
-											// Aprender
+		controller = new LearnController();// instantiating the controller learn
 
-		bt_proximo = (ImageView) findViewById(R.id.bt_proximo);
-		bt_anterior = (ImageView) findViewById(R.id.bt_anterior);
-		bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
-		bt_som = (ImageView) findViewById(R.id.bt_som);
-		imagem = (ImageView) findViewById(R.id.imagem_selecionada);
+		nextButton = (ImageView) findViewById(R.id.bt_proximo);
+		previousButton = (ImageView) findViewById(R.id.bt_anterior);
+		backButton = (ImageView) findViewById(R.id.bt_voltar);
+		soundButton = (ImageView) findViewById(R.id.bt_som);
+		image = (ImageView) findViewById(R.id.imagem_selecionada);
 
-		if (numero == null)
-			numero = obterParamentro();
+		if (number == null)
+			number = obtainParameter();
 
-		id = controller.definirNumero(numero);
+		id = controller.defineNumber(number);
 
-		definirImagem(id[0]);
-		definirAudio(id[1]);
+		defineImage(id[0]);
+		defineAudio(id[1]);
 	}
 
-	private void definirAudio(int id) {
-		musica = MediaPlayer.create(this, id);
+	private void defineAudio(int id) {
+		music = MediaPlayer.create(this, id);
 	}
 
-	private void definirImagem(int id) {
-		imagem.setImageResource(id);
+	private void defineImage(int id) {
+		image.setImageResource(id);
 	}
 
-	private String obterParamentro() {
+	private String obtainParameter() {
 
 		it = getIntent();
 		params = it.getExtras();
 
-		numero = params.getString("OK");
+		number = params.getString("OK");
 
-		return numero;
+		return number;
 	}
 
 	public void defineEvents() {
 
-		bt_voltar.setOnClickListener(new OnClickListener() {
+		backButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(LearnNumber.this, Aprender_123.class));
+				startActivity(new Intent(LearnNumber.this, Learn123.class));
 			}
 		});
 
-		bt_som.setOnClickListener(new OnClickListener() {
+		soundButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				musica.start();
+				music.start();
 			}
 		});
 
-		bt_proximo.setOnClickListener(new OnClickListener() {
+		nextButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -116,7 +115,7 @@ public class LearnNumber extends Activity {
 			}
 		});
 
-		bt_anterior.setOnClickListener(new OnClickListener() {
+		previousButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
