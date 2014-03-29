@@ -1,5 +1,5 @@
-/*Classe LearnLetter
- * 	Abcd�rio is free software: you can redistribute it and / or
+/*Class LearnLetter
+ * 	Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -36,62 +36,62 @@ public class LearnLetter extends Activity{
 
 	private LearnController controller;	
 	
-	private ImageView bt_proximo, bt_anterior, bt_voltar, bt_som, imagem; 
+	private ImageView nextButton, previousButton, backButton, soundButton, image; 
 	private Intent it;
 	private Bundle params;
-	private String letra;
+	private String letter;
 	private int id[] = new int[2];
-	private MediaPlayer musica;
+	private MediaPlayer music;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); 
         setContentView(R.layout.aprender); 	
         
-        inicializarComponentes(null);
-        definirEventos();
+        initializeComponents(null);
+        defineEvents();
     }
 
-	public void inicializarComponentes(String letra) {
+	public void initializeComponents(String letter) {
 		
 		controller = new LearnController();
 		
-		bt_proximo = (ImageView) findViewById(R.id.bt_proximo);
-		bt_anterior = (ImageView) findViewById(R.id.bt_anterior);
-		bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
-		bt_som = (ImageView) findViewById(R.id.bt_som);
-		imagem = (ImageView) findViewById(R.id.imagem_selecionada);
+		nextButton = (ImageView) findViewById(R.id.bt_proximo);
+		previousButton = (ImageView) findViewById(R.id.bt_anterior);
+		backButton = (ImageView) findViewById(R.id.bt_voltar);
+		soundButton = (ImageView) findViewById(R.id.bt_som);
+		image = (ImageView) findViewById(R.id.imagem_selecionada);
 		
-		if(letra == null)
-			letra = obterParamentro();
+		if(letter == null)
+			letter = obtainParameter();
 		
-		id = controller.definirLetra(letra);
+		id = controller.defineLetter(letter);
 		
-		definirImagem(id[0]);
+		defineImage(id[0]);
 		definirAudio(id[1]);
 	}
 
 	private void definirAudio(int id) {
-		musica = MediaPlayer.create(this, id);
+		music = MediaPlayer.create(this, id);
 	}
 
-	private void definirImagem(int id) {
-		imagem.setImageResource(id);
+	private void defineImage(int id) {
+		image.setImageResource(id);
 	}
 
-	private String obterParamentro() {
+	private String obtainParameter() {
 		
 		it = getIntent();
 		params = it.getExtras();
 		
-		letra = params.getString("OK");
+		letter = params.getString("OK");
 		
-		return letra;
+		return letter;
 	}
 
 	public void defineEvents() {
 		
-		bt_voltar.setOnClickListener(new OnClickListener() {
+		backButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -99,15 +99,15 @@ public class LearnLetter extends Activity{
 			}
 		});
 		
-		bt_som.setOnClickListener(new OnClickListener() {
+		soundButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				musica.start();
+				music.start();
 			}
 		});
 		
-		bt_proximo.setOnClickListener(new OnClickListener() {
+		nextButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -115,7 +115,7 @@ public class LearnLetter extends Activity{
 			}
 		});
 		
-		bt_anterior.setOnClickListener(new OnClickListener() {
+		previousButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
