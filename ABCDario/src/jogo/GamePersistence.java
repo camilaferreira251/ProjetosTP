@@ -37,8 +37,8 @@ public class GamePersistence {
 	// Declaring and instantiating an ArrayList that will contain all objects of
 	// type
 	// GameModel related to numbers
-	ArrayList<JogoModel> registrationNumber = new ArrayList<JogoModel>();
-	ArrayList<JogoModel> registrationLetter = new ArrayList<JogoModel>();
+	ArrayList<GameModel> registrationNumber = new ArrayList<GameModel>();
+	ArrayList<GameModel> registrationLetter = new ArrayList<GameModel>();
 
 	// Singleton pattern - Only one instance
 	private GamePersistence() {
@@ -56,167 +56,167 @@ public class GamePersistence {
 	public int updatesRegister(){
 		
 		//Declaring and instantiating objects of type GameModel related letters
-		JogoModel firstChoiceLetterA = new JogoModel("a", R.drawable.letra_a_01, R.drawable.bt_a); 
-		JogoModel secondChoiceLetterA = new JogoModel("a", R.drawable.letra_a_02, R.drawable.bt_a); 
-		JogoModel thirdChoiceLetterA = new JogoModel("a", R.drawable.letra_a_03, R.drawable.bt_a); 
+		GameModel firstChoiceLetterA = new GameModel("a", R.drawable.letra_a_01, R.drawable.bt_a); 
+		GameModel secondChoiceLetterA = new GameModel("a", R.drawable.letra_a_02, R.drawable.bt_a); 
+		GameModel thirdChoiceLetterA = new GameModel("a", R.drawable.letra_a_03, R.drawable.bt_a); 
 		
-		JogoModel firstChoiceLetterB = new JogoModel("b", R.drawable.letra_b_01, R.drawable.bt_b); 
-		JogoModel secondChoiceLetterB = new JogoModel("b", R.drawable.letra_b_02, R.drawable.bt_b); 
-		JogoModel thirdChoiceLetterB = new JogoModel("b", R.drawable.letra_b_03, R.drawable.bt_b); 
+		GameModel firstChoiceLetterB = new GameModel("b", R.drawable.letra_b_01, R.drawable.bt_b); 
+		GameModel secondChoiceLetterB = new GameModel("b", R.drawable.letra_b_02, R.drawable.bt_b); 
+		GameModel thirdChoiceLetterB = new GameModel("b", R.drawable.letra_b_03, R.drawable.bt_b); 
 		
-		JogoModel firstChoiceLetterC = new JogoModel("c", R.drawable.letra_c_01, R.drawable.bt_c);
-		JogoModel secondChoiceLetterC = new JogoModel("c", R.drawable.letra_c_02, R.drawable.bt_c);
-		JogoModel thirdChoiceLetterC = new JogoModel("c", R.drawable.letra_c_03, R.drawable.bt_c);
-		JogoModel fourthChoiceLetterC = new JogoModel("c", R.drawable.letra_c_04, R.drawable.bt_c);
+		GameModel firstChoiceLetterC = new GameModel("c", R.drawable.letra_c_01, R.drawable.bt_c);
+		GameModel secondChoiceLetterC = new GameModel("c", R.drawable.letra_c_02, R.drawable.bt_c);
+		GameModel thirdChoiceLetterC = new GameModel("c", R.drawable.letra_c_03, R.drawable.bt_c);
+		GameModel fourthChoiceLetterC = new GameModel("c", R.drawable.letra_c_04, R.drawable.bt_c);
 		
-		JogoModel firstChoiceLetterD = new JogoModel("d", R.drawable.letra_d_01, R.drawable.bt_d); 
-		JogoModel secondChoiceLetterD = new JogoModel("d", R.drawable.letra_d_02, R.drawable.bt_d); 
-		JogoModel thirdChoiceLetterD = new JogoModel("d", R.drawable.letra_d_03, R.drawable.bt_d); 
+		GameModel firstChoiceLetterD = new GameModel("d", R.drawable.letra_d_01, R.drawable.bt_d); 
+		GameModel secondChoiceLetterD = new GameModel("d", R.drawable.letra_d_02, R.drawable.bt_d); 
+		GameModel thirdChoiceLetterD = new GameModel("d", R.drawable.letra_d_03, R.drawable.bt_d); 
 		
-		JogoModel firstChoiceLetterE = new JogoModel("e", R.drawable.letra_e_01, R.drawable.bt_e); 
-		JogoModel secondChoiceLetterE = new JogoModel("e", R.drawable.letra_e_02, R.drawable.bt_e);
-		JogoModel thirdChoiceLetterE = new JogoModel("e", R.drawable.letra_e_03, R.drawable.bt_e);
+		GameModel firstChoiceLetterE = new GameModel("e", R.drawable.letra_e_01, R.drawable.bt_e); 
+		GameModel secondChoiceLetterE = new GameModel("e", R.drawable.letra_e_02, R.drawable.bt_e);
+		GameModel thirdChoiceLetterE = new GameModel("e", R.drawable.letra_e_03, R.drawable.bt_e);
 		
-		JogoModel firstChoiceLetterF = new JogoModel("f", R.drawable.letra_f_01, R.drawable.bt_f); 
-		JogoModel secondChoiceLetterF = new JogoModel("f", R.drawable.letra_f_02, R.drawable.bt_f);
-		JogoModel thirdChoiceLetterF = new JogoModel("f", R.drawable.letra_f_03, R.drawable.bt_f);
+		GameModel firstChoiceLetterF = new GameModel("f", R.drawable.letra_f_01, R.drawable.bt_f); 
+		GameModel secondChoiceLetterF = new GameModel("f", R.drawable.letra_f_02, R.drawable.bt_f);
+		GameModel thirdChoiceLetterF = new GameModel("f", R.drawable.letra_f_03, R.drawable.bt_f);
 		
-		JogoModel firstChoiceLetterG = new JogoModel("g", R.drawable.letra_g_01, R.drawable.bt_g); 
-		JogoModel secondChoiceLetterG = new JogoModel("g", R.drawable.letra_g_02, R.drawable.bt_g);
-		JogoModel thirdChoiceLetterG = new JogoModel("g", R.drawable.letra_g_03, R.drawable.bt_g);
+		JogoModel firstChoiceLetterG = new GameModel("g", R.drawable.letra_g_01, R.drawable.bt_g); 
+		JogoModel secondChoiceLetterG = new GameModel("g", R.drawable.letra_g_02, R.drawable.bt_g);
+		JogoModel thirdChoiceLetterG = new GameModel("g", R.drawable.letra_g_03, R.drawable.bt_g);
 		
-		JogoModel firstChoiceLetterH = new JogoModel("h", R.drawable.letra_h_01, R.drawable.bt_h);
-		JogoModel secondChoiceLetterH = new JogoModel("h", R.drawable.letra_h_02, R.drawable.bt_h);
-		JogoModel thirdChoiceLetterH = new JogoModel("h", R.drawable.letra_h_03, R.drawable.bt_h);
+		GameModel firstChoiceLetterH = new GameModel("h", R.drawable.letra_h_01, R.drawable.bt_h);
+		GameModel secondChoiceLetterH = new GameModel("h", R.drawable.letra_h_02, R.drawable.bt_h);
+		GameModel thirdChoiceLetterH = new GameModel("h", R.drawable.letra_h_03, R.drawable.bt_h);
 		
-		JogoModel firstChoiceLetterI = new JogoModel("i", R.drawable.letra_i_01, R.drawable.bt_i); 
-		JogoModel secondChoiceLetterI = new JogoModel("i", R.drawable.letra_i_02, R.drawable.bt_i); 
-		JogoModel thirdChoiceLetterI = new JogoModel("i", R.drawable.letra_i_03, R.drawable.bt_i); 
+		GameModel firstChoiceLetterI = new GameModel("i", R.drawable.letra_i_01, R.drawable.bt_i); 
+		GameModel secondChoiceLetterI = new GameModel("i", R.drawable.letra_i_02, R.drawable.bt_i); 
+		GameModel thirdChoiceLetterI = new GameModel("i", R.drawable.letra_i_03, R.drawable.bt_i); 
 		
-		JogoModel firstChoiceLetterJ = new JogoModel("j", R.drawable.letra_j_01, R.drawable.bt_j);
-		JogoModel secondChoiceLetterJ = new JogoModel("j", R.drawable.letra_j_02, R.drawable.bt_j);
-		JogoModel thirdChoiceLetterJ = new JogoModel("j", R.drawable.letra_j_03, R.drawable.bt_j);
+		GameModel firstChoiceLetterJ = new GameModel("j", R.drawable.letra_j_01, R.drawable.bt_j);
+		GameModel secondChoiceLetterJ = new GameModel("j", R.drawable.letra_j_02, R.drawable.bt_j);
+		GameModel thirdChoiceLetterJ = new GameModel("j", R.drawable.letra_j_03, R.drawable.bt_j);
 		
-		JogoModel firstChoiceLetterK = new JogoModel("k", R.drawable.letra_k_01, R.drawable.bt_k); 
+		GameModel firstChoiceLetterK = new GameModel("k", R.drawable.letra_k_01, R.drawable.bt_k); 
 		
-		JogoModel firstChoiceLetterL = new JogoModel("l", R.drawable.letra_l_01, R.drawable.bt_l); 
-		JogoModel secondChoiceLetterL = new JogoModel("l", R.drawable.letra_l_02, R.drawable.bt_l); 
-		JogoModel thirdChoiceLetterL = new JogoModel("l", R.drawable.letra_l_03, R.drawable.bt_l); 
+		GameModel firstChoiceLetterL = new GameModel("l", R.drawable.letra_l_01, R.drawable.bt_l); 
+		GameModel secondChoiceLetterL = new GameModel("l", R.drawable.letra_l_02, R.drawable.bt_l); 
+		GameModel thirdChoiceLetterL = new GameModel("l", R.drawable.letra_l_03, R.drawable.bt_l); 
 		
-		JogoModel firstChoiceLetterM = new JogoModel("m", R.drawable.letra_m_01, R.drawable.bt_m);
-		JogoModel secondChoiceLetterM = new JogoModel("m", R.drawable.letra_m_02, R.drawable.bt_m);
-		JogoModel thirdChoiceLetterM = new JogoModel("m", R.drawable.letra_m_03, R.drawable.bt_m);
+		GameModel firstChoiceLetterM = new GameModel("m", R.drawable.letra_m_01, R.drawable.bt_m);
+		GameModel secondChoiceLetterM = new GameModel("m", R.drawable.letra_m_02, R.drawable.bt_m);
+		GameModel thirdChoiceLetterM = new GameModel("m", R.drawable.letra_m_03, R.drawable.bt_m);
 		
-		JogoModel firstChoiceLetterN = new JogoModel("n", R.drawable.letra_n_01, R.drawable.bt_n); 
-		JogoModel secondChoiceLetterN = new JogoModel("n", R.drawable.letra_n_02, R.drawable.bt_n); 
-		JogoModel thirdChoiceLetterN = new JogoModel("n", R.drawable.letra_n_03, R.drawable.bt_n); 
+		GameModel firstChoiceLetterN = new GameModel("n", R.drawable.letra_n_01, R.drawable.bt_n); 
+		GameModel secondChoiceLetterN = new GameModel("n", R.drawable.letra_n_02, R.drawable.bt_n); 
+		GameModel thirdChoiceLetterN = new GameModel("n", R.drawable.letra_n_03, R.drawable.bt_n); 
 		
-		JogoModel firstChoiceLetterO = new JogoModel("o", R.drawable.letra_o_01, R.drawable.bt_o); 
-		JogoModel secondChoiceLetterO = new JogoModel("o", R.drawable.letra_o_02, R.drawable.bt_o); 
-		JogoModel thirdChoiceLetterO = new JogoModel("o", R.drawable.letra_o_03, R.drawable.bt_o); 
+		GameModel firstChoiceLetterO = new GameModel("o", R.drawable.letra_o_01, R.drawable.bt_o); 
+		GameModel secondChoiceLetterO = new GameModel("o", R.drawable.letra_o_02, R.drawable.bt_o); 
+		GameModel thirdChoiceLetterO = new GameModel("o", R.drawable.letra_o_03, R.drawable.bt_o); 
 		
-		JogoModel firstChoiceLetterP = new JogoModel("p", R.drawable.letra_p_01, R.drawable.bt_p); 
-		JogoModel secondChoiceLetterP = new JogoModel("p", R.drawable.letra_p_02, R.drawable.bt_p); 
-		JogoModel thirdChoiceLetterP = new JogoModel("p", R.drawable.letra_p_03, R.drawable.bt_p); 
+		GameModel firstChoiceLetterP = new GameModel("p", R.drawable.letra_p_01, R.drawable.bt_p); 
+		GameModel secondChoiceLetterP = new GameModel("p", R.drawable.letra_p_02, R.drawable.bt_p); 
+		GameModel thirdChoiceLetterP = new GameModel("p", R.drawable.letra_p_03, R.drawable.bt_p); 
 		
-		JogoModel firstChoiceLetterQ = new JogoModel("q", R.drawable.letra_q_01, R.drawable.bt_q); 
-		JogoModel secondChoiceLetterQ = new JogoModel("q", R.drawable.letra_q_02, R.drawable.bt_q); 
-		JogoModel thirdChoiceLetterQ = new JogoModel("q", R.drawable.letra_q_03, R.drawable.bt_q); 
+		GameModel firstChoiceLetterQ = new GameModel("q", R.drawable.letra_q_01, R.drawable.bt_q); 
+		GameModel secondChoiceLetterQ = new GameModel("q", R.drawable.letra_q_02, R.drawable.bt_q); 
+		GameModel thirdChoiceLetterQ = new GameModel("q", R.drawable.letra_q_03, R.drawable.bt_q); 
 		
-		JogoModel firstChoiceLetterR = new JogoModel("r", R.drawable.letra_r_01, R.drawable.bt_r);
-		JogoModel secondChoiceLetterR = new JogoModel("r", R.drawable.letra_r_02, R.drawable.bt_r);
-		JogoModel thirdChoiceLetterR = new JogoModel("r", R.drawable.letra_r_03, R.drawable.bt_r);
+		GameModel firstChoiceLetterR = new GameModel("r", R.drawable.letra_r_01, R.drawable.bt_r);
+		GameModel secondChoiceLetterR = new GameModel("r", R.drawable.letra_r_02, R.drawable.bt_r);
+		GameModel thirdChoiceLetterR = new GameModel("r", R.drawable.letra_r_03, R.drawable.bt_r);
 		
-		JogoModel firstChoiceLetterS = new JogoModel("s", R.drawable.letra_s_01, R.drawable.bt_s);
-		JogoModel secondChoiceLetterS = new JogoModel("s", R.drawable.letra_s_02, R.drawable.bt_s);
-		JogoModel thirdChoiceLetterS = new JogoModel("s", R.drawable.letra_s_03, R.drawable.bt_s);
+		GameModel firstChoiceLetterS = new GameModel("s", R.drawable.letra_s_01, R.drawable.bt_s);
+		GameModel secondChoiceLetterS = new GameModel("s", R.drawable.letra_s_02, R.drawable.bt_s);
+		GameModel thirdChoiceLetterS = new GameModel("s", R.drawable.letra_s_03, R.drawable.bt_s);
 		
-		JogoModel firstChoiceLetterT = new JogoModel("t", R.drawable.letra_t_01, R.drawable.bt_t); 
-		JogoModel secondChoiceLetterT = new JogoModel("t", R.drawable.letra_t_02, R.drawable.bt_t); 
-		JogoModel ThirdChoiceLetterT = new JogoModel("t", R.drawable.letra_t_03, R.drawable.bt_t); 
+		GameModel firstChoiceLetterT = new GameModel("t", R.drawable.letra_t_01, R.drawable.bt_t); 
+		GameModel secondChoiceLetterT = new GameModel("t", R.drawable.letra_t_02, R.drawable.bt_t); 
+		GameModel ThirdChoiceLetterT = new GameModel("t", R.drawable.letra_t_03, R.drawable.bt_t); 
 		
-		JogoModel firstChoiceLetterU = new JogoModel("u", R.drawable.letra_u_01, R.drawable.bt_u);
-		JogoModel secondChoiceLetterU = new JogoModel("u", R.drawable.letra_u_02, R.drawable.bt_u);
-		JogoModel thirdChoiceLetterU = new JogoModel("u", R.drawable.letra_u_03, R.drawable.bt_u);
+		GameModel firstChoiceLetterU = new GameModel("u", R.drawable.letra_u_01, R.drawable.bt_u);
+		GameModel secondChoiceLetterU = new GameModel("u", R.drawable.letra_u_02, R.drawable.bt_u);
+		GameModel thirdChoiceLetterU = new GameModel("u", R.drawable.letra_u_03, R.drawable.bt_u);
 		
-		JogoModel firstChoiceLetterV = new JogoModel("v", R.drawable.letra_v_01, R.drawable.bt_v);
-		JogoModel secondChoiceLetterV = new JogoModel("v", R.drawable.letra_v_02, R.drawable.bt_v);
-		JogoModel thirdChoiceLetterV = new JogoModel("v", R.drawable.letra_v_03, R.drawable.bt_v);
+		GameModel firstChoiceLetterV = new GameModel("v", R.drawable.letra_v_01, R.drawable.bt_v);
+		GameModel secondChoiceLetterV = new GameModel("v", R.drawable.letra_v_02, R.drawable.bt_v);
+		GameModel thirdChoiceLetterV = new GameModel("v", R.drawable.letra_v_03, R.drawable.bt_v);
 		
-		JogoModel firstChoiceLetterW = new JogoModel("w", R.drawable.letra_w_01, R.drawable.bt_w); 
-		JogoModel secondChoiceLetterW = new JogoModel("w", R.drawable.letra_w_02, R.drawable.bt_w); 
+		GameModel firstChoiceLetterW = new GameModel("w", R.drawable.letra_w_01, R.drawable.bt_w); 
+		GameModel secondChoiceLetterW = new GameModel("w", R.drawable.letra_w_02, R.drawable.bt_w); 
 		
-		JogoModel firstChoiceLetterX = new JogoModel("x", R.drawable.letra_x_01, R.drawable.bt_x);
-		JogoModel secondChoiceLetterX = new JogoModel("x", R.drawable.letra_x_02, R.drawable.bt_x);
+		GameModel firstChoiceLetterX = new GameModel("x", R.drawable.letra_x_01, R.drawable.bt_x);
+		GameModel secondChoiceLetterX = new GameModel("x", R.drawable.letra_x_02, R.drawable.bt_x);
 		
-		JogoModel firstChoiceLetterY = new JogoModel("y", R.drawable.letra_y_01, R.drawable.bt_y);
+		GameModel firstChoiceLetterY = new GameModel("y", R.drawable.letra_y_01, R.drawable.bt_y);
 		
-		JogoModel firstChoiceLetterZ = new JogoModel("z", R.drawable.letra_z_01, R.drawable.bt_z);
-		JogoModel secondChoiceLetterZ = new JogoModel("z", R.drawable.letra_z_02, R.drawable.bt_z);
+		GameModel firstChoiceLetterZ = new GameModel("z", R.drawable.letra_z_01, R.drawable.bt_z);
+		GameModel secondChoiceLetterZ = new GameModel("z", R.drawable.letra_z_02, R.drawable.bt_z);
 		
 	
 		//Declaring and instantiating objects of type GameModel related to numbers
-		JogoModel firstChoiceNumber1 = new JogoModel("1",R.drawable.num_1_01, R.drawable.bt_1 );
-		JogoModel secondChoiceNumber1 = new JogoModel("1",R.drawable.num_1_02, R.drawable.bt_1 );
-		JogoModel thirdChoiceNumber1 = new JogoModel("1",R.drawable.num_1_03, R.drawable.bt_1 );
-		JogoModel fourthChoiceNumber1 = new JogoModel("1",R.drawable.num_1_04, R.drawable.bt_1 );
-		JogoModel fifthChoiceNumber1 = new JogoModel("1",R.drawable.num_1_05, R.drawable.bt_1 );
-		JogoModel sixthChoiceNumber1 = new JogoModel("1",R.drawable.num_1_06, R.drawable.bt_1 );
+		GameModel firstChoiceNumber1 = new GameModel("1",R.drawable.num_1_01, R.drawable.bt_1 );
+		GameModel secondChoiceNumber1 = new GameModel("1",R.drawable.num_1_02, R.drawable.bt_1 );
+		GameModel thirdChoiceNumber1 = new GameModel("1",R.drawable.num_1_03, R.drawable.bt_1 );
+		GameModel fourthChoiceNumber1 = new GameModel("1",R.drawable.num_1_04, R.drawable.bt_1 );
+		GameModel fifthChoiceNumber1 = new GameModel("1",R.drawable.num_1_05, R.drawable.bt_1 );
+		GameModel sixthChoiceNumber1 = new GameModel("1",R.drawable.num_1_06, R.drawable.bt_1 );
 	
-		JogoModel firstChoiceNumber2 = new JogoModel("2",R.drawable.num_2_01, R.drawable.bt_2 );
-		JogoModel secondChoiceNumber2 = new JogoModel("2",R.drawable.num_2_02, R.drawable.bt_2 );
-		JogoModel thirdChoiceNumber2 = new JogoModel("2",R.drawable.num_2_03, R.drawable.bt_2 );
-		JogoModel fourthChoiceNumber2 = new JogoModel("2",R.drawable.num_2_04, R.drawable.bt_2 );
-		JogoModel fifthChoiceNumber2 = new JogoModel("2",R.drawable.num_2_05, R.drawable.bt_2 );
-		JogoModel sixthChoiceNumber2 = new JogoModel("2",R.drawable.num_2_06, R.drawable.bt_2 );
+		GameModel firstChoiceNumber2 = new GameModel("2",R.drawable.num_2_01, R.drawable.bt_2 );
+		GameModel secondChoiceNumber2 = new GameModel("2",R.drawable.num_2_02, R.drawable.bt_2 );
+		GameModel thirdChoiceNumber2 = new GameModel("2",R.drawable.num_2_03, R.drawable.bt_2 );
+		GameModel fourthChoiceNumber2 = new GameModel("2",R.drawable.num_2_04, R.drawable.bt_2 );
+		GameModel fifthChoiceNumber2 = new GameModel("2",R.drawable.num_2_05, R.drawable.bt_2 );
+		GameModel sixthChoiceNumber2 = new GameModel("2",R.drawable.num_2_06, R.drawable.bt_2 );
 	
-		JogoModel firstChoiceNumber3 = new JogoModel("3",R.drawable.num_3_01, R.drawable.bt_3 );	
-		JogoModel secondChoiceNumber3 = new JogoModel("3",R.drawable.num_3_02, R.drawable.bt_3 );
-		JogoModel thirdChoiceNumber3 = new JogoModel("3",R.drawable.num_3_03, R.drawable.bt_3 );
-		JogoModel fourthChoiceNumber3 = new JogoModel("3",R.drawable.num_3_04, R.drawable.bt_3 );
-		JogoModel fifthChoiceNumber3 = new JogoModel("3",R.drawable.num_3_05, R.drawable.bt_3 );
-		JogoModel sixthChoiceNumber3 = new JogoModel("3",R.drawable.num_3_06, R.drawable.bt_3 );
+		GameModel firstChoiceNumber3 = new GameModel("3",R.drawable.num_3_01, R.drawable.bt_3 );	
+		GameModel secondChoiceNumber3 = new GameModel("3",R.drawable.num_3_02, R.drawable.bt_3 );
+		GameModel thirdChoiceNumber3 = new GameModel("3",R.drawable.num_3_03, R.drawable.bt_3 );
+		GameModel fourthChoiceNumber3 = new GameModel("3",R.drawable.num_3_04, R.drawable.bt_3 );
+		GameModel fifthChoiceNumber3 = new GameModel("3",R.drawable.num_3_05, R.drawable.bt_3 );
+		GameModel sixthChoiceNumber3 = new GameModel("3",R.drawable.num_3_06, R.drawable.bt_3 );
 	
-		JogoModel firstChoiceNumber4 = new JogoModel("4",R.drawable.num_4_01, R.drawable.bt_4 );
-		JogoModel thirdChoiceNumber4 = new JogoModel("4",R.drawable.num_4_03, R.drawable.bt_4 );
-		JogoModel fourthChoiceNumber4 = new JogoModel("4",R.drawable.num_4_04, R.drawable.bt_4 );
-		JogoModel fifthChoiceNumber4 = new JogoModel("4",R.drawable.num_4_05, R.drawable.bt_4 );
-		JogoModel sixthChoiceNumber4 = new JogoModel("4",R.drawable.num_4_06, R.drawable.bt_4 );
+		GameModel firstChoiceNumber4 = new GameModel("4",R.drawable.num_4_01, R.drawable.bt_4 );
+		GameModel thirdChoiceNumber4 = new GameModel("4",R.drawable.num_4_03, R.drawable.bt_4 );
+		GameModel fourthChoiceNumber4 = new GameModel("4",R.drawable.num_4_04, R.drawable.bt_4 );
+		GameModel fifthChoiceNumber4 = new GameModel("4",R.drawable.num_4_05, R.drawable.bt_4 );
+		GameModel sixthChoiceNumber4 = new GameModel("4",R.drawable.num_4_06, R.drawable.bt_4 );
 	
-		JogoModel firstChoiceNumber5 = new JogoModel("5",R.drawable.num_5_01, R.drawable.bt_5 );
-		JogoModel secondChoiceNumber5 = new JogoModel("5",R.drawable.num_5_02, R.drawable.bt_5 );
-		JogoModel thirdChoiceNumber5 = new JogoModel("5",R.drawable.num_5_03, R.drawable.bt_5 );
-		JogoModel fourthChoiceNumber5 = new JogoModel("5",R.drawable.num_5_04, R.drawable.bt_5 );
-		JogoModel fifthChoiceNumber5 = new JogoModel("5",R.drawable.num_5_05, R.drawable.bt_5 );
-		JogoModel sixthChoiceNumber5 = new JogoModel("5",R.drawable.num_5_06, R.drawable.bt_5 );
+		GameModel firstChoiceNumber5 = new GameModel("5",R.drawable.num_5_01, R.drawable.bt_5 );
+		GameModel secondChoiceNumber5 = new GameModel("5",R.drawable.num_5_02, R.drawable.bt_5 );
+		GameModel thirdChoiceNumber5 = new GameModel("5",R.drawable.num_5_03, R.drawable.bt_5 );
+		GameModel fourthChoiceNumber5 = new GameModel("5",R.drawable.num_5_04, R.drawable.bt_5 );
+		GameModel fifthChoiceNumber5 = new GameModel("5",R.drawable.num_5_05, R.drawable.bt_5 );
+		GameModel sixthChoiceNumber5 = new GameModel("5",R.drawable.num_5_06, R.drawable.bt_5 );
 	
-		JogoModel firstChoiceNumber6 = new JogoModel("6",R.drawable.num_6_01, R.drawable.bt_6 );
-		JogoModel secondChoiceNumber6 = new JogoModel("6",R.drawable.num_6_02, R.drawable.bt_6 );
-		JogoModel thirdChoiceNumber6 = new JogoModel("6",R.drawable.num_6_03, R.drawable.bt_6 );
-		JogoModel fourthChoiceNumber6 = new JogoModel("6",R.drawable.num_6_04, R.drawable.bt_6 );
-		JogoModel fifthChoiceNumber6 = new JogoModel("6",R.drawable.num_6_05, R.drawable.bt_6 );
-		JogoModel sixthChoiceNumber6 = new JogoModel("6",R.drawable.num_6_06, R.drawable.bt_6 );
+		GameModel firstChoiceNumber6 = new GameModel("6",R.drawable.num_6_01, R.drawable.bt_6 );
+		GameModel secondChoiceNumber6 = new GameModel("6",R.drawable.num_6_02, R.drawable.bt_6 );
+		GameModel thirdChoiceNumber6 = new GameModel("6",R.drawable.num_6_03, R.drawable.bt_6 );
+		GameModel fourthChoiceNumber6 = new GameModel("6",R.drawable.num_6_04, R.drawable.bt_6 );
+		GameModel fifthChoiceNumber6 = new GameModel("6",R.drawable.num_6_05, R.drawable.bt_6 );
+		GameModel sixthChoiceNumber6 = new GameModel("6",R.drawable.num_6_06, R.drawable.bt_6 );
 	
-		JogoModel firstChoiceNumber7 = new JogoModel("7",R.drawable.num_7_01, R.drawable.bt_7 );
-		JogoModel secondChoiceNumber7 = new JogoModel("7",R.drawable.num_7_02, R.drawable.bt_7 );
-		JogoModel thirdChoiceNumber7 = new JogoModel("7",R.drawable.num_7_03, R.drawable.bt_7 );
-		JogoModel fourthChoiceNumber7 = new JogoModel("7",R.drawable.num_7_04, R.drawable.bt_7 );
-		JogoModel fifthChoiceNumber7 = new JogoModel("7",R.drawable.num_7_05, R.drawable.bt_7 );
-		JogoModel sixthChoiceNumber7 = new JogoModel("7",R.drawable.num_7_06, R.drawable.bt_7 );
+		GameModel firstChoiceNumber7 = new GameModel("7",R.drawable.num_7_01, R.drawable.bt_7 );
+		GameModel secondChoiceNumber7 = new GameModel("7",R.drawable.num_7_02, R.drawable.bt_7 );
+		GameModel thirdChoiceNumber7 = new GameModel("7",R.drawable.num_7_03, R.drawable.bt_7 );
+		GameModel fourthChoiceNumber7 = new GameModel("7",R.drawable.num_7_04, R.drawable.bt_7 );
+		GameModel fifthChoiceNumber7 = new GameModel("7",R.drawable.num_7_05, R.drawable.bt_7 );
+		GameModel sixthChoiceNumber7 = new GameModel("7",R.drawable.num_7_06, R.drawable.bt_7 );
 	
-		JogoModel FirstChoiceNumber8 = new JogoModel("8",R.drawable.num_8_01, R.drawable.bt_8 );
-		JogoModel secondChoiceNumber8 = new JogoModel("8",R.drawable.num_8_02, R.drawable.bt_8 );
-		JogoModel thirdChoiceNumber8JogoModel("8",R.drawable.num_8_03, R.drawable.bt_8 );
-		JogoModel fourthChoiceNumber8 = new JogoModel("8",R.drawable.num_8_04, R.drawable.bt_8 );
-		JogoModel fifthChoiceNumber8 = new JogoModel("8",R.drawable.num_8_05, R.drawable.bt_8 );
-		JogoModel sixthChoiceNumber8 = new JogoModel("8",R.drawable.num_8_06, R.drawable.bt_8 );
+		GameModel FirstChoiceNumber8 = new GameModel("8",R.drawable.num_8_01, R.drawable.bt_8 );
+		GameModel secondChoiceNumber8 = new GameModel("8",R.drawable.num_8_02, R.drawable.bt_8 );
+		GameModel thirdChoiceNumber8 = new GameModel("8",R.drawable.num_8_03, R.drawable.bt_8 );
+		GameModel fourthChoiceNumber8 = new GameModel("8",R.drawable.num_8_04, R.drawable.bt_8 );
+		GameModel fifthChoiceNumber8 = new GameModel("8",R.drawable.num_8_05, R.drawable.bt_8 );
+		GameModel sixthChoiceNumber8 = new GameModel("8",R.drawable.num_8_06, R.drawable.bt_8 );
 	
-		JogoModel firstChoiceNumber9 = new JogoModel("9",R.drawable.num_9_01, R.drawable.bt_9 );
-		JogoModel secondChoiceNumber9 = new JogoModel("9",R.drawable.num_9_02, R.drawable.bt_9 );
-		JogoModel thirdChoiceNumber9 = new JogoModel("9",R.drawable.num_9_03, R.drawable.bt_9 );
-		JogoModel fourthChoiceNumber9 = new JogoModel("9",R.drawable.num_9_04, R.drawable.bt_9 );
-		JogoModel fifthChoiceNumber9 = new JogoModel("9",R.drawable.num_9_05, R.drawable.bt_9 );
-		JogoModel sixthChoiceNumber9 = new JogoModel("9",R.drawable.num_9_06, R.drawable.bt_9 );
+		GameModel firstChoiceNumber9 = new GameModel("9",R.drawable.num_9_01, R.drawable.bt_9 );
+		GameModel secondChoiceNumber9 = new GameModel("9",R.drawable.num_9_02, R.drawable.bt_9 );
+		GameModel thirdChoiceNumber9 = new GameModel("9",R.drawable.num_9_03, R.drawable.bt_9 );
+		GameModel fourthChoiceNumber9 = new GameModel("9",R.drawable.num_9_04, R.drawable.bt_9 );
+		GameModel fifthChoiceNumber9 = new GameModel("9",R.drawable.num_9_05, R.drawable.bt_9 );
+		GameModel sixthChoiceNumber9 = new GameModel("9",R.drawable.num_9_06, R.drawable.bt_9 );
 	
 		//storing the registrationLetter
 		cadastroLetra.add(firstChoiceLetterA);
@@ -387,16 +387,16 @@ public class GamePersistence {
 		return 0;
 	}
 
-	// Function to return object of type JogoModel from sending a desired number
-	public JogoModel getModelNumero(String numero) {
+	// Function to return object of type GameModel from sending a desired number
+	public GameModel getModelNumero(String numero) {
 
-		Iterator<JogoModel> i = cadastroNumero.iterator();
+		Iterator<GameModel> i = cadastroNumero.iterator();
 
 		Collections.shuffle(cadastroNumero);
 
 		while (i.hasNext()) {
 
-			JogoModel jm = (JogoModel) i.next();
+			GameModel jm = (GameModel) i.next();
 
 			String nome = jm.getNome();
 
@@ -407,16 +407,16 @@ public class GamePersistence {
 		return null;
 	}
 
-	// Function to return object of type JogoModel from sending a letter desired
-	public JogoModel getModelLetra(String letra) {
+	// Function to return object of type GameModel from sending a letter desired
+	public GameModel getModelLetra(String letra) {
 
-		Iterator<JogoModel> i = cadastroLetra.iterator();
+		Iterator<GameModel> i = cadastroLetra.iterator();
 
 		Collections.shuffle(cadastroLetra);
 
 		while (i.hasNext()) {
 
-			JogoModel jm = (JogoModel) i.next();
+			GameModel jm = (GameModel) i.next();
 
 			String nome = jm.getNome();
 

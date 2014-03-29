@@ -1,5 +1,5 @@
-/*Classe AprenderController
-	 * Abcd�rio is free software: you can redistribute it and / or
+/*Classe LearnController
+ * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -21,47 +21,47 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo;
+package jogo; 
 
+public class LearnController {
 
-public class AprenderController {
+	public LearnController() {
+	}
 
-	public AprenderController(){}
-	
 	private AprenderPersistencia acessar = AprenderPersistencia.getInstance();
 	private LearnModel tela;
 
-	public int[] definirLetra(String letra){
-		
+	public int[] definirLetra(String letra) {
+
 		int id[] = new int[2];
-		
+
 		tela = acessar.getModelLetra(letra);
-		
+
 		id[0] = tela.getImagem();
 		id[1] = tela.getAudio();
-		
+
 		return id;
 	}
 
-	public int[] definirNumero(String numero){
+	public int[] definirNumero(String numero) {
 
 		int id[] = new int[2];
-		
+
 		tela = acessar.getModelNumero(numero);
-		
+
 		id[0] = tela.getImagem();
 		id[1] = tela.getAudio();
-		
+
 		return id;
 	}
-	
-	public char proximaLetra(char letra){
-		
+
+	public char proximaLetra(char letra) {
+
 		return 'a';
 	}
-	
-	public char anteriorLetra(char letra){
-		
+
+	public char anteriorLetra(char letra) {
+
 		return 'a';
 	}
 }

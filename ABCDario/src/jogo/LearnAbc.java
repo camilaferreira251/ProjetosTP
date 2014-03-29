@@ -48,7 +48,7 @@ public class LearnAbc extends AbstractActivity {
 		backButton = (ImageView) findViewById(R.id.bt_voltar);
 		gridView = (GridView) findViewById(R.id.aprender_grade);
 
-		gridView.setAdapter(new GradeLetras(this));
+		gridView.setAdapter(new LettersGrid(this));
 	}
 
 	@Override
@@ -56,7 +56,7 @@ public class LearnAbc extends AbstractActivity {
 		backButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View arg0) {
-				startActivity(new Intent(LearnAbc.this, SelectMode_ABC.class));
+				startActivity(new Intent(LearnAbc.this, SelectModeABC.class));
 
 			}
 		});

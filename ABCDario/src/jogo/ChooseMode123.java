@@ -1,5 +1,5 @@
-/*Classe SelectMode_ABC
- * Abcd�rio is free software: you can redistribute it and / or
+/*Classe ChooseMode123
+	 * Abcd�rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -30,58 +30,49 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
-public class SelectMode_ABC extends Activity {
-
-	private ImageView bt_back, bt_learn, bt_play;
+public class ChooseMode123 extends Activity {
+	
+	private ImageView bt_voltar, bt_aprender, bt_jogar;
 
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.menu_abc);
-
-
+		setContentView(R.layout.menu_123);
+		
 		inicializarComponetes();
-		defineEvents();
-
+		definirEventos();
 	}
-	
+
 	private void inicializarComponetes() {
-		bt_back = (ImageView) findViewById(R.imgV.bt_voltar);
-		bt_learn = (ImageView) findViewById(R.imgV.bt_aprender);
-		bt_play = (ImageView) findViewById(R.imgV.bt_jogar);
+		bt_voltar = (ImageView) findViewById(R.imgV.bt_voltar);
+		bt_aprender = (ImageView) findViewById(R.imgV.bt_aprender);
+		bt_jogar = (ImageView) findViewById(R.imgV.bt_jogar);
+					
 	}
-
 	
-	private void defineEvents() {
-
-		bt_back.setOnClickListener(new View.OnClickListener() {
-
+	private void definirEventos() {
+		bt_voltar.setOnClickListener(new View.OnClickListener() {
+			
 			public void onClick(View v) {
-				startActivity(new Intent(SelectMode_ABC.this, Choice.class));
-
+				startActivity(new Intent(ChooseMode123.this, Choice.class));
+				
 			}
 		});
-
-
-		bt_learn.setOnClickListener(new View.OnClickListener() {
-
+		
+		bt_aprender.setOnClickListener(new View.OnClickListener() {
+			
 			public void onClick(View v) {
-
-				startActivity(new Intent(SelectMode_ABC.this, LearnAbc.class));
-
+				startActivity(new Intent(ChooseMode123.this, Aprender_123.class));
+				
 			}
-
 		});
-
-		bt_play.setOnClickListener(new View.OnClickListener() {
-
+		
+		bt_jogar.setOnClickListener(new View.OnClickListener() {
+			
 			public void onClick(View v) {
-
-				startActivity(new Intent(SelectMode_ABC.this, GameLetter.class));
+				startActivity(new Intent(ChooseMode123.this, JogoNumero.class));
+				
 			}
-
 		});
-
 	}
-
 }

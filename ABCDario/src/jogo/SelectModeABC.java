@@ -1,5 +1,5 @@
-	/*Classe EscolhaModo123
-	 * Abcd�rio is free software: you can redistribute it and / or
+/*Classe SelectModeABC
+ * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -30,49 +30,54 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Escolha_modo_123 extends Activity {
-	
-	private ImageView bt_voltar, bt_aprender, bt_jogar;
+public class SelectModeABC extends Activity {
 
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	private ImageView bt_back, bt_learn, bt_play;
+
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.menu_123);
-		
+		setContentView(R.layout.menu_abc);
+
 		inicializarComponetes();
-		definirEventos();
+		defineEvents();
+
 	}
 
 	private void inicializarComponetes() {
-		bt_voltar = (ImageView) findViewById(R.imgV.bt_voltar);
-		bt_aprender = (ImageView) findViewById(R.imgV.bt_aprender);
-		bt_jogar = (ImageView) findViewById(R.imgV.bt_jogar);
-					
+		bt_back = (ImageView) findViewById(R.imgV.bt_voltar);
+		bt_learn = (ImageView) findViewById(R.imgV.bt_aprender);
+		bt_play = (ImageView) findViewById(R.imgV.bt_jogar);
 	}
-	
-	private void definirEventos() {
-		bt_voltar.setOnClickListener(new View.OnClickListener() {
-			
+
+	private void defineEvents() {
+
+		bt_back.setOnClickListener(new View.OnClickListener() {
+
 			public void onClick(View v) {
-				startActivity(new Intent(Escolha_modo_123.this, Choice.class));
-				
+				startActivity(new Intent(SelectModeABC.this, Choice.class));
+
 			}
 		});
-		
-		bt_aprender.setOnClickListener(new View.OnClickListener() {
-			
+
+		bt_learn.setOnClickListener(new View.OnClickListener() {
+
 			public void onClick(View v) {
-				startActivity(new Intent(Escolha_modo_123.this, Aprender_123.class));
-				
+
+				startActivity(new Intent(SelectModeABC.this, LearnAbc.class));
+
 			}
+
 		});
-		
-		bt_jogar.setOnClickListener(new View.OnClickListener() {
-			
+
+		bt_play.setOnClickListener(new View.OnClickListener() {
+
 			public void onClick(View v) {
-				startActivity(new Intent(Escolha_modo_123.this, JogoNumero.class));
-				
+
+				startActivity(new Intent(SelectModeABC.this, GameLetter.class));
 			}
+
 		});
+
 	}
+
 }

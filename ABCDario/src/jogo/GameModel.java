@@ -1,5 +1,5 @@
-/*Class NeuronBP 
- * RNA is free software: you can redistribute it and / or
+/*Classe GameModel
+ * Abcdário is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -21,41 +21,45 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
+package jogo;
 
-package RNA;
+import java.io.Serializable;
 
+@SuppressWarnings("serial")
+public class GameModel implements Serializable {
 
+	private String nome;
+	private int imagem;
+	private int botao;
 
-class NeuronBP {
+	public GameModel(String nome, int imagem, int botao) {
+		setNome(nome);
+		setImagem(imagem);
+		setBotao(botao);
+	}
 
-    private double[] deltaw = null;
-    private double deltaBias = 0;
+	public int getImagem() {
+		return imagem;
+	}
 
-    NeuronBP(int tamanho) {
-        deltaw = new double[tamanho];
+	public void setImagem(int imagem) {
+		this.imagem = imagem;
+	}
 
-        for (int i = 0; i < deltaw.length; i++) {
-            deltaw[i] = 0;
-        }
-    }
+	public int getBotao() {
+		return botao;
+	}
 
-    final double getDeltaw(int i) {
-        return deltaw[i];
-    }
+	public void setBotao(int botao) {
+		this.botao = botao;
+	}
 
-    final void setDeltaw(int i, double valor) {
-        deltaw[i] = valor;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    final double getDeltaBias() {
-        return deltaBias;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    final void setDeltaBias(double deltaBias) {
-        this.deltaBias = deltaBias;
-    }
-
-    int getTamanho() {
-        return deltaw.length;
-    }
 }

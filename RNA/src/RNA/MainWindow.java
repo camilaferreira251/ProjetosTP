@@ -26,10 +26,10 @@ package RNA;
 import javax.swing.JLabel;
 import javax.swing.JToggleButton;
 
-public class JanelaPrincipal extends javax.swing.JFrame {
+public class MainWindow extends javax.swing.JFrame {
 
-    JanelaPrincipal essaJanela;
-    public JanelaPrincipal() {
+    MainWindow essaJanela;
+    public MainWindow() {
         initComponents();
         this.botaoUtilizar.setEnabled(false);
         essaJanela=this;
@@ -150,14 +150,14 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        JanelaTreinamento janela = new JanelaTreinamento(new JanelaPrincipal(), true,essaJanela);
+        JanelaTreinamento janela = new JanelaTreinamento(new MainWindow(), true,essaJanela);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void botaoUtilizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoUtilizarActionPerformed
-                QuestionWindow janela = new QuestionWindow(new JanelaPrincipal(), true);
+                QuestionWindow janela = new QuestionWindow(new MainWindow(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);

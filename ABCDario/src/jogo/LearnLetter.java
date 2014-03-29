@@ -34,7 +34,7 @@ import fga.mds.abcdario.R;
 
 public class LearnLetter extends Activity{
 
-	private AprenderController controller;	
+	private LearnController controller;	
 	
 	private ImageView bt_proximo, bt_anterior, bt_voltar, bt_som, imagem; 
 	private Intent it;
@@ -54,7 +54,7 @@ public class LearnLetter extends Activity{
 
 	public void inicializarComponentes(String letra) {
 		
-		controller = new AprenderController();
+		controller = new LearnController();
 		
 		bt_proximo = (ImageView) findViewById(R.id.bt_proximo);
 		bt_anterior = (ImageView) findViewById(R.id.bt_anterior);

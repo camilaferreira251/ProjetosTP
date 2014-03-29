@@ -23,7 +23,7 @@ public class JogoController {
 		
 		Collections.shuffle(numero);
 		
-		JogoModel modelo = acessar.getModelNumero((String) numero.get(0));
+		GameModel modelo = acessar.getModelNumero((String) numero.get(0));
 		
 		int[] id = new int[2];
 		
@@ -37,7 +37,7 @@ public class JogoController {
 		
 		Collections.shuffle(numero);
 		
-		JogoModel modelo =  acessar.getModelNumero((String) numero.get(0));
+		GameModel modelo =  acessar.getModelNumero((String) numero.get(0));
 		
 		return modelo.getBotao();
 	}
@@ -46,7 +46,7 @@ public class JogoController {
 		
 		Collections.shuffle(letra);
 		
-		JogoModel modelo = acessar.getModelLetra((String) letra.get(0));
+		GameModel modelo = acessar.getModelLetra((String) letra.get(0));
 		
 		int[] id = new int[2];
 		
@@ -60,7 +60,7 @@ public class JogoController {
 		
 		Collections.shuffle(letra);
 		
-		JogoModel modelo =  acessar.getModelLetra((String) letra.get(0));
+		GameModel modelo =  acessar.getModelLetra((String) letra.get(0));
 		
 		return modelo.getBotao();
 	}

@@ -21,28 +21,14 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-
-package RNA;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
+package RNA; 
 
 import RNA.Operador;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Marcos
- */
-public class QuestionWindow1 extends javax.swing.JDialog {
+public class QuestionWindows1 extends javax.swing.JDialog {
 
-    /**
-     * Creates new form Perguntas
-     */
-    public QuestionWindow1(java.awt.Frame parent, boolean modal) {
+    public QuestionWindows1(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 
@@ -481,7 +467,7 @@ public class QuestionWindow1 extends javax.swing.JDialog {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         this.dispose();
-        QuestionWindow janela = new QuestionWindow(new JanelaPrincipal(), true);
+        QuestionWindows janela = new QuestionWindows(new MainWindow(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
