@@ -1,5 +1,5 @@
 /*Classe GameModel
-	 * Abcdário is free software: you can redistribute it and / or
+ * Abcdário is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -26,13 +26,13 @@ package jogo;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class GameModel implements Serializable{
+public class GameModel implements Serializable {
 
 	private String nome;
 	private int imagem;
 	private int botao;
-	
-	public GameModel(String nome, int imagem, int botao){
+
+	public GameModel(String nome, int imagem, int botao) {
 		setNome(nome);
 		setImagem(imagem);
 		setBotao(botao);
@@ -61,5 +61,5 @@ public class GameModel implements Serializable{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 }
