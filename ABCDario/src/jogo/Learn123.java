@@ -58,7 +58,7 @@ public class Learn123 extends AbstractActivity{
 		bt_back.setOnClickListener(new View.OnClickListener(){
 	    	  
 	    	  public void onClick(View arg0) {			 
-	    		  startActivity(new Intent(Learn123.this, Escolha_modo_123.class));
+	    		  startActivity(new Intent(Learn123.this, ChooseMode123.class));
 	    	  }
 	    });
 		
