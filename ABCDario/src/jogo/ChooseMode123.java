@@ -54,7 +54,7 @@ public class ChooseMode123 extends Activity {
 		bt_voltar.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				startActivity(new Intent(ChooseMode123.this, Choice.class));
+				startActivity(new Intent(ChooseMode123.this, Select.class));
 				
 			}
 		});
@@ -62,7 +62,7 @@ public class ChooseMode123 extends Activity {
 		bt_aprender.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				startActivity(new Intent(ChooseMode123.this, Aprender_123.class));
+				startActivity(new Intent(ChooseMode123.this, Learn123.class));
 				
 			}
 		});
@@ -70,7 +70,7 @@ public class ChooseMode123 extends Activity {
 		bt_jogar.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				startActivity(new Intent(ChooseMode123.this, JogoNumero.class));
+				startActivity(new Intent(ChooseMode123.this, NumberGame.class));
 				
 			}
 		});
