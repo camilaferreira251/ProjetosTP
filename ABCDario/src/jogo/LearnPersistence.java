@@ -5,18 +5,18 @@ import java.util.Iterator;
 
 import fga.mds.abcdario.R;
 
-public class AprenderPersistencia {
+public class LearnPersistence {
 
 	private ArrayList<LearnModel> cadastroNumero= new ArrayList<LearnModel>();
 	private ArrayList<LearnModel> cadastroLetra= new ArrayList<LearnModel>();
 	
-	private static AprenderPersistencia instance;
+	private static LearnPersistence instance;
 	
-	private AprenderPersistencia(){}
+	private LearnPersistence(){}
 	
-	public static AprenderPersistencia getInstance(){
+	public static LearnPersistence getInstance(){
 		if(instance == null){
-			instance = new AprenderPersistencia();
+			instance = new LearnPersistence();
 			instance.atualizaCadastro();
 		}
 		return instance;
