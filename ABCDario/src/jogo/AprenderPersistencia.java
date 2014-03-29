@@ -104,7 +104,7 @@ public class AprenderPersistencia {
 		return 0;
 	}
 	
-	public LearnModel getModelLetra(String letra){
+	public LearnModel getModelLetter(String letra){
 			
 		Iterator<LearnModel> i = cadastroLetra.iterator();
 		
@@ -121,7 +121,7 @@ public class AprenderPersistencia {
 		return null;
 	}
 
-	public LearnModel getModelNumero(String numero) {
+	public LearnModel getModelNumber(String numero) {
 		
 		Iterator<LearnModel> i = cadastroNumero.iterator();
 		
