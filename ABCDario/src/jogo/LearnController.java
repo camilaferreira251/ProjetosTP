@@ -31,11 +31,11 @@ public class LearnController {
 	private AprenderPersistencia acessar = AprenderPersistencia.getInstance();
 	private LearnModel tela;
 
-	public int[] definirLetra(String letra) {
+	public int[] defineLetter(String letter) {
 
 		int id[] = new int[2];
 
-		tela = acessar.getModelLetra(letra);
+		tela = acessar.getModelLetter(letter);
 
 		id[0] = tela.getImage();
 		id[1] = tela.getAudio();
@@ -43,11 +43,11 @@ public class LearnController {
 		return id;
 	}
 
-	public int[] definirNumero(String numero) {
+	public int[] defineNumber(String number) {
 
 		int id[] = new int[2];
 
-		tela = acessar.getModelNumero(numero);
+		tela = acessar.getModelNumber(number);
 
 		id[0] = tela.getImage();
 		id[1] = tela.getAudio();
@@ -55,12 +55,12 @@ public class LearnController {
 		return id;
 	}
 
-	public char proximaLetra(char letra) {
+	public char nextLetter(char letter) {
 
 		return 'a';
 	}
 
-	public char anteriorLetra(char letra) {
+	public char previousLetter(char letter) {
 
 		return 'a';
 	}
