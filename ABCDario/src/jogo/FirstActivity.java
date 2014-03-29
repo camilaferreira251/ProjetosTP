@@ -42,8 +42,8 @@ public class FirstActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.inicio);
 
-		inicializarComponentes();
-		definirEventos();
+		initializeComponents();
+		defineEvents();
 	}
 
 	public void initializeComponents() {
@@ -56,7 +56,7 @@ public class FirstActivity extends Activity {
 		bt_iniciar.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View arg0) {
-				startActivity(new Intent(FirstActivity.this, Choice.class));
+				startActivity(new Intent(FirstActivity.this, Select.class));
 
 			}
 		});
