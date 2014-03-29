@@ -37,7 +37,7 @@ public class LearnController {
 
 		tela = acessar.getModelLetra(letra);
 
-		id[0] = tela.getImagem();
+		id[0] = tela.getImage();
 		id[1] = tela.getAudio();
 
 		return id;
@@ -49,7 +49,7 @@ public class LearnController {
 
 		tela = acessar.getModelNumero(numero);
 
-		id[0] = tela.getImagem();
+		id[0] = tela.getImage();
 		id[1] = tela.getAudio();
 
 		return id;
