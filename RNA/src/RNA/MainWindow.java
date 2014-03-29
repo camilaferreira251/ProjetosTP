@@ -157,7 +157,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void botaoUtilizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoUtilizarActionPerformed
-                QuestionWindow janela = new QuestionWindow(new MainWindow(), true);
+                QuestionWindows janela = new QuestionWindows(new MainWindow(), true);
         janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         janela.setVisible(true);
