@@ -52,7 +52,7 @@ public class Select extends Activity {
 		numbersButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View view) {
-				startActivity(new Intent(Select.this, Escolha_modo_123.class));
+				startActivity(new Intent(Select.this, SelectMode123.class));
 
 			}
 		});
@@ -60,7 +60,7 @@ public class Select extends Activity {
 		lettersBbutton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View view) {
-				startActivity(new Intent(Select.this, Escolha_modo_ABC.class));
+				startActivity(new Intent(Select.this, SelectModeABC.class));
 
 			}
 		});
