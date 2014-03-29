@@ -1,4 +1,4 @@
-/*Classe SelectModeABC
+/*Class SelectModeABC
  * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -32,34 +32,34 @@ import android.widget.ImageView;
 
 public class SelectModeABC extends Activity {
 
-	private ImageView bt_back, bt_learn, bt_play;
+	private ImageView backButton, learnButton, playButton;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_abc);
 
-		inicializarComponetes();
+		initializeComponents();
 		defineEvents();
 
 	}
 
-	private void inicializarComponetes() {
-		bt_back = (ImageView) findViewById(R.imgV.bt_voltar);
-		bt_learn = (ImageView) findViewById(R.imgV.bt_aprender);
-		bt_play = (ImageView) findViewById(R.imgV.bt_jogar);
+	private void initializeComponents() {
+		backButton = (ImageView) findViewById(R.imgV.bt_voltar);
+		learnButton = (ImageView) findViewById(R.imgV.bt_aprender);
+		playButton = (ImageView) findViewById(R.imgV.bt_jogar);
 	}
 
 	private void defineEvents() {
 
-		bt_back.setOnClickListener(new View.OnClickListener() {
+		backButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				startActivity(new Intent(SelectModeABC.this, Choice.class));
+				startActivity(new Intent(SelectModeABC.this, Select.class));
 
 			}
 		});
 
-		bt_learn.setOnClickListener(new View.OnClickListener() {
+		learnButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 
@@ -69,7 +69,7 @@ public class SelectModeABC extends Activity {
 
 		});
 
-		bt_play.setOnClickListener(new View.OnClickListener() {
+		playButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 
