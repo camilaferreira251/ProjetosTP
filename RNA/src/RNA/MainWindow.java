@@ -26,6 +26,7 @@ package RNA;
 import javax.swing.JLabel;
 import javax.swing.JToggleButton;
 
+@SuppressWarnings("serial")
 public class MainWindow extends javax.swing.JFrame {
 
     MainWindow essaJanela;
@@ -35,8 +36,6 @@ public class MainWindow extends javax.swing.JFrame {
         essaJanela=this;
     }
 
-    @SuppressWarnings("unchecked")
-    
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();

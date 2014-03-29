@@ -23,8 +23,9 @@
 
 package RNA;
 
-import RNA.Operador;
+import RNA.Operator;
 
+@SuppressWarnings("serial")
 public class QuestionWindows extends javax.swing.JDialog {
 
 	public QuestionWindows(java.awt.Frame parent, boolean modal) {
@@ -52,7 +53,6 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 	}
 
-	@SuppressWarnings("unchecked")
 	// <editor-fold defaultstate="collapsed"
 	// desc="Generated Code">//GEN-BEGIN:initComponents
 	private void initComponents() {
@@ -625,37 +625,37 @@ public class QuestionWindows extends javax.swing.JDialog {
 	}// GEN-LAST:event_jToggleButton1ActionPerformed
 
 	private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton2ActionPerformed
-		Operador.entradas[0] = simP1.isSelected() ? 1 : 0;
-		Operador.entradas[1] = simP2.isSelected() ? 1 : 0;
-		Operador.entradas[3] = simP4.isSelected() ? 1 : 0;
-		Operador.entradas[4] = simP5.isSelected() ? 1 : 0;
-		Operador.entradas[5] = simP6.isSelected() ? 1 : 0;
-		Operador.entradas[6] = simP7.isSelected() ? 1 : 0;
-		Operador.entradas[7] = simP8.isSelected() ? 1 : 0;
-		Operador.entradas[8] = simP9.isSelected() ? 1 : 0;
-		Operador.entradas[9] = simP10.isSelected() ? 1 : 0;
-		Operador.entradas[10] = simP11.isSelected() ? 1 : 0;
+		Operator.entradas[0] = simP1.isSelected() ? 1 : 0;
+		Operator.entradas[1] = simP2.isSelected() ? 1 : 0;
+		Operator.entradas[3] = simP4.isSelected() ? 1 : 0;
+		Operator.entradas[4] = simP5.isSelected() ? 1 : 0;
+		Operator.entradas[5] = simP6.isSelected() ? 1 : 0;
+		Operator.entradas[6] = simP7.isSelected() ? 1 : 0;
+		Operator.entradas[7] = simP8.isSelected() ? 1 : 0;
+		Operator.entradas[8] = simP9.isSelected() ? 1 : 0;
+		Operator.entradas[9] = simP10.isSelected() ? 1 : 0;
+		Operator.entradas[10] = simP11.isSelected() ? 1 : 0;
 
 		if (p3figado.isSelected()) {
-			Operador.entradas[2] = 0.89;
+			Operator.entradas[2] = 0.89;
 		} else if (p3corneas.isSelected()) {
-			Operador.entradas[2] = 0.44;
+			Operator.entradas[2] = 0.44;
 		} else if (p3coracao.isSelected()) {
-			Operador.entradas[2] = 0.11;
+			Operator.entradas[2] = 0.11;
 		} else if (p3pulmao.isSelected()) {
-			Operador.entradas[2] = 0.78;
+			Operator.entradas[2] = 0.78;
 		} else if (p3ossos.isSelected()) {
-			Operador.entradas[2] = 0.22;
+			Operator.entradas[2] = 0.22;
 		} else if (p3medula.isSelected()) {
-			Operador.entradas[2] = 1;
+			Operator.entradas[2] = 1;
 		} else if (p3rins.isSelected()) {
-			Operador.entradas[2] = 0.67;
+			Operator.entradas[2] = 0.67;
 		} else if (p3pele.isSelected()) {
-			Operador.entradas[2] = 0;
+			Operator.entradas[2] = 0;
 		} else if (p3pancreas.isSelected()) {
-			Operador.entradas[2] = 0.56;
+			Operator.entradas[2] = 0.56;
 		} else {
-			Operador.entradas[2] = 0.33;
+			Operator.entradas[2] = 0.33;
 		}
 
 		this.dispose();

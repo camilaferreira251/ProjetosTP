@@ -52,7 +52,7 @@ class NeuronBackPropagation {
 		this.deltaBias = deltaBias;
 	}
 
-	int getTamanho() {
+	int getSize() {
 		return deltaw.length;
 	}
 }

@@ -26,13 +26,13 @@ package RNA;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class Leitor {
+public class Reader {
 
     public final int tamanhoTreinamento = 48; //era 18
     private final double[][] entradaTreinamento = new double[tamanhoTreinamento][19];
     private final double[][] saidaDesejadaTreinamento = new double[tamanhoTreinamento][1];
-    private double testeEntrada[][] = new double[Operador.TAMANHOTESTE][19];
-    private double testeSaidaEsperada[][] = new double[Operador.TAMANHOTESTE][1];
+    private double testeEntrada[][] = new double[Operator.TAMANHOTESTE][19];
+    private double testeSaidaEsperada[][] = new double[Operator.TAMANHOTESTE][1];
 
     public void carregarArquivos() {
         int j;
@@ -68,7 +68,7 @@ public class Leitor {
             BufferedReader fileReader = new BufferedReader(file);
             fileReader.mark(500);
 
-            while (fileReader.readLine() != null && j < Operador.TAMANHOTESTE) {
+            while (fileReader.readLine() != null && j < Operator.TAMANHOTESTE) {
                 fileReader.reset();
                 String s[] = new String[20];
                 String linha = fileReader.readLine();
