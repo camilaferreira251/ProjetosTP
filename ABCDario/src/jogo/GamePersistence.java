@@ -101,11 +101,11 @@ public class GamePersistence {
 		GameModel thirdChoiceLetterF = new GameModel("f",
 				R.drawable.letra_f_03, R.drawable.bt_f);
 
-		JogoModel firstChoiceLetterG = new GameModel("g",
+		GameModel firstChoiceLetterG = new GameModel("g",
 				R.drawable.letra_g_01, R.drawable.bt_g);
-		JogoModel secondChoiceLetterG = new GameModel("g",
+		GameModel secondChoiceLetterG = new GameModel("g",
 				R.drawable.letra_g_02, R.drawable.bt_g);
-		JogoModel thirdChoiceLetterG = new GameModel("g",
+		GameModel thirdChoiceLetterG = new GameModel("g",
 				R.drawable.letra_g_03, R.drawable.bt_g);
 
 		GameModel firstChoiceLetterH = new GameModel("h",
@@ -192,7 +192,7 @@ public class GamePersistence {
 				R.drawable.letra_t_01, R.drawable.bt_t);
 		GameModel secondChoiceLetterT = new GameModel("t",
 				R.drawable.letra_t_02, R.drawable.bt_t);
-		GameModel ThirdChoiceLetterT = new GameModel("t",
+		GameModel thirdChoiceLetterT = new GameModel("t",
 				R.drawable.letra_t_03, R.drawable.bt_t);
 
 		GameModel firstChoiceLetterU = new GameModel("u",
@@ -345,188 +345,188 @@ public class GamePersistence {
 				R.drawable.bt_9);
 
 		// storing the registrationLetter
-		cadastroLetra.add(firstChoiceLetterA);
-		cadastroLetra.add(secondChoiceLetterA);
-		cadastroLetra.add(thirdChoiceLetterA);
+		registrationLetter.add(firstChoiceLetterA);
+		registrationLetter.add(secondChoiceLetterA);
+		registrationLetter.add(thirdChoiceLetterA);
 
-		cadastroLetra.add(firstChoiceLetterB);
-		cadastroLetra.add(secondChoiceLetterB);
-		cadastroLetra.add(thirdChoiceLetterB);
+		registrationLetter.add(firstChoiceLetterB);
+		registrationLetter.add(secondChoiceLetterB);
+		registrationLetter.add(thirdChoiceLetterB);
 
-		cadastroLetra.add(firstChoiceLetterC);
-		cadastroLetra.add(secondChoiceLetterC);
-		cadastroLetra.add(thirdChoiceLetterC);
-		cadastroLetra.add(fourthChoiceLetterC);
+		registrationLetter.add(firstChoiceLetterC);
+		registrationLetter.add(secondChoiceLetterC);
+		registrationLetter.add(thirdChoiceLetterC);
+		registrationLetter.add(fourthChoiceLetterC);
 
-		cadastroLetra.add(firstChoiceLetterD);
-		cadastroLetra.add(secondChoiceLetterD);
-		cadastroLetra.add(thirdChoiceLetterD);
+		registrationLetter.add(firstChoiceLetterD);
+		registrationLetter.add(secondChoiceLetterD);
+		registrationLetter.add(thirdChoiceLetterD);
 
-		cadastroLetra.add(firstChoiceLetterE);
-		cadastroLetra.add(secondChoiceLetterE);
-		cadastroLetra.add(thirdChoiceLetterE);
+		registrationLetter.add(firstChoiceLetterE);
+		registrationLetter.add(secondChoiceLetterE);
+		registrationLetter.add(thirdChoiceLetterE);
 
-		cadastroLetra.add(firstChoiceLetterF);
-		cadastroLetra.add(secondChoiceLetterF);
-		cadastroLetra.add(thirdChoiceLetterF);
+		registrationLetter.add(firstChoiceLetterF);
+		registrationLetter.add(secondChoiceLetterF);
+		registrationLetter.add(thirdChoiceLetterF);
 
-		cadastroLetra.add(firstChoiceLetterG);
-		cadastroLetra.add(secondChoiceLetterG);
-		cadastroLetra.add(thirdChoiceLetterG);
+		registrationLetter.add(firstChoiceLetterG);
+		registrationLetter.add(secondChoiceLetterG);
+		registrationLetter.add(thirdChoiceLetterG);
 
-		cadastroLetra.add(firstChoiceLetterH);
-		cadastroLetra.add(secondChoiceLetterH);
-		cadastroLetra.add(thirdChoiceLetterH);
+		registrationLetter.add(firstChoiceLetterH);
+		registrationLetter.add(secondChoiceLetterH);
+		registrationLetter.add(thirdChoiceLetterH);
 
-		cadastroLetra.add(firstChoiceLetterI);
-		cadastroLetra.add(secondChoiceLetterI);
-		cadastroLetra.add(thirdChoiceLetterI);
+		registrationLetter.add(firstChoiceLetterI);
+		registrationLetter.add(secondChoiceLetterI);
+		registrationLetter.add(thirdChoiceLetterI);
 
-		cadastroLetra.add(firstChoiceLetterJ);
-		cadastroLetra.add(secondChoiceLetterJ);
-		cadastroLetra.add(thirdChoiceLetterJ);
+		registrationLetter.add(firstChoiceLetterJ);
+		registrationLetter.add(secondChoiceLetterJ);
+		registrationLetter.add(thirdChoiceLetterJ);
 
-		cadastroLetra.add(firstChoiceLetterK);
+		registrationLetter.add(firstChoiceLetterK);
 
-		cadastroLetra.add(firstChoiceLetterL);
-		cadastroLetra.add(secondChoiceLetterL);
-		cadastroLetra.add(thirdChoiceLetterL);
+		registrationLetter.add(firstChoiceLetterL);
+		registrationLetter.add(secondChoiceLetterL);
+		registrationLetter.add(thirdChoiceLetterL);
 
-		cadastroLetra.add(firstChoiceLetterM);
-		cadastroLetra.add(secondChoiceLetterM);
-		cadastroLetra.add(thirdChoiceLetterM);
+		registrationLetter.add(firstChoiceLetterM);
+		registrationLetter.add(secondChoiceLetterM);
+		registrationLetter.add(thirdChoiceLetterM);
 
-		cadastroLetra.add(firstChoiceLetterN);
-		cadastroLetra.add(secondChoiceLetterN);
-		cadastroLetra.add(thirdChoiceLetterN);
+		registrationLetter.add(firstChoiceLetterN);
+		registrationLetter.add(secondChoiceLetterN);
+		registrationLetter.add(thirdChoiceLetterN);
 
-		cadastroLetra.add(firstChoiceLetterO);
-		cadastroLetra.add(secondChoiceLetterO);
-		cadastroLetra.add(thirdChoiceLetterO);
+		registrationLetter.add(firstChoiceLetterO);
+		registrationLetter.add(secondChoiceLetterO);
+		registrationLetter.add(thirdChoiceLetterO);
 
-		cadastroLetra.add(firstChoiceLetterP);
-		cadastroLetra.add(secondChoiceLetterP);
-		cadastroLetra.add(thirdChoiceLetterP);
+		registrationLetter.add(firstChoiceLetterP);
+		registrationLetter.add(secondChoiceLetterP);
+		registrationLetter.add(thirdChoiceLetterP);
 
-		cadastroLetra.add(firstChoiceLetterQ);
-		cadastroLetra.add(secondChoiceLetterQ);
-		cadastroLetra.add(thirdChoiceLetterQ);
+		registrationLetter.add(firstChoiceLetterQ);
+		registrationLetter.add(secondChoiceLetterQ);
+		registrationLetter.add(thirdChoiceLetterQ);
 
-		cadastroLetra.add(firstChoiceLetterR);
-		cadastroLetra.add(secondChoiceLetterR);
-		cadastroLetra.add(thirdChoiceLetterR);
+		registrationLetter.add(firstChoiceLetterR);
+		registrationLetter.add(secondChoiceLetterR);
+		registrationLetter.add(thirdChoiceLetterR);
 
-		cadastroLetra.add(firstChoiceLetterS);
-		cadastroLetra.add(secondChoiceLetterS);
-		cadastroLetra.add(thirdChoiceLetterS);
+		registrationLetter.add(firstChoiceLetterS);
+		registrationLetter.add(secondChoiceLetterS);
+		registrationLetter.add(thirdChoiceLetterS);
 
-		cadastroLetra.add(firstChoiceLetterT);
-		cadastroLetra.add(secondChoiceLetterT);
-		cadastroLetra.add(thirdChoiceLetterT);
+		registrationLetter.add(firstChoiceLetterT);
+		registrationLetter.add(secondChoiceLetterT);
+		registrationLetter.add(thirdChoiceLetterT);
 
-		cadastroLetra.add(firstChoiceLetterU);
-		cadastroLetra.add(secondChoiceLetterU);
-		cadastroLetra.add(thirdChoiceLetterU);
+		registrationLetter.add(firstChoiceLetterU);
+		registrationLetter.add(secondChoiceLetterU);
+		registrationLetter.add(thirdChoiceLetterU);
 
-		cadastroLetra.add(firstChoiceLetterV);
-		cadastroLetra.add(secondChoiceLetterV);
-		cadastroLetra.add(ThirdChoiceLetterV);
+		registrationLetter.add(firstChoiceLetterV);
+		registrationLetter.add(secondChoiceLetterV);
+		registrationLetter.add(thirdChoiceLetterV);
 
-		cadastroLetra.add(firstChoiceLetterW);
-		cadastroLetra.add(secondChoiceLetterW);
+		registrationLetter.add(firstChoiceLetterW);
+		registrationLetter.add(secondChoiceLetterW);
 
-		cadastroLetra.add(firstChoiceLetterX);
-		cadastroLetra.add(secondChoiceLetterX);
+		registrationLetter.add(firstChoiceLetterX);
+		registrationLetter.add(secondChoiceLetterX);
 
-		cadastroLetra.add(firstChoiceLetterY);
+		registrationLetter.add(firstChoiceLetterY);
 
-		cadastroLetra.add(firstChoiceLetterZ);
-		cadastroLetra.add(secondChoiceLetterZ);
+		registrationLetter.add(firstChoiceLetterZ);
+		registrationLetter.add(secondChoiceLetterZ);
 
 		// Storing the registrationNumber
-		cadastroNumero.add(firstChoiceNumber1);
-		cadastroNumero.add(secondChoiceNumber1);
-		cadastroNumero.add(thirdChthirdNumber1);
-		cadastroNumero.add(fourthChoiceNumber1);
-		cadastroNumero.add(fifthChoiceNumber1);
-		cadastroNumero.add(sixthChoiceNumber1);
+		registrationNumber.add(firstChoiceNumber1);
+		registrationNumber.add(secondChoiceNumber1);
+		registrationNumber.add(thirdChoiceNumber1);
+		registrationNumber.add(fourthChoiceNumber1);
+		registrationNumber.add(fifthChoiceNumber1);
+		registrationNumber.add(sixthChoiceNumber1);
 
-		cadastroNumero.add(firstChoiceNumber2);
-		cadastroNumero.add(secondChoiceNumber2);
-		cadastroNumero.add(thirdChoiceNumber2);
-		cadastroNumero.add(fourthChoiceNumber2);
-		cadastroNumero.add(fifthChoiceNumber2);
-		cadastroNumero.add(sixthChoiceNumber2);
+		registrationNumber.add(firstChoiceNumber2);
+		registrationNumber.add(secondChoiceNumber2);
+		registrationNumber.add(thirdChoiceNumber2);
+		registrationNumber.add(fourthChoiceNumber2);
+		registrationNumber.add(fifthChoiceNumber2);
+		registrationNumber.add(sixthChoiceNumber2);
 
-		cadastroNumero.add(firstChoiceNumber3);
-		cadastroNumero.add(secondChoiceNumber3);
-		cadastroNumero.add(thirdChoiceNumber3);
-		cadastroNumero.add(fourthChoiceNumber3);
-		cadastroNumero.add(fifthChoiceNumber3);
-		cadastroNumero.add(sixthChoiceNumber3);
+		registrationNumber.add(firstChoiceNumber3);
+		registrationNumber.add(secondChoiceNumber3);
+		registrationNumber.add(thirdChoiceNumber3);
+		registrationNumber.add(fourthChoiceNumber3);
+		registrationNumber.add(fifthChoiceNumber3);
+		registrationNumber.add(sixthChoiceNumber3);
 
-		cadastroNumero.add(firstChoiceNumber4);
-		cadastroNumero.add(thirdChoiceNumber4);
-		cadastroNumero.add(fourthChoiceNumber4);
-		cadastroNumero.add(fifthChoiceNumber4);
-		cadastroNumero.add(sixthChoiceNumber4);
+		registrationNumber.add(firstChoiceNumber4);
+		registrationNumber.add(thirdChoiceNumber4);
+		registrationNumber.add(fourthChoiceNumber4);
+		registrationNumber.add(fifthChoiceNumber4);
+		registrationNumber.add(sixthChoiceNumber4);
 
-		cadastroNumero.add(firstChoiceNumber5);
-		cadastroNumero.add(secondChoiceNumber5);
-		cadastroNumero.add(thirdChoiceNumber5);
-		cadastroNumero.add(fourthChoiceNumber5);
-		cadastroNumero.add(fifthChoiceNumber5);
-		cadastroNumero.add(sixthChoiceNumber5);
+		registrationNumber.add(firstChoiceNumber5);
+		registrationNumber.add(secondChoiceNumber5);
+		registrationNumber.add(thirdChoiceNumber5);
+		registrationNumber.add(fourthChoiceNumber5);
+		registrationNumber.add(fifthChoiceNumber5);
+		registrationNumber.add(sixthChoiceNumber5);
 
-		cadastroNumero.add(firstChoiceNumber6);
-		cadastroNumero.add(secondChoiceNumber6);
-		cadastroNumero.add(thirdChoiceNumber6);
-		cadastroNumero.add(fourthChoiceNumber6);
-		cadastroNumero.add(fifthChoiceNumber6);
-		cadastroNumero.add(sixthChoiceNumber6);
+		registrationNumber.add(firstChoiceNumber6);
+		registrationNumber.add(secondChoiceNumber6);
+		registrationNumber.add(thirdChoiceNumber6);
+		registrationNumber.add(fourthChoiceNumber6);
+		registrationNumber.add(fifthChoiceNumber6);
+		registrationNumber.add(sixthChoiceNumber6);
 
-		cadastroNumero.add(firstChoiceNumber7);
-		cadastroNumero.add(secondChoiceNumber7);
-		cadastroNumero.add(thirdChoiceNumber7);
-		cadastroNumero.add(fourthChoiceNumber7);
-		cadastroNumero.add(fifthChoiceNumber7);
-		cadastroNumero.add(sixthChoiceNumber7);
+		registrationNumber.add(firstChoiceNumber7);
+		registrationNumber.add(secondChoiceNumber7);
+		registrationNumber.add(thirdChoiceNumber7);
+		registrationNumber.add(fourthChoiceNumber7);
+		registrationNumber.add(fifthChoiceNumber7);
+		registrationNumber.add(sixthChoiceNumber7);
 
-		cadastroNumero.add(FirstChoiceNumber8);
-		cadastroNumero.add(secondChoiceNumber8);
-		cadastroNumero.add(thirdChoiceNumber8);
-		cadastroNumero.add(fourthChoiceNumber8);
-		cadastroNumero.add(fifthChoiceNumber8);
-		cadastroNumero.add(sixthChoiceNumber8);
+		registrationNumber.add(FirstChoiceNumber8);
+		registrationNumber.add(secondChoiceNumber8);
+		registrationNumber.add(thirdChoiceNumber8);
+		registrationNumber.add(fourthChoiceNumber8);
+		registrationNumber.add(fifthChoiceNumber8);
+		registrationNumber.add(sixthChoiceNumber8);
 
-		cadastroNumero.add(firstChoiceNumber9);
-		cadastroNumero.add(secondChoiceNumber9);
-		cadastroNumero.add(thirdChoiceNumber9);
-		cadastroNumero.add(fourthChoiceNumber9);
-		cadastroNumero.add(fifthChoiceNumber9);
-		cadastroNumero.add(sixthChoiceNumber9);
+		registrationNumber.add(firstChoiceNumber9);
+		registrationNumber.add(secondChoiceNumber9);
+		registrationNumber.add(thirdChoiceNumber9);
+		registrationNumber.add(fourthChoiceNumber9);
+		registrationNumber.add(fifthChoiceNumber9);
+		registrationNumber.add(sixthChoiceNumber9);
 
 		// verification
-		if (cadastroLetra.isEmpty() || cadastroNumero.isEmpty())
+		if (registrationLetter.isEmpty() || registrationNumber.isEmpty())
 			return -1;
 
 		return 0;
 	}
 
 	// Function to return object of type GameModel from sending a desired number
-	public GameModel getModelNumero(String numero) {
+	public GameModel getModelNumero(String number) {
 
-		Iterator<GameModel> i = cadastroNumero.iterator();
+		Iterator<GameModel> i = registrationNumber.iterator();
 
-		Collections.shuffle(cadastroNumero);
+		Collections.shuffle(registrationNumber);
 
 		while (i.hasNext()) {
 
 			GameModel jm = (GameModel) i.next();
 
-			String nome = jm.getNome();
+			String name = jm.getNome();
 
-			if (nome.equalsIgnoreCase(numero))
+			if (name.equalsIgnoreCase(number))
 				return jm;
 		}
 
@@ -534,19 +534,19 @@ public class GamePersistence {
 	}
 
 	// Function to return object of type GameModel from sending a letter desired
-	public GameModel getModelLetra(String letra) {
+	public GameModel getModelLetra(String letter) {
 
-		Iterator<GameModel> i = cadastroLetra.iterator();
+		Iterator<GameModel> i = registrationLetter.iterator();
 
-		Collections.shuffle(cadastroLetra);
+		Collections.shuffle(registrationLetter);
 
 		while (i.hasNext()) {
 
 			GameModel jm = (GameModel) i.next();
 
-			String nome = jm.getNome();
+			String name = jm.getNome();
 
-			if (nome.equalsIgnoreCase(letra)) {
+			if (name.equalsIgnoreCase(letter)) {
 
 				return jm;
 			}

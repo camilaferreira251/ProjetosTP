@@ -1,4 +1,4 @@
-package jogo
+package jogo;
 
 import fga.mds.abcdario.R;
 import android.app.Service;
@@ -16,7 +16,7 @@ public class SomBackground extends Service{
 	@Override
 	public void onCreate() {
 	    super.onCreate();
-	       	player = MediaPlayer.create(this, R.raw.musica_back);
+	       	player = MediaPlayer.create(this, R.raw.musica_tela_inicial);
 	        player.setLooping(true); // Set looping
 	        player.setVolume(0.35f , 0.35f);
 	        player.start();
