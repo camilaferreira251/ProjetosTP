@@ -24,11 +24,11 @@
 package RNA;
 
 public class Sigmoide extends Function {
-	public final double funcao(double x) {
+	public final double function (double x) {
 		return (1 / (1 + Math.exp(-x)));
 	}
 
-	public final double derivada(double x) {
+	public final double derived(double x) {
 		return x * (1 - x);
 	}
 }
