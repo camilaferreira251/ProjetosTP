@@ -28,17 +28,17 @@ public class LearnController {
 	public LearnController() {
 	}
 
-	private LearnPersistence acessar = LearnPersistence.getInstance();
-	private LearnModel tela;
+	private LearnPersistence acess = LearnPersistence.getInstance();
+	private LearnModel screen;
 
 	public int[] defineLetter(String letter) {
 
 		int id[] = new int[2];
 
-		tela = acessar.getModelLetter(letter);
+		screen = acess.getModelLetter(letter);
 
-		id[0] = tela.getImage();
-		id[1] = tela.getAudio();
+		id[0] = screen.getImage();
+		id[1] = screen.getAudio();
 
 		return id;
 	}
@@ -47,10 +47,10 @@ public class LearnController {
 
 		int id[] = new int[2];
 
-		tela = acessar.getModelNumber(number);
+		screen = acess.getModelNumber(number);
 
-		id[0] = tela.getImage();
-		id[1] = tela.getAudio();
+		id[0] = screen.getImage();
+		id[1] = screen.getAudio();
 
 		return id;
 	}
