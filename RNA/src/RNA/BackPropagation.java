@@ -103,7 +103,7 @@ public class BackPropagation {
 			ultima.setError(
 					i,
 					(saidaDesejada[i] - c.getOutPut(i))
-							* f.derivada(c.getOutPut(i)));
+							* f.derived(c.getOutPut(i)));
 		}
 	}
 
@@ -120,7 +120,7 @@ public class BackPropagation {
 					double erroNeuronio = camadas[i + 1].getError(k);
 					erro += pesoNeuronio * erroNeuronio;
 				}
-				erro *= f.derivada(m.getLayer(i).getOutPut(j));
+				erro *= f.derived(m.getLayer(i).getOutPut(j));
 				camadas[i].setError(j, erro);
 			}
 		}
