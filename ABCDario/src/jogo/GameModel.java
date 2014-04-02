@@ -28,38 +28,38 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class GameModel implements Serializable {
 
-	private String nome;
-	private int imagem;
-	private int botao;
+	private String name;
+	private int image;
+	private int button;
 
-	public GameModel(String nome, int imagem, int botao) {
-		setNome(nome);
-		setImagem(imagem);
-		setBotao(botao);
+	public GameModel(String name, int image, int button) {
+		setNome(name);
+		setImagem(image);
+		setBotao(button);
 	}
 
-	public int getImagem() {
-		return imagem;
+	public int getImage() {
+		return image;
 	}
 
-	public void setImagem(int imagem) {
-		this.imagem = imagem;
+	public void setImage(int image) {
+		this.image = image;
 	}
 
-	public int getBotao() {
-		return botao;
+	public int getButton() {
+		return button;
 	}
 
-	public void setBotao(int botao) {
-		this.botao = botao;
+	public void setButton(int button) {
+		this.button = button;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String name) {
+		this.name = name;
 	}
 
 }

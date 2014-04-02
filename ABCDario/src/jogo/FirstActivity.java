@@ -35,7 +35,7 @@ import android.widget.ImageView;
 
 public class FirstActivity extends Activity {
 
-	private ImageView bt_iniciar, bt_sair, bt_sobre;
+	private ImageView bt_start, bt_exit, br_about;
 	final Context context = this;
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +47,13 @@ public class FirstActivity extends Activity {
 	}
 
 	public void initializeComponents() {
-		bt_iniciar = (ImageView) findViewById(R.imgV.bt_iniciar);
-		bt_sair = (ImageView) findViewById(R.imgV.bt_sair);
-		bt_sobre = (ImageView) findViewById(R.imgV.bt_sobre);
+		bt_start = (ImageView) findViewById(R.imgV.bt_iniciar);
+		bt_exit = (ImageView) findViewById(R.imgV.bt_sair);
+		br_about = (ImageView) findViewById(R.imgV.bt_sobre);
 	}
 
 	public void defineEvents() {
-		bt_iniciar.setOnClickListener(new View.OnClickListener() {
+		bt_start.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View arg0) {
 				startActivity(new Intent(FirstActivity.this, Select.class));
@@ -61,14 +61,14 @@ public class FirstActivity extends Activity {
 			}
 		});
 
-		bt_sair.setOnClickListener(new View.OnClickListener() {
+		bt_exit.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View arg0) {
 				System.exit(0);
 			}
 		});
 
-		bt_sobre.setOnClickListener(new View.OnClickListener() {
+		br_about.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View arg0) {
 				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
