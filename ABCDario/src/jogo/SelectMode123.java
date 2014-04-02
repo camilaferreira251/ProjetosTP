@@ -32,7 +32,7 @@ import android.widget.ImageView;
 
 public class SelectMode123 extends Activity {
 	
-	private ImageView bt_voltar, bt_aprender, bt_jogar;
+	private ImageView bt_back, bt_learn, bt_play;
 
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -44,14 +44,14 @@ public class SelectMode123 extends Activity {
 	}
 
 	private void inicializarComponetes() {
-		bt_voltar = (ImageView) findViewById(R.imgV.bt_voltar);
-		bt_aprender = (ImageView) findViewById(R.imgV.bt_aprender);
-		bt_jogar = (ImageView) findViewById(R.imgV.bt_jogar);
+		bt_back = (ImageView) findViewById(R.imgV.bt_voltar);
+		bt_learn = (ImageView) findViewById(R.imgV.bt_aprender);
+		bt_play = (ImageView) findViewById(R.imgV.bt_jogar);
 					
 	}
 	
 	private void definirEventos() {
-		bt_voltar.setOnClickListener(new View.OnClickListener() {
+		bt_back.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
 				startActivity(new Intent(SelectMode123.this, Select.class));
@@ -59,7 +59,7 @@ public class SelectMode123 extends Activity {
 			}
 		});
 		
-		bt_aprender.setOnClickListener(new View.OnClickListener() {
+		bt_learn.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
 				startActivity(new Intent(SelectMode123.this, Learn123.class));
@@ -67,7 +67,7 @@ public class SelectMode123 extends Activity {
 			}
 		});
 		
-		bt_jogar.setOnClickListener(new View.OnClickListener() {
+		bt_play.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
 				startActivity(new Intent(SelectMode123.this, NumberGame.class));
