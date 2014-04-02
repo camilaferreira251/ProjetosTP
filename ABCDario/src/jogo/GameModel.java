@@ -34,8 +34,8 @@ public class GameModel implements Serializable {
 
 	public GameModel(String name, int image, int button) {
 		setNome(name);
-		setImagem(image);
-		setBotao(button);
+		setImage(image);
+		setButton(button);
 	}
 
 	public int getImage() {
@@ -58,7 +58,7 @@ public class GameModel implements Serializable {
 		return name;
 	}
 
-	public void setNome(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
