@@ -28,7 +28,7 @@ public class LearnController {
 	public LearnController() {
 	}
 
-	private AprenderPersistencia acessar = AprenderPersistencia.getInstance();
+	private LearnPersistence acessar = LearnPersistence.getInstance();
 	private LearnModel tela;
 
 	public int[] defineLetter(String letter) {
