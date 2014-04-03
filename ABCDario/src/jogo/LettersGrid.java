@@ -34,10 +34,10 @@ import android.widget.GridLayout.LayoutParams;
 
 public class LettersGrid extends BaseAdapter {
 
-	private Context contexto;
+	private Context context;
 
 	// Iniciando botoes na grade
-	public Integer[] botoesLetras = { R.drawable.bt_a, R.drawable.bt_b,
+	public Integer[] buttonsLetters = { R.drawable.bt_a, R.drawable.bt_b,
 			R.drawable.bt_c, R.drawable.bt_d, R.drawable.bt_e, R.drawable.bt_f,
 			R.drawable.bt_g, R.drawable.bt_h, R.drawable.bt_i, R.drawable.bt_j,
 			R.drawable.bt_k, R.drawable.bt_l, R.drawable.bt_m, R.drawable.bt_n,
@@ -46,29 +46,29 @@ public class LettersGrid extends BaseAdapter {
 			R.drawable.bt_x, R.drawable.bt_z, R.drawable.bt_w, R.drawable.bt_y, };
 
 	public LettersGrid(Context c) {
-		this.contexto = c;
+		this.context = c;
 	}
 
 	@Override
 	public int getCount() {
-		return botoesLetras.length;
+		return buttonsLetters.length;
 	}
 
 	@Override
-	public Object getItem(int posicao) {
-		return botoesLetras[posicao];
+	public Object getItem(int positon) {
+		return buttonsLetters[positon];
 	}
 
 	@Override
-	public long getItemId(int posicao) {
+	public long getItemId(int position) {
 		return 0;
 	}
 
 	@Override
-	public View getView(int posicao, View convertView, ViewGroup parent) {
+	public View getView(int position, View convertView, ViewGroup parent) {
 
-		ImageView imageView = new ImageView(contexto);
-		imageView.setImageResource(botoesLetras[posicao]);
+		ImageView imageView = new ImageView(context);
+		imageView.setImageResource(buttonsLetters[position]);
 		imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 		imageView.setLayoutParams(new GridView.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));

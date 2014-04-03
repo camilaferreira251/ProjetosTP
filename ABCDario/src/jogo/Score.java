@@ -35,21 +35,21 @@ public class Score extends Activity {
 
 	// Declaração das variáveis, textView e Bundle.
 
-	private TextView campo_acertos; // Campo que informa quantidade de acertos
+	private TextView sucesses_field; // Campo que informa quantidade de acertos
 									// realizados no jogo.
-	private TextView campo_erros; // Campo que informa quantidade de erros
+	private TextView mistakes_field; // Campo que informa quantidade de erros
 									// realizados no jogo.
-	private ImageView estrelas; // Imagem de estrela que varia de acordo com a
+	private ImageView stars; // Imagem de estrela que varia de acordo com a
 								// porcentagem de acertos realizados no jogo.
-	private ImageView bt_voltar; // Imagem utilizada como botão para retornar
+	private ImageView bt_back; // Imagem utilizada como botão para retornar
 									// para tela anterior.
 	private Bundle params; // Declaração de variável do tipo Bundle para
 							// manipulação de parâmetros.
-	private int qtd_acertos; // Declaração de variável int para armazenar a
+	private int qtd_sucesses; // Declaração de variável int para armazenar a
 								// quantidade de acertos realizados no jogo.
-	private int qtd_erros; // Declaração de variável int para armazenar a
+	private int qtd_mistakes; // Declaração de variável int para armazenar a
 							// quantidade de erros realizados no jogo.
-	private float porcentagemAcertos; // Declaração de variável float para
+	private float porcentageSucesses; // Declaração de variável float para
 										// armazenar a procentagem de acertos.
 	private ScoreController controller;
 
@@ -63,25 +63,25 @@ public class Score extends Activity {
 									// componentes de tela utilizando ID.
 		params = obterParametros(); // Obtendo os parametros que a activity de
 									// jogo passou para o Bundle.
-		qtd_acertos = setandoNumerosAcertosTela(params);// Setando na tela, no
+		qtd_sucesses = setandoNumerosAcertosTela(params);// Setando na tela, no
 														// campo de acertos a
 														// quantidade obtida.
-		qtd_erros = setandoNumerosErrosTela(params); // Setando na tela, no
+		qtd_mistakes = setandoNumerosErrosTela(params); // Setando na tela, no
 														// campo de erros a
 														// quantidade obtida.
-		porcentagemAcertos = calculaPorcentagemAcertos(qtd_acertos, qtd_erros); // Calculando
+		porcentageSucesses = calculaPorcentagemAcertos(qtd_sucesses, qtd_mistakes); // Calculando
 																				// porcentagem
 																				// de
 																				// acertos.
-		definirImgEstrelas(porcentagemAcertos);
+		definirImgEstrelas(porcentageSucesses);
 		definirEventos(); // Definindo evento do botão voltar.
 	}
 
 	private void inicializarComponentes() {
-		estrelas = (ImageView) findViewById(R.id.estrelas);
-		bt_voltar = (ImageView) findViewById(R.id.bt_voltar);
-		campo_acertos = (TextView) findViewById(R.id.campo_acertos);
-		campo_erros = (TextView) findViewById(R.id.campo_erros);
+		stars = (ImageView) findViewById(R.id.estrelas);
+		bt_back = (ImageView) findViewById(R.id.bt_voltar);
+		sucesses_field = (TextView) findViewById(R.id.sucesses_field);
+		mistakes_field = (TextView) findViewById(R.id.mistakes_field);
 	}
 
 	private Bundle obterParametros() {
@@ -96,7 +96,7 @@ public class Score extends Activity {
 		{
 			int mostraacertos = params.getInt("acertos");
 			String acertos = Integer.toString(mostraacertos);
-			campo_acertos.setText(acertos);
+			sucesses_field.setText(acertos);
 			return mostraacertos;
 		}
 	}
@@ -107,7 +107,7 @@ public class Score extends Activity {
 		{
 			int mostraerros = params.getInt("erros");
 			String erros = Integer.toString(mostraerros);
-			campo_erros.setText(erros);
+			mistakes_field.setText(erros);
 			return mostraerros;
 		}
 	}
@@ -119,7 +119,7 @@ public class Score extends Activity {
 	}
 
 	private void definirEventos() {
-		bt_voltar.setOnClickListener(new View.OnClickListener() {
+		bt_back.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 				finish();
@@ -128,7 +128,7 @@ public class Score extends Activity {
 	}
 
 	private void definirImgEstrelas(float porcentagemAcertos) {
-		estrelas.setImageDrawable(getResources().getDrawable(
+		stars.setImageDrawable(getResources().getDrawable(
 				controller.definirImgEstrelas(porcentagemAcertos)));
 	}
 

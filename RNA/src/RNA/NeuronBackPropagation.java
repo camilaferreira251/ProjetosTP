@@ -28,8 +28,8 @@ class NeuronBackPropagation {
 	private double[] deltaw = null;
 	private double deltaBias = 0;
 
-	NeuronBackPropagation(int tamanho) {
-		deltaw = new double[tamanho];
+	NeuronBackPropagation(int size) {
+		deltaw = new double[size];
 
 		for (int i = 0; i < deltaw.length; i++) {
 			deltaw[i] = 0;
@@ -40,8 +40,8 @@ class NeuronBackPropagation {
 		return deltaw[i];
 	}
 
-	final void setDeltaw(int i, double valor) {
-		deltaw[i] = valor;
+	final void setDeltaw(int i, double value) {
+		deltaw[i] = value;
 	}
 
 	final double getDeltaBias() {

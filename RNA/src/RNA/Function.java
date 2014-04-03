@@ -24,7 +24,7 @@
 package RNA;
 
 public abstract class Function {
-	public abstract double funcao(double x);
+	public abstract double function(double x);
 
-	public abstract double derivada(double x);
+	public abstract double derived(double x);
 }

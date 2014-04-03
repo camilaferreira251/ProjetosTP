@@ -53,7 +53,7 @@ public class Layer {
     void Calcular(double[] entradas) {
 
         for (int i = 0; i < neuronios.length; i++) {
-            saidas[i] = f.funcao(rede(i, entradas));
+            saidas[i] = f.function(rede(i, entradas));
         }
     }
 
