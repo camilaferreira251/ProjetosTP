@@ -1,3 +1,26 @@
+/*Classe GameControler
+ * Abcdário is free software: you can redistribute it and / or
+
+     modify it under the terms of the GNU General Public License as
+
+     published by the Free Software Foundation (FSF), version 2 of the
+
+     License, or (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+
+     but WITHOUT ANY WARRANTY; without even the implied warranty of fitness for any
+
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. View
+
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+
+     along with this program, if not, write to the Foundation of Software
+
+     Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
+
 package jogo;
 
 import java.util.ArrayList;
@@ -6,7 +29,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class JogoController {
+public class GameController {
 
 	private GamePersistence acessar = GamePersistence.getInstance();
 	
@@ -14,7 +37,7 @@ public class JogoController {
 	private String lista_letra[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 			"m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 	
-	public JogoController(){}
+	public GameController(){}
 	
 	List<String> numero = new ArrayList<String>(Arrays.asList(lista_num));
 	List<String> letra = new ArrayList<String>(Arrays.asList(lista_letra));
