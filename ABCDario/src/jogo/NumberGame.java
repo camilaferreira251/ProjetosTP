@@ -34,10 +34,10 @@ import fga.mds.abcdario.R;
 
 public class NumberGame extends AbstractActivity {
 
-	private ImageView imagem_central, bt_1, bt_2, bt_back, bt_right;
+	private ImageView central_image, bt_1, bt_2, bt_back, bt_right;
 	private int cont_hit = 0, cont_error = 0;
 	
-	private JogoController controller;
+	private GameController controller;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +51,11 @@ public class NumberGame extends AbstractActivity {
 	@Override
 	public void initializeComponents() {	
 		
-		controller = new JogoController();
+		controller = new GameController();
 		int[] id = new int[2];
 		int idButon;
 		
-		imagem_central = (ImageView) findViewById(R.id.imagem_central);
+		central_image = (ImageView) findViewById(R.id.imagem_central);
 		bt_1 = (ImageView) findViewById(R.id.bt_1);
 		bt_2 = (ImageView) findViewById(R.id.bt_2);
 		bt_back = (ImageView) findViewById(R.id.bt_voltar);
@@ -86,7 +86,7 @@ public class NumberGame extends AbstractActivity {
 	}
 
 	private void atualizarImagem(int id) {
-		imagem_central.setImageResource(id);
+		central_image.setImageResource(id);
 	}
 
 	@Override
