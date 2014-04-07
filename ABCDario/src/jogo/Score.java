@@ -80,8 +80,8 @@ public class Score extends Activity {
 	private void inicializarComponentes() {
 		stars = (ImageView) findViewById(R.id.estrelas);
 		bt_back = (ImageView) findViewById(R.id.bt_voltar);
-		sucesses_field = (TextView) findViewById(R.id.sucesses_field);
-		mistakes_field = (TextView) findViewById(R.id.mistakes_field);
+		sucesses_field = (TextView) findViewById(R.id.campo_acertos);
+		mistakes_field = (TextView) findViewById(R.id.campo_erros);
 	}
 
 	private Bundle obterParametros() {
