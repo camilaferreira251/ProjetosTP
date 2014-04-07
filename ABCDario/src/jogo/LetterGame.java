@@ -38,7 +38,7 @@ public class LetterGame extends AbstractActivity {
 			rightButton;
 	private int hitsCount = 0, errorCount = 0;
 
-	private JogoController controller;
+	private GameController controller;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class LetterGame extends AbstractActivity {
 	@Override
 	public void initializeComponents() {
 
-		controller = new JogoController();
+		controller = new GameController();
 		int[] id = new int[2];
 		int idBotao;
 
