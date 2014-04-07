@@ -524,7 +524,7 @@ public class GamePersistence {
 
 			GameModel jm = (GameModel) i.next();
 
-			String name = jm.getNome();
+			String name = jm.getName();
 
 			if (name.equalsIgnoreCase(number))
 				return jm;
@@ -544,7 +544,7 @@ public class GamePersistence {
 
 			GameModel jm = (GameModel) i.next();
 
-			String name = jm.getNome();
+			String name = jm.getName();
 
 			if (name.equalsIgnoreCase(letter)) {
 
