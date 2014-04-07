@@ -33,7 +33,7 @@ public class GameModel implements Serializable {
 	private int button;
 
 	public GameModel(String name, int image, int button) {
-		setNome(name);
+		setName(name);
 		setImage(image);
 		setButton(button);
 	}
