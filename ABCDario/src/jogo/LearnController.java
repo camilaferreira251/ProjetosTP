@@ -28,13 +28,12 @@ public class LearnController {
 	public LearnController() {
 	}
 
-<<<<<<< HEAD
+
 	private LearnPersistence acessar = LearnPersistence.getInstance();
 	private LearnModel tela;
-=======
 	private LearnPersistence acess = LearnPersistence.getInstance();
 	private LearnModel screen;
->>>>>>> 61405f13e08ee71b3f3f2c7ebdd1069b4cf10980
+
 
 	public int[] defineLetter(String letter) {
 
