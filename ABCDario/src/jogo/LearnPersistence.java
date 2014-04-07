@@ -30,7 +30,7 @@ import fga.mds.abcdario.R;
 
 public class LearnPersistence {
 
-	private ArrayList<LearnModel> registratioNumber= new ArrayList<LearnModel>();
+	private ArrayList<LearnModel> registrationNumber= new ArrayList<LearnModel>();
 	private ArrayList<LearnModel> registrationLetter= new ArrayList<LearnModel>();
 	
 	private static LearnPersistence instance;
@@ -84,44 +84,44 @@ public class LearnPersistence {
 		LearnModel numero_8 = new LearnModel("8", R.drawable.num_8_oito, R.raw.oito);
 		LearnModel numero_9 = new LearnModel("9", R.drawable.num_9_nove, R.raw.nove);
 		
-		cadastroLetra.add(letra_a);		
-		cadastroLetra.add(letra_b);		
-		cadastroLetra.add(letra_c);
-		cadastroLetra.add(letra_d);
-		cadastroLetra.add(letra_e);
-		cadastroLetra.add(letra_f);
-		cadastroLetra.add(letra_g);
-		cadastroLetra.add(letra_h);
-		cadastroLetra.add(letra_i);
-		cadastroLetra.add(letra_j);
-		cadastroLetra.add(letra_k);
-		cadastroLetra.add(letra_l);
-		cadastroLetra.add(letra_m);
-		cadastroLetra.add(letra_n);
-		cadastroLetra.add(letra_o);
-		cadastroLetra.add(letra_p);
-		cadastroLetra.add(letra_q);
-		cadastroLetra.add(letra_r);
-		cadastroLetra.add(letra_s);
-		cadastroLetra.add(letra_t);
-		cadastroLetra.add(letra_u);
-		cadastroLetra.add(letra_v);
-		cadastroLetra.add(letra_w);
-		cadastroLetra.add(letra_x);
-		cadastroLetra.add(letra_y);
-		cadastroLetra.add(letra_z);
+		registrationLetter.add(letra_a);		
+		registrationLetter.add(letra_b);		
+		registrationLetter.add(letra_c);
+		registrationLetter.add(letra_d);
+		registrationLetter.add(letra_e);
+		registrationLetter.add(letra_f);
+		registrationLetter.add(letra_g);
+		registrationLetter.add(letra_h);
+		registrationLetter.add(letra_i);
+		registrationLetter.add(letra_j);
+		registrationLetter.add(letra_k);
+		registrationLetter.add(letra_l);
+		registrationLetter.add(letra_m);
+		registrationLetter.add(letra_n);
+		registrationLetter.add(letra_o);
+		registrationLetter.add(letra_p);
+		registrationLetter.add(letra_q);
+		registrationLetter.add(letra_r);
+		registrationLetter.add(letra_s);
+		registrationLetter.add(letra_t);
+		registrationLetter.add(letra_u);
+		registrationLetter.add(letra_v);
+		registrationLetter.add(letra_w);
+		registrationLetter.add(letra_x);
+		registrationLetter.add(letra_y);
+		registrationLetter.add(letra_z);
 		
-		cadastroNumero.add(numero_1);
-		cadastroNumero.add(numero_2);
-		cadastroNumero.add(numero_3);
-		cadastroNumero.add(numero_4);
-		cadastroNumero.add(numero_5);
-		cadastroNumero.add(numero_6);
-		cadastroNumero.add(numero_7);
-		cadastroNumero.add(numero_8);
-		cadastroNumero.add(numero_9);
+		registrationNumber.add(numero_1);
+		registrationNumber.add(numero_2);
+		registrationNumber.add(numero_3);
+		registrationNumber.add(numero_4);
+		registrationNumber.add(numero_5);
+		registrationNumber.add(numero_6);
+		registrationNumber.add(numero_7);
+		registrationNumber.add(numero_8);
+		registrationNumber.add(numero_9);
 		
-		if(cadastroLetra.isEmpty())
+		if(registrationLetter.isEmpty())
 			return -1;
 				
 		return 0;
@@ -129,7 +129,7 @@ public class LearnPersistence {
 	
 	public LearnModel getModelLetter(String letra){
 			
-		Iterator<LearnModel> i = cadastroLetra.iterator();
+		Iterator<LearnModel> i = registrationLetter.iterator();
 		
 		while(i.hasNext()){
 			
@@ -146,7 +146,7 @@ public class LearnPersistence {
 
 	public LearnModel getModelNumber(String numero) {
 		
-		Iterator<LearnModel> i = cadastroNumero.iterator();
+		Iterator<LearnModel> i = registrationNumber.iterator();
 		
 		while(i.hasNext()){
 			
