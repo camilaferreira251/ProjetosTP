@@ -50,8 +50,8 @@ public class GameController {
 		
 		int[] id = new int[2];
 		
-		id[0] = modelo.getImagem();
-		id[1] = modelo.getBotao();
+		id[0] = modelo.getImage();
+		id[1] = modelo.getButton();
 		
 		return id;
 	}
@@ -62,7 +62,7 @@ public class GameController {
 		
 		GameModel modelo =  acessar.getModelNumero((String) number.get(0));
 		
-		return modelo.getBotao();
+		return modelo.getButton();
 	}
 	
 	public int[] getModelLetra(){
@@ -73,8 +73,8 @@ public class GameController {
 		
 		int[] id = new int[2];
 		
-		id[0] = modelo.getImagem();
-		id[1] = modelo.getBotao();
+		id[0] = modelo.getImage();
+		id[1] = modelo.getButton();
 		
 		return id;
 	}
@@ -85,6 +85,6 @@ public class GameController {
 		
 		GameModel modelo =  acessar.getModelLetra((String) letter.get(0));
 		
-		return modelo.getBotao();
+		return modelo.getButton();
 	}
 }
