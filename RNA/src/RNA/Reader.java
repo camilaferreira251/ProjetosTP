@@ -28,11 +28,11 @@ import java.io.FileReader;
 
 public class Reader {
 
-    public final int tamanhoTreinamento = 48; //era 18
-    private final double[][] entradaTreinamento = new double[tamanhoTreinamento][19];
-    private final double[][] saidaDesejadaTreinamento = new double[tamanhoTreinamento][1];
-    private double testeEntrada[][] = new double[Operator.TAMANHOTESTE][19];
-    private double testeSaidaEsperada[][] = new double[Operator.TAMANHOTESTE][1];
+    public final int trainingSize = 48; //era 18
+    private final double[][] trainignInput = new double[trainingSize][19];
+    private final double[][] trainingDesiredOutput = new double[trainingSize][1];
+    private double inputTest[][] = new double[Operator.TAMANHOTESTE][19];
+    private double desiredOutputTest[][] = new double[Operator.TAMANHOTESTE][1];
 
     public void carregarArquivos() {
         int j;
@@ -42,17 +42,17 @@ public class Reader {
             BufferedReader fileReader = new BufferedReader(file);
             fileReader.mark(500);
 
-            while (fileReader.readLine() != null && j < tamanhoTreinamento) {
+            while (fileReader.readLine() != null && j < trainingSize) {
                 fileReader.reset();
                 String s[] = new String[20];
                 String linha = fileReader.readLine();
                 s = linha.split(";");
 
                 for (int i = 0; i < 19; i++) {
-                    entradaTreinamento[j][i] = Double.parseDouble(s[i]);
+                    trainignInput[j][i] = Double.parseDouble(s[i]);
                 }
 
-                saidaDesejadaTreinamento[j][0] = Double.parseDouble(s[19]);
+                trainingDesiredOutput[j][0] = Double.parseDouble(s[19]);
                 j++;
                 fileReader.mark(500);
             }
@@ -75,9 +75,9 @@ public class Reader {
                 s = linha.split(";");
 
                 for (int t = 0; t < 19; t++) {
-                    testeEntrada[j][t] = Double.parseDouble(s[t]);
+                    inputTest[j][t] = Double.parseDouble(s[t]);
                 }
-                testeSaidaEsperada[j][0] = Double.parseDouble(s[19]);
+                desiredOutputTest[j][0] = Double.parseDouble(s[19]);
                 j++;
                 fileReader.mark(500);
             }
@@ -89,18 +89,18 @@ public class Reader {
     }
 
     public double[][] getEntrada() {
-        return entradaTreinamento;
+        return trainignInput;
     }
 
     public double[][] getSaidaDesejada() {
-        return saidaDesejadaTreinamento;
+        return trainingDesiredOutput;
     }
 
     public double[][] getTesteEntrada() {
-        return testeEntrada;
+        return inputTest;
     }
 
     public double[][] getTesteSaidaEsperada() {
-        return testeSaidaEsperada;
+        return desiredOutputTest;
     }
 }
