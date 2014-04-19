@@ -31,10 +31,10 @@ import RNA.Reader;
 public class BackPropagation {
 
 	private MultilayerPerceptron m = null;
-	private BackPropagationLayer[] camadas = null;
+	private BackPropagationLayer[] layer = null;
 	private Function f = null;
 	private double txAprendizado = 0.2;
-	private double momento = 0.5;
+	private double moment = 0.5;
 
 	public BackPropagation(MultilayerPerceptron m) {
 
@@ -46,10 +46,10 @@ public class BackPropagation {
 		}
 
 		int tamanho = m.getSize();
-		camadas = new BackPropagationLayer[tamanho];
+		layer = new BackPropagationLayer[tamanho];
 
 		for (int i = 0; i < tamanho; i++) {
-			camadas[i] = new BackPropagationLayer(m.getLayer(i).getSize(), m
+			layer[i] = new BackPropagationLayer(m.getLayer(i).getSize(), m
 					.getLayer(i).getTamanhoNeuronio());
 		}
 	}
@@ -59,7 +59,7 @@ public class BackPropagation {
 		this(m);
 
 		this.txAprendizado = txAprend;
-		this.momento = moment;
+		this.moment = moment;
 	}
 
 	public void setTaxaAprendizado(double txAprend) {
@@ -71,11 +71,11 @@ public class BackPropagation {
 	}
 
 	public void setMomento(double moment) {
-		this.momento = moment;
+		this.moment = moment;
 	}
 
 	public double getMomento() {
-		return momento;
+		return moment;
 	}
 
 	public void backward(double[] entrada, double[] saidaDesejada) {
@@ -86,42 +86,42 @@ public class BackPropagation {
 		corrigirPesos();
 	}
 
-	public void treinar(double[] entrada, double[] saidaDesejada) {
+	public void treinar(double[] entry, double[] desiredOutput) {
 
-		m.Advance(entrada);
+		m.Advance(entry);
 
-		backward(entrada, saidaDesejada);
+		backward(entry, desiredOutput);
 	}
 
-	private void calcularErrosUltimaCamada(double[] saidaDesejada) {
+	private void calcularErrosUltimaCamada(double[] desiredOutput) {
 		Layer c = m.getLastLayer();
-		BackPropagationLayer ultima = camadas[camadas.length - 1];
+		BackPropagationLayer ultima = layer[layer.length - 1];
 
-		int tamanho = ultima.getSize();
+		int size = ultima.getSize();
 
-		for (int i = 0; i < tamanho; i++) {
+		for (int i = 0; i < size; i++) {
 			ultima.setError(
 					i,
-					(saidaDesejada[i] - c.getOutPut(i))
+					(desiredOutput[i] - c.getOutPut(i))
 							* f.derived(c.getOutPut(i)));
 		}
 	}
 
 	private void calcularErrosInternos() {
-		double erro;
+		double error;
 
-		for (int i = camadas.length - 2; i >= 0; i--) {
-			for (int j = 0; j < camadas[i].getSize(); j++) {
-				erro = 0;
-				for (int k = 0; k < camadas[i + 1].getSize(); k++) {
+		for (int i = layer.length - 2; i >= 0; i--) {
+			for (int j = 0; j < layer[i].getSize(); j++) {
+				error = 0;
+				for (int k = 0; k < layer[i + 1].getSize(); k++) {
 
 					double pesoNeuronio = m.getLayer(i + 1).getNeuronio(k)
 							.getPeso(j);
-					double erroNeuronio = camadas[i + 1].getError(k);
-					erro += pesoNeuronio * erroNeuronio;
+					double erroNeuronio = layer[i + 1].getError(k);
+					error += pesoNeuronio * erroNeuronio;
 				}
-				erro *= f.derived(m.getLayer(i).getOutPut(j));
-				camadas[i].setError(j, erro);
+				error *= f.derived(m.getLayer(i).getOutPut(j));
+				layer[i].setError(j, error);
 			}
 		}
 	}
@@ -129,19 +129,19 @@ public class BackPropagation {
 	private void calcularDeltas(double[] entrada) {
 		int i, j, k;
 
-		for (i = 0; i < camadas.length; i++) {
-			for (j = 0; j < camadas[i].getSize(); j++) {
-				for (k = 0; k < camadas[i].getNeuronBackPropagation(j)
+		for (i = 0; i < layer.length; i++) {
+			for (j = 0; j < layer[i].getSize(); j++) {
+				for (k = 0; k < layer[i].getNeuronBackPropagation(j)
 						.getSize(); k++) {
-					camadas[i].getNeuronBackPropagation(j).setDeltaw(
+					layer[i].getNeuronBackPropagation(j).setDeltaw(
 							k,
-							txAprendizado * entrada[k] * camadas[i].getError(j)
-									+ momento
-									* camadas[i].getNeuronBackPropagation(j).getDeltaw(k));
+							txAprendizado * entrada[k] * layer[i].getError(j)
+									+ moment
+									* layer[i].getNeuronBackPropagation(j).getDeltaw(k));
 				}
-				camadas[i].getNeuronBackPropagation(j).setDeltaBias(
-						txAprendizado * (-1) * camadas[i].getError(j) + momento
-								* camadas[i].getNeuronBackPropagation(j).getDeltaBias());
+				layer[i].getNeuronBackPropagation(j).setDeltaBias(
+						txAprendizado * (-1) * layer[i].getError(j) + moment
+								* layer[i].getNeuronBackPropagation(j).getDeltaBias());
 			}
 			entrada = m.getLayer(i).getOutPuts();
 		}
@@ -154,9 +154,9 @@ public class BackPropagation {
 			for (j = 0; j < m.getLayer(i).getSize(); j++) {
 				Neuron n = m.getLayer(i).getNeuronio(j);
 				for (k = 0; k < n.getTamanho(); k++) {
-					n.corrigirPeso(k, camadas[i].getNeuronBackPropagation(j).getDeltaw(k));
+					n.corrigirPeso(k, layer[i].getNeuronBackPropagation(j).getDeltaw(k));
 				}
-				n.corrigirBias(camadas[i].getNeuronBackPropagation(j).getDeltaBias());
+				n.corrigirBias(layer[i].getNeuronBackPropagation(j).getDeltaBias());
 			}
 		}
 	}
