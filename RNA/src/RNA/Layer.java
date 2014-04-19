@@ -29,8 +29,8 @@ import RNA.TgHip;
 
 public class Layer {
 
-    private Neuron[] neuronios;
-    private double[] saidas;
+    private Neuron[] neurons;
+    private double[] outings;
     private Function f;
 
 
@@ -41,50 +41,50 @@ public class Layer {
         else
             f=new TgHip();
         
-        neuronios = new Neuron[n];
-        saidas = new double[n];
+        neurons = new Neuron[n];
+        outings = new double[n];
 
-        for (int i = 0; i < neuronios.length; i++) {
-            neuronios[i] = new Neuron(conexoes,bias);
-            neuronios[i].randomizarPesos(intervalo);
+        for (int i = 0; i < neurons.length; i++) {
+            neurons[i] = new Neuron(conexoes,bias);
+            neurons[i].randomizarPesos(intervalo);
         }
     }
 
     void Calcular(double[] entradas) {
 
-        for (int i = 0; i < neuronios.length; i++) {
-            saidas[i] = f.function(rede(i, entradas));
+        for (int i = 0; i < neurons.length; i++) {
+            outings[i] = f.function(rede(i, entradas));
         }
     }
 
     public int getSize() {
-        return neuronios.length;
+        return neurons.length;
     }
 
     public double getOutPut(int index) {
-        return saidas[index];
+        return outings[index];
     }
 
     public double[] getOutPuts() {
-        return saidas;
+        return outings;
     }
 
     public Neuron getNeuronio(int i) {
-        return neuronios[i];
+        return neurons[i];
     }
 
     public int getTamanhoNeuronio() {
-        return neuronios[0].getTamanho();
+        return neurons[0].getTamanho();
     }
 
     private double rede(int neuronio, double[] entradas) {
         double u = 0;
 
         for (int i = 0; i < entradas.length; i++) {
-            u += entradas[i] * neuronios[neuronio].getPeso(i);
+            u += entradas[i] * neurons[neuronio].getPeso(i);
         }
         
-        u -= neuronios[neuronio].getBias();
+        u -= neurons[neuronio].getBias();
         return u;
     }
 }
