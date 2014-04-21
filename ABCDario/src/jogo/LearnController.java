@@ -29,12 +29,11 @@ public class LearnController {
 	}
 
 
-	private LearnPersistence acessar = LearnPersistence.getInstance();
-	private LearnModel tela;
 	private LearnPersistence acess = LearnPersistence.getInstance();
 	private LearnModel screen;
 
 
+	// Defines an image and audio to the letter
 	public int[] defineLetter(String letter) {
 
 		int id[] = new int[2];
@@ -47,6 +46,7 @@ public class LearnController {
 		return id;
 	}
 
+	// Defines an image and audio to the number
 	public int[] defineNumber(String number) {
 
 		int id[] = new int[2];
