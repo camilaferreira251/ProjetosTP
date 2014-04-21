@@ -29,57 +29,57 @@ import RNA.BackPropagation;
 public class Operator {
 
 	public static MultilayerPerceptron m;
-	public static Reader leitor;
-	public static double entradas[] = new double[19];
-	public static final int TAMANHOTESTE = 86;
-	public static int iteracoesFeitas = 0;
-	public static double calcErro = 1;
+	public static Reader reader;
+	public static double inputs[] = new double[19];
+	public static final int TEST_SIZE = 86;
+	public static int madeIterations = 0;
+	public static double errorCalculation = 1;
 
-	public static void treinar(double aprendizado, double momento, int bias,
-			int funcao, int intervalo, int iteracoes, double erro) {
-		leitor = new Reader();
-		leitor.carregarArquivos();
+	public static void train(double learning, double time, int bias,
+			int function, int range, int iterations, double error) {
+		reader = new Reader();
+		reader.uploadFiles();
 		
-		m = new MultilayerPerceptron(3, funcao, bias, intervalo);
+		m = new MultilayerPerceptron(3, function, bias, range);
 
 		m.insertInPutLayer(19, 19);
-		m.addCamada(6);
-		m.addCamada(1);
+		m.addLayer(6);
+		m.addLayer(1);
 
-		BackPropagation b = new BackPropagation(m, aprendizado, momento);
-		calcErro = 1;
+		BackPropagation b = new BackPropagation(m, learning, time);
+		errorCalculation = 1;
 		int i;
-		for (i = 0; i < iteracoes && calcErro > erro; i++) {
+		for (i = 0; i < iterations && errorCalculation > error; i++) {
 			double erroAux = 0;
-			double saidas[] = new double[leitor.trainingSize];
+			double outputs[] = new double[reader.trainingSize];
 
-			for (int k = 0; k < leitor.trainingSize; k++) {
-				b.treinar(leitor.getEntrada()[k], leitor.getSaidaDesejada()[k]);
-				saidas[k] = m.getOutPut(0);
+			for (int k = 0; k < reader.trainingSize; k++) {
+				b.train(reader.getInput()[k], reader.getDesiredOutput()[k]);
+				outputs[k] = m.getOutPut(0);
 			}
-			erroAux = b.calcularErro(leitor, saidas);
-			calcErro = erroAux;
+			erroAux = b.calculateError(reader, outputs);
+			errorCalculation = erroAux;
 		}
-		iteracoesFeitas = i;
+		madeIterations = i;
 
-		for (int w = 0; w < TAMANHOTESTE; w++) {
-			m.Advance(leitor.getTesteEntrada()[w]);
+		for (int w = 0; w < TEST_SIZE; w++) {
+			m.Advance(reader.getInputTest()[w]);
 		}
 	}
 
-	public static int teste() {
-		int soma = 0;
+	public static int test() {
+		int sum = 0;
 		for (int w = 0; w < 86; w++) {
-			m.Advance(leitor.getTesteEntrada()[w]);
+			m.Advance(reader.getInputTest()[w]);
 			if (m.getOutPut(0) > 0.5) {
-				soma++;
+				sum++;
 			}
 		}
-		return soma - 8;
+		return sum - 8;
 	}
 
-	public static double operar() {
-		m.Advance(entradas);
+	public static double operate() {
+		m.Advance(inputs);
 		return m.getOutPut(0);
 	}
 }

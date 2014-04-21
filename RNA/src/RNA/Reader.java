@@ -31,10 +31,10 @@ public class Reader {
     public final int trainingSize = 48; //era 18
     private final double[][] trainignInput = new double[trainingSize][19];
     private final double[][] trainingDesiredOutput = new double[trainingSize][1];
-    private double inputTest[][] = new double[Operator.TAMANHOTESTE][19];
-    private double desiredOutputTest[][] = new double[Operator.TAMANHOTESTE][1];
+    private double inputTest[][] = new double[Operator.TEST_SIZE][19];
+    private double desiredOutputTest[][] = new double[Operator.TEST_SIZE][1];
 
-    public void carregarArquivos() {
+    public void uploadFiles() {
         int j;
         try {
             j = 0;
@@ -68,7 +68,7 @@ public class Reader {
             BufferedReader fileReader = new BufferedReader(file);
             fileReader.mark(500);
 
-            while (fileReader.readLine() != null && j < Operator.TAMANHOTESTE) {
+            while (fileReader.readLine() != null && j < Operator.TEST_SIZE) {
                 fileReader.reset();
                 String s[] = new String[20];
                 String linha = fileReader.readLine();
@@ -88,15 +88,15 @@ public class Reader {
         }
     }
 
-    public double[][] getEntrada() {
+    public double[][] getInput() {
         return trainignInput;
     }
 
-    public double[][] getSaidaDesejada() {
+    public double[][] getDesiredOutput() {
         return trainingDesiredOutput;
     }
 
-    public double[][] getTesteEntrada() {
+    public double[][] getInputTest() {
         return inputTest;
     }
 

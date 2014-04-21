@@ -86,7 +86,7 @@ public class BackPropagation {
 		corrigirPesos();
 	}
 
-	public void treinar(double[] entry, double[] desiredOutput) {
+	public void train(double[] entry, double[] desiredOutput) {
 
 		m.Advance(entry);
 
@@ -161,10 +161,10 @@ public class BackPropagation {
 		}
 	}
 
-	public double calcularErro(Reader dados, double saida[]) {
+	public double calculateError(Reader dados, double saida[]) {
 		double soma = 0;
 		for (int j = 0; j < dados.trainingSize; j++) {
-			soma += Math.pow((saida[j] - dados.getSaidaDesejada()[j][0]), 2);
+			soma += Math.pow((saida[j] - dados.getDesiredOutput()[j][0]), 2);
 		}
 		return Math.sqrt(soma / dados.trainingSize);
 	}

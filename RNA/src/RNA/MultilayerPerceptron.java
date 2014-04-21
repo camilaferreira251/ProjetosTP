@@ -43,7 +43,7 @@ public class MultilayerPerceptron {
         lastLayer = 0;
     }
 
-    public void addCamada(int numberNeuron) {
+    public void addLayer(int numberNeuron) {
 
         layer[lastLayer + 1] = new Layer(numberNeuron, layer[lastLayer].getSize(),functionType,bias,intervalRand);
 

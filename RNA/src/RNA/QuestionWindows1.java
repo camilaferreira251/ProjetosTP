@@ -500,30 +500,30 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 	}// GEN-LAST:event_jToggleButton1ActionPerformed
 
 	private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton2ActionPerformed
-		Operator.entradas[11] = simP12.isSelected() ? 1 : 0;
-		Operator.entradas[12] = simP13.isSelected() ? 1 : 0;
-		Operator.entradas[13] = simP14.isSelected() ? 1 : 0;
-		Operator.entradas[14] = simP15.isSelected() ? 1 : 0;
-		Operator.entradas[15] = simP16.isSelected() ? 1 : 0;
-		Operator.entradas[16] = simP17.isSelected() ? 1 : 0;
-		Operator.entradas[17] = simP18.isSelected() ? 1 : 0;
+		Operator.inputs[11] = simP12.isSelected() ? 1 : 0;
+		Operator.inputs[12] = simP13.isSelected() ? 1 : 0;
+		Operator.inputs[13] = simP14.isSelected() ? 1 : 0;
+		Operator.inputs[14] = simP15.isSelected() ? 1 : 0;
+		Operator.inputs[15] = simP16.isSelected() ? 1 : 0;
+		Operator.inputs[16] = simP17.isSelected() ? 1 : 0;
+		Operator.inputs[17] = simP18.isSelected() ? 1 : 0;
 
 		if (p19_1.isSelected()) {
-			Operator.entradas[18] = 0.2;
+			Operator.inputs[18] = 0.2;
 		} else if (p19_2.isSelected()) {
-			Operator.entradas[18] = 0.4;
+			Operator.inputs[18] = 0.4;
 		} else if (p19_3.isSelected()) {
-			Operator.entradas[18] = 0.6;
+			Operator.inputs[18] = 0.6;
 		} else if (p19_4.isSelected()) {
-			Operator.entradas[18] = 0.8;
+			Operator.inputs[18] = 0.8;
 		} else if (p19_5.isSelected()) {
-			Operator.entradas[18] = 1.0;
+			Operator.inputs[18] = 1.0;
 		} else {
-			Operator.entradas[18] = 0;
+			Operator.inputs[18] = 0;
 		}
 
 		JOptionPane.showMessageDialog(null,
-				(Operator.operar() > 0.5 ? "Órgão pode ser doado!!"
+				(Operator.operate() > 0.5 ? "Órgão pode ser doado!!"
 						: "Órgão não pode ser doado!!"),
 				"Resultado da Consulta", 1);
 		this.dispose();

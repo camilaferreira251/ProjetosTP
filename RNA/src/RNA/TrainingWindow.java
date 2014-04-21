@@ -313,8 +313,8 @@ public class TrainingWindow extends javax.swing.JDialog {
         try {
             if (Double.parseDouble(boxError.getText()) >= 0.1) {
                 if (JOptionPane.showConfirmDialog(null, "Erro inserido relativamente alto. \nDeseja Continuar?", "Treinamento Finalizado!", 1) == 0) {
-                    Operator.treinar((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
-                    if (Operator.teste() >= 0) {
+                    Operator.train((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
+                    if (Operator.test() >= 0) {
                         pai.getBotaoUtilizar().setEnabled(true);
                         pai.getBotaoUtilizar().setText("Utilizar");
                         pai.getTextoUtilizar().setText("");
@@ -323,12 +323,12 @@ public class TrainingWindow extends javax.swing.JDialog {
                         pai.getBotaoUtilizar().setText("*Utilizar");
                     }
 
-                    JOptionPane.showMessageDialog(null, (Operator.teste() < 0 ? "Treinamento Falhou!" : ("Teste realizado para 86 entradas distintas. \nIterações realizadas: " + Operator.iteracoesFeitas + "\nErro mínimo alcançado: " + Operator.calcErro + "\nResultados incorretos: ") + Operator.teste()), "Treinamento Finalizado!", 1);
+                    JOptionPane.showMessageDialog(null, (Operator.test() < 0 ? "Treinamento Falhou!" : ("Teste realizado para 86 entradas distintas. \nIterações realizadas: " + Operator.madeIterations + "\nErro mínimo alcançado: " + Operator.errorCalculation + "\nResultados incorretos: ") + Operator.test()), "Treinamento Finalizado!", 1);
                     this.dispose();
                 }
             } else {
-                Operator.treinar((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
-                if (Operator.teste() >= 0) {
+                Operator.train((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
+                if (Operator.test() >= 0) {
                     pai.getBotaoUtilizar().setEnabled(true);
                     pai.getBotaoUtilizar().setText("Utilizar");
                     pai.getTextoUtilizar().setText("");
@@ -337,7 +337,7 @@ public class TrainingWindow extends javax.swing.JDialog {
                     pai.getBotaoUtilizar().setText("*Utilizar");
                 }
 
-                JOptionPane.showMessageDialog(null, (Operator.teste() < 0 ? "Treinamento Falhou!" : ("Teste realizado para 86 entradas distintas. \nIterações realizadas: " + Operator.iteracoesFeitas + "\nErro mínimo alcançado: " + Operator.calcErro + "\nResultados incorretos: ") + Operator.teste()), "Treinamento Finalizado!", 1);
+                JOptionPane.showMessageDialog(null, (Operator.test() < 0 ? "Treinamento Falhou!" : ("Teste realizado para 86 entradas distintas. \nIterações realizadas: " + Operator.madeIterations + "\nErro mínimo alcançado: " + Operator.errorCalculation + "\nResultados incorretos: ") + Operator.test()), "Treinamento Finalizado!", 1);
                 this.dispose();
             }
         } catch (Exception e) {

@@ -625,37 +625,37 @@ public class QuestionWindows extends javax.swing.JDialog {
 	}// GEN-LAST:event_jToggleButton1ActionPerformed
 
 	private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton2ActionPerformed
-		Operator.entradas[0] = simP1.isSelected() ? 1 : 0;
-		Operator.entradas[1] = simP2.isSelected() ? 1 : 0;
-		Operator.entradas[3] = simP4.isSelected() ? 1 : 0;
-		Operator.entradas[4] = simP5.isSelected() ? 1 : 0;
-		Operator.entradas[5] = simP6.isSelected() ? 1 : 0;
-		Operator.entradas[6] = simP7.isSelected() ? 1 : 0;
-		Operator.entradas[7] = simP8.isSelected() ? 1 : 0;
-		Operator.entradas[8] = simP9.isSelected() ? 1 : 0;
-		Operator.entradas[9] = simP10.isSelected() ? 1 : 0;
-		Operator.entradas[10] = simP11.isSelected() ? 1 : 0;
+		Operator.inputs[0] = simP1.isSelected() ? 1 : 0;
+		Operator.inputs[1] = simP2.isSelected() ? 1 : 0;
+		Operator.inputs[3] = simP4.isSelected() ? 1 : 0;
+		Operator.inputs[4] = simP5.isSelected() ? 1 : 0;
+		Operator.inputs[5] = simP6.isSelected() ? 1 : 0;
+		Operator.inputs[6] = simP7.isSelected() ? 1 : 0;
+		Operator.inputs[7] = simP8.isSelected() ? 1 : 0;
+		Operator.inputs[8] = simP9.isSelected() ? 1 : 0;
+		Operator.inputs[9] = simP10.isSelected() ? 1 : 0;
+		Operator.inputs[10] = simP11.isSelected() ? 1 : 0;
 
 		if (p3figado.isSelected()) {
-			Operator.entradas[2] = 0.89;
+			Operator.inputs[2] = 0.89;
 		} else if (p3corneas.isSelected()) {
-			Operator.entradas[2] = 0.44;
+			Operator.inputs[2] = 0.44;
 		} else if (p3coracao.isSelected()) {
-			Operator.entradas[2] = 0.11;
+			Operator.inputs[2] = 0.11;
 		} else if (p3pulmao.isSelected()) {
-			Operator.entradas[2] = 0.78;
+			Operator.inputs[2] = 0.78;
 		} else if (p3ossos.isSelected()) {
-			Operator.entradas[2] = 0.22;
+			Operator.inputs[2] = 0.22;
 		} else if (p3medula.isSelected()) {
-			Operator.entradas[2] = 1;
+			Operator.inputs[2] = 1;
 		} else if (p3rins.isSelected()) {
-			Operator.entradas[2] = 0.67;
+			Operator.inputs[2] = 0.67;
 		} else if (p3pele.isSelected()) {
-			Operator.entradas[2] = 0;
+			Operator.inputs[2] = 0;
 		} else if (p3pancreas.isSelected()) {
-			Operator.entradas[2] = 0.56;
+			Operator.inputs[2] = 0.56;
 		} else {
-			Operator.entradas[2] = 0.33;
+			Operator.inputs[2] = 0.33;
 		}
 
 		this.dispose();
