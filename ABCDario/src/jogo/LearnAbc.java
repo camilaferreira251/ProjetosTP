@@ -38,13 +38,13 @@ public class LearnAbc extends AbstractActivity {
 
 	private GridView gridView;
 
-	@Override
+	// This is the first function to be executed when an Activity is launched
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.grade_letras);
 	}
 
-	@Override
+	// Initializes the components used in activity
 	public void initializeComponents() {
 		backButton = (ImageView) findViewById(R.id.bt_voltar);
 		gridView = (GridView) findViewById(R.id.aprender_grade);
@@ -52,7 +52,7 @@ public class LearnAbc extends AbstractActivity {
 		gridView.setAdapter(new LettersGrid(this));
 	}
 
-	@Override
+	// Defines the events of activity
 	public void defineEvents() {
 		backButton.setOnClickListener(new View.OnClickListener() {
 
