@@ -33,6 +33,7 @@ public class Information extends AbstractActivity {
 
 	private ImageView backButton;
 
+	// This is the first function to be executed when an Activity is launched
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.informacao);
@@ -40,11 +41,13 @@ public class Information extends AbstractActivity {
 		initializeComponents();
 		defineEvents();
 	}
-
+	
+	// Initializes the components used in activity
 	public void initializeComponents() {
 		backButton = (ImageView) findViewById(R.imgV.bt_voltar);
 	}
 
+	// Defines the events of activity
 	public void defineEvents() {
 
 		backButton.setOnClickListener(new View.OnClickListener() {
