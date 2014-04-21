@@ -49,7 +49,7 @@ public class LearnAbc extends AbstractActivity {
 		backButton = (ImageView) findViewById(R.id.bt_voltar);
 		gridView = (GridView) findViewById(R.id.aprender_grade);
 
-		gridView.setAdapter(new LettersGrid(this));
+		gridView.setAdapter(new GridLetters(this));
 	}
 
 	// Defines the events of activity
@@ -68,7 +68,7 @@ public class LearnAbc extends AbstractActivity {
 					int position, long id) {
 
 				Intent i = new Intent(getApplicationContext(),
-						LearnLetter.class);
+						LetterLearn.class);
 				i.putExtra("id", position);
 				startActivity(i);
 			}

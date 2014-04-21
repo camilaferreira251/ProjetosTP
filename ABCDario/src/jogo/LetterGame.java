@@ -40,7 +40,7 @@ public class LetterGame extends AbstractActivity {
 
 	private GameController controller;
 
-	@Override
+	// This is the first function to be executed when an Activity is launched
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.jogo_letra);
@@ -49,7 +49,7 @@ public class LetterGame extends AbstractActivity {
 		defineEvents();
 	}
 
-	@Override
+	// Initializes the components used in activity
 	public void initializeComponents() {
 
 		controller = new GameController();
@@ -68,6 +68,7 @@ public class LetterGame extends AbstractActivity {
 		refreshButton(id[1], idBotao);
 	}
 
+	// Associates the right answer to the button
 	private void refreshButton(int btModel, int bt) {
 
 		while (btModel == bt)
@@ -90,7 +91,7 @@ public class LetterGame extends AbstractActivity {
 		centralImage.setImageResource(id);
 	}
 
-	@Override
+	// Defines the events of activity
 	public void defineEvents() {
 
 		backButton.setOnClickListener(new OnClickListener() {

@@ -1,5 +1,5 @@
-/*Class LearnNumber
- * Abcdario is free software: you can redistribute it and / or
+/*Class LearnLetter
+ * 	Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -23,7 +23,6 @@
 
 package jogo;
 
-import fga.mds.abcdario.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -31,42 +30,43 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import fga.mds.abcdario.R;
 
-public class LearnNumber extends Activity {
+public class LetterLearn extends Activity{
 
-	private LearnController controller;
-
-	private ImageView nextButton, previousButton, backButton, soundButton, image;
+	private LearnController controller;	
+	
+	private ImageView nextButton, previousButton, backButton, soundButton, image; 
 	private Intent it;
 	private Bundle params;
-	private String number;
+	private String letter;
 	private int id[] = new int[2];
 	private MediaPlayer music;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState); 
+        setContentView(R.layout.aprender); 	
+        
+        initializeComponents(null);
+        defineEvents();
+    }
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.aprender);
-
-		initializeComponents(null);
-		defineEvents();
-	}
-
-	public void initializeComponents(String number) {
-
-		controller = new LearnController();// instantiating the controller learn
-
+	public void initializeComponents(String letter) {
+		
+		controller = new LearnController();
+		
 		nextButton = (ImageView) findViewById(R.id.bt_proximo);
 		previousButton = (ImageView) findViewById(R.id.bt_anterior);
 		backButton = (ImageView) findViewById(R.id.bt_voltar);
 		soundButton = (ImageView) findViewById(R.id.bt_som);
 		image = (ImageView) findViewById(R.id.imagem_selecionada);
-
-		if (number == null)
-			number = obtainParameter();
-
-		id = controller.defineNumber(number);
-
+		
+		if(letter == null)
+			letter = obtainParameter();
+		
+		id = controller.defineLetter(letter);
+		
 		defineImage(id[0]);
 		defineAudio(id[1]);
 	}
@@ -80,43 +80,43 @@ public class LearnNumber extends Activity {
 	}
 
 	private String obtainParameter() {
-
+		
 		it = getIntent();
 		params = it.getExtras();
-
-		number = params.getString("OK");
-
-		return number;
+		
+		letter = params.getString("OK");
+		
+		return letter;
 	}
 
 	public void defineEvents() {
-
+		
 		backButton.setOnClickListener(new OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(LearnNumber.this, Learn123.class));
+				startActivity(new Intent(LetterLearn.this, LearnAbc.class));
 			}
 		});
-
+		
 		soundButton.setOnClickListener(new OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
 				music.start();
 			}
 		});
-
+		
 		nextButton.setOnClickListener(new OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
-
+				
 			}
 		});
-
+		
 		previousButton.setOnClickListener(new OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
 			}

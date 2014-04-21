@@ -32,7 +32,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.GridLayout.LayoutParams;
 
-public class LettersGrid extends BaseAdapter {
+public class GridLetters extends BaseAdapter {
 
 	private Context context;
 
@@ -45,7 +45,7 @@ public class LettersGrid extends BaseAdapter {
 			R.drawable.bt_s, R.drawable.bt_t, R.drawable.bt_u, R.drawable.bt_v,
 			R.drawable.bt_x, R.drawable.bt_z, R.drawable.bt_w, R.drawable.bt_y, };
 
-	public LettersGrid(Context c) {
+	public GridLetters(Context c) {
 		this.context = c;
 	}
 
