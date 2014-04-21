@@ -36,8 +36,7 @@ public class GamePersistence {
 	private static GamePersistence instance;
 
 	// Declaring and instantiating an ArrayList that will contain all objects of
-	// type
-	// GameModel related to numbers
+	// type GameModel related to numbers
 	ArrayList<GameModel> registrationNumber = new ArrayList<GameModel>();
 	ArrayList<GameModel> registrationLetter = new ArrayList<GameModel>();
 
@@ -53,7 +52,7 @@ public class GamePersistence {
 		return instance;
 	}
 
-	// whose method which will be called to initialize / update the registration
+	// Whose method which will be called to initialize / update the registration
 	public int updatesRegister() {
 
 		// Declaring and instantiating objects of type GameModel related letters
@@ -344,7 +343,7 @@ public class GamePersistence {
 		GameModel sixthChoiceNumber9 = new GameModel("9", R.drawable.num_9_06,
 				R.drawable.bt_9);
 
-		// storing the registrationLetter
+		// Storing the registrationLetter
 		registrationLetter.add(firstChoiceLetterA);
 		registrationLetter.add(secondChoiceLetterA);
 		registrationLetter.add(thirdChoiceLetterA);
