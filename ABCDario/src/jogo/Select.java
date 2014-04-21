@@ -34,6 +34,7 @@ public class Select extends Activity {
 
 	private ImageView numbersButton, lettersBbutton, backButton;
 
+	// This is the first function to be executed when an Activity is launched
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.escolha);
@@ -42,12 +43,14 @@ public class Select extends Activity {
 		defineEvents();
 	}
 
+	// Initializes the components used in activity
 	public void initializeComponents() {
 		numbersButton = (ImageView) findViewById(R.imgV.bt_123);
 		lettersBbutton = (ImageView) findViewById(R.imgV.bt_abc);
 		backButton = (ImageView) findViewById(R.imgV.bt_voltar);
 	}
 
+	// Defines the events of activity
 	public void defineEvents() {
 		numbersButton.setOnClickListener(new View.OnClickListener() {
 
