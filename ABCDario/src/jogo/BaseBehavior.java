@@ -25,8 +25,11 @@ package jogo;
 
 public interface BaseBehavior {
 
+	// Initializes the components used in activity
 	public void initializeComponents();
 
+	// Defines the events of activity
 	public void defineEvents();
 
 }
+
