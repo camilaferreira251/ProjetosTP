@@ -163,10 +163,10 @@ public class BackPropagation {
 
 	public double calcularErro(Reader dados, double saida[]) {
 		double soma = 0;
-		for (int j = 0; j < dados.tamanhoTreinamento; j++) {
+		for (int j = 0; j < dados.trainingSize; j++) {
 			soma += Math.pow((saida[j] - dados.getSaidaDesejada()[j][0]), 2);
 		}
-		return Math.sqrt(soma / dados.tamanhoTreinamento);
+		return Math.sqrt(soma / dados.trainingSize);
 	}
 
 }

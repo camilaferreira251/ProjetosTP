@@ -53,17 +53,17 @@ public class TrainingWindow extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         boxBias = new javax.swing.JCheckBox();
         jLabel5 = new javax.swing.JLabel();
-        seletorFuncao = new javax.swing.JComboBox();
+        functionSelector = new javax.swing.JComboBox();
         jLabel6 = new javax.swing.JLabel();
-        seletorIntervalo = new javax.swing.JComboBox();
+        rangeSelector = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        botaoTreinar = new javax.swing.JToggleButton();
-        botaoVoltar = new javax.swing.JToggleButton();
-        sliderTaxa = new javax.swing.JSlider();
-        sliderMomento = new javax.swing.JSlider();
-        boxIteracoes = new javax.swing.JTextField();
-        boxErro = new javax.swing.JTextField();
+        buttonTrain = new javax.swing.JToggleButton();
+        backButton = new javax.swing.JToggleButton();
+        sliderRate = new javax.swing.JSlider();
+        sliderTime = new javax.swing.JSlider();
+        boxIterations = new javax.swing.JTextField();
+        boxError = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -110,10 +110,10 @@ public class TrainingWindow extends javax.swing.JDialog {
         jLabel5.setForeground(new java.awt.Color(0, 204, 255));
         jLabel5.setText("Funcao");
 
-        seletorFuncao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sigmoide", "Tangente Hiperbolica" }));
-        seletorFuncao.addActionListener(new java.awt.event.ActionListener() {
+        functionSelector.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sigmoide", "Tangente Hiperbolica" }));
+        functionSelector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seletorFuncaoActionPerformed(evt);
+                functionSelectorActionPerformed(evt);
             }
         });
 
@@ -121,10 +121,10 @@ public class TrainingWindow extends javax.swing.JDialog {
         jLabel6.setForeground(new java.awt.Color(0, 204, 255));
         jLabel6.setText("Intervalo");
 
-        seletorIntervalo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0 a 1", "-1 a 1", "-1 a 0" }));
-        seletorIntervalo.addActionListener(new java.awt.event.ActionListener() {
+        rangeSelector.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0 a 1", "-1 a 1", "-1 a 0" }));
+        rangeSelector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seletorIntervaloActionPerformed(evt);
+                rangeSelectorActionPerformed(evt);
             }
         });
 
@@ -136,41 +136,41 @@ public class TrainingWindow extends javax.swing.JDialog {
         jLabel8.setForeground(new java.awt.Color(0, 204, 255));
         jLabel8.setText("Erro");
 
-        botaoTreinar.setBackground(new java.awt.Color(0, 0, 0));
-        botaoTreinar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        botaoTreinar.setForeground(new java.awt.Color(0, 204, 255));
-        botaoTreinar.setText("Treinar");
-        botaoTreinar.addActionListener(new java.awt.event.ActionListener() {
+        buttonTrain.setBackground(new java.awt.Color(0, 0, 0));
+        buttonTrain.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        buttonTrain.setForeground(new java.awt.Color(0, 204, 255));
+        buttonTrain.setText("Treinar");
+        buttonTrain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoTreinarActionPerformed(evt);
+                buttonTrainActionPerformed(evt);
             }
         });
 
-        botaoVoltar.setBackground(new java.awt.Color(0, 0, 0));
-        botaoVoltar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        botaoVoltar.setForeground(new java.awt.Color(0, 204, 255));
-        botaoVoltar.setText("Voltar");
-        botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
+        backButton.setBackground(new java.awt.Color(0, 0, 0));
+        backButton.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        backButton.setForeground(new java.awt.Color(0, 204, 255));
+        backButton.setText("Voltar");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoVoltarActionPerformed(evt);
+                backButtonActionPerformed(evt);
             }
         });
 
-        sliderTaxa.setBackground(new java.awt.Color(0, 0, 0));
-        sliderTaxa.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        sliderTaxa.setForeground(new java.awt.Color(0, 204, 255));
-        sliderTaxa.setMajorTickSpacing(20);
-        sliderTaxa.setMinorTickSpacing(10);
-        sliderTaxa.setPaintTicks(true);
+        sliderRate.setBackground(new java.awt.Color(0, 0, 0));
+        sliderRate.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        sliderRate.setForeground(new java.awt.Color(0, 204, 255));
+        sliderRate.setMajorTickSpacing(20);
+        sliderRate.setMinorTickSpacing(10);
+        sliderRate.setPaintTicks(true);
 
-        sliderMomento.setBackground(new java.awt.Color(0, 0, 0));
-        sliderMomento.setMajorTickSpacing(20);
-        sliderMomento.setMinorTickSpacing(10);
-        sliderMomento.setPaintTicks(true);
+        sliderTime.setBackground(new java.awt.Color(0, 0, 0));
+        sliderTime.setMajorTickSpacing(20);
+        sliderTime.setMinorTickSpacing(10);
+        sliderTime.setPaintTicks(true);
 
-        boxIteracoes.setText("15000");
+        boxIterations.setText("15000");
 
-        boxErro.setText("0.05");
+        boxError.setText("0.05");
 
         jLabel10.setForeground(new java.awt.Color(0, 204, 255));
         jLabel10.setText("0");
@@ -199,22 +199,22 @@ public class TrainingWindow extends javax.swing.JDialog {
                                     .addComponent(jLabel1))
                                 .addGap(6, 6, 6)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(seletorFuncao, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(functionSelector, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(botaoTreinar)
+                                            .addComponent(buttonTrain)
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                                     .addComponent(jLabel10)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(sliderTaxa, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(sliderRate, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addComponent(jLabel13))
                                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                                     .addComponent(jLabel11)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(sliderMomento, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(sliderTime, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addComponent(jLabel12)))))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -231,16 +231,16 @@ public class TrainingWindow extends javax.swing.JDialog {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(108, 108, 108)
-                                        .addComponent(seletorIntervalo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(rangeSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(boxErro, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(boxIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(boxError, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(boxIterations, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(8, 8, 8))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(botaoVoltar)))
+                        .addComponent(backButton)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -254,10 +254,10 @@ public class TrainingWindow extends javax.swing.JDialog {
                             .addComponent(jLabel1))
                         .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING))
                     .addComponent(jLabel13)
-                    .addComponent(sliderTaxa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sliderRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sliderMomento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sliderTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
                         .addComponent(jLabel11))
@@ -269,23 +269,23 @@ public class TrainingWindow extends javax.swing.JDialog {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(seletorFuncao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(functionSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(seletorIntervalo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rangeSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(boxIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(boxIterations, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(boxErro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(boxError, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoVoltar)
-                    .addComponent(botaoTreinar))
+                    .addComponent(backButton)
+                    .addComponent(buttonTrain))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -307,13 +307,13 @@ public class TrainingWindow extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField4ActionPerformed
 
-    private void botaoTreinarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTreinarActionPerformed
+    private void buttonTrainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTreinarActionPerformed
 
 
         try {
-            if (Double.parseDouble(boxErro.getText()) >= 0.1) {
+            if (Double.parseDouble(boxError.getText()) >= 0.1) {
                 if (JOptionPane.showConfirmDialog(null, "Erro inserido relativamente alto. \nDeseja Continuar?", "Treinamento Finalizado!", 1) == 0) {
-                    Operator.treinar((double) (sliderTaxa.getValue() / 100.0), (double) (sliderMomento.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, seletorFuncao.getSelectedIndex(), seletorIntervalo.getSelectedIndex(), Integer.parseInt(boxIteracoes.getText()), Double.parseDouble(boxErro.getText()));
+                    Operator.treinar((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
                     if (Operator.teste() >= 0) {
                         pai.getBotaoUtilizar().setEnabled(true);
                         pai.getBotaoUtilizar().setText("Utilizar");
@@ -327,7 +327,7 @@ public class TrainingWindow extends javax.swing.JDialog {
                     this.dispose();
                 }
             } else {
-                Operator.treinar((double) (sliderTaxa.getValue() / 100.0), (double) (sliderMomento.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, seletorFuncao.getSelectedIndex(), seletorIntervalo.getSelectedIndex(), Integer.parseInt(boxIteracoes.getText()), Double.parseDouble(boxErro.getText()));
+                Operator.treinar((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
                 if (Operator.teste() >= 0) {
                     pai.getBotaoUtilizar().setEnabled(true);
                     pai.getBotaoUtilizar().setText("Utilizar");
@@ -345,23 +345,23 @@ public class TrainingWindow extends javax.swing.JDialog {
 
     }//GEN-LAST:event_botaoTreinarActionPerformed
 
-    private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
-
-    private void seletorFuncaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seletorFuncaoActionPerformed
+    
+    private void functionSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seletorFuncaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_seletorFuncaoActionPerformed
 
-    private void seletorIntervaloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seletorIntervaloActionPerformed
+    private void rangeSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seletorIntervaloActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_seletorIntervaloActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton botaoTreinar;
-    private javax.swing.JToggleButton botaoVoltar;
+    private javax.swing.JToggleButton buttonTrain;
+    private javax.swing.JToggleButton backButton;
     private javax.swing.JCheckBox boxBias;
-    private javax.swing.JTextField boxErro;
-    private javax.swing.JTextField boxIteracoes;
+    private javax.swing.JTextField boxError;
+    private javax.swing.JTextField boxIterations;
     private javax.swing.JFormattedTextField jFormattedTextField4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -381,10 +381,10 @@ public class TrainingWindow extends javax.swing.JDialog {
 	private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField jTextField2;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox seletorFuncao;
+	private javax.swing.JComboBox functionSelector;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox seletorIntervalo;
-    private javax.swing.JSlider sliderMomento;
-    private javax.swing.JSlider sliderTaxa;
+	private javax.swing.JComboBox rangeSelector;
+    private javax.swing.JSlider sliderTime;
+    private javax.swing.JSlider sliderRate;
     // End of variables declaration//GEN-END:variables
 }

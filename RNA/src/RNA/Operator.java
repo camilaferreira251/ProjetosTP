@@ -51,9 +51,9 @@ public class Operator {
 		int i;
 		for (i = 0; i < iteracoes && calcErro > erro; i++) {
 			double erroAux = 0;
-			double saidas[] = new double[leitor.tamanhoTreinamento];
+			double saidas[] = new double[leitor.trainingSize];
 
-			for (int k = 0; k < leitor.tamanhoTreinamento; k++) {
+			for (int k = 0; k < leitor.trainingSize; k++) {
 				b.treinar(leitor.getEntrada()[k], leitor.getSaidaDesejada()[k]);
 				saidas[k] = m.getOutPut(0);
 			}
