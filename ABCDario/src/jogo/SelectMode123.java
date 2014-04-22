@@ -39,11 +39,11 @@ public class SelectMode123 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_123);
 		
-		inicializarComponetes();
+		InitializeComponents();
 		definirEventos();
 	}
 
-	private void inicializarComponetes() {
+	private void InitializeComponents() {
 		bt_back = (ImageView) findViewById(R.imgV.bt_voltar);
 		bt_learn = (ImageView) findViewById(R.imgV.bt_aprender);
 		bt_play = (ImageView) findViewById(R.imgV.bt_jogar);
