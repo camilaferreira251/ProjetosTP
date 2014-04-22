@@ -1,4 +1,4 @@
-/*Classe LettersGrid
+/*Class LettersGrid
  * Abcdário is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -36,7 +36,7 @@ public class GridLetters extends BaseAdapter {
 
 	private Context context;
 
-	// Iniciando botoes na grade
+	// Initializing buttons on grid
 	public Integer[] buttonsLetters = { R.drawable.bt_a, R.drawable.bt_b,
 			R.drawable.bt_c, R.drawable.bt_d, R.drawable.bt_e, R.drawable.bt_f,
 			R.drawable.bt_g, R.drawable.bt_h, R.drawable.bt_i, R.drawable.bt_j,
