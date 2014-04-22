@@ -43,19 +43,19 @@ public class ScorePersistence {
 
 	public int criaEarmazenaArrayListDeImagens() {
 
-		ScoreModel img_0_estrelas = new ScoreModel(0, R.drawable.img_0_estrelas);
-		ScoreModel img_1_estrela = new ScoreModel(1, R.drawable.img_1_estrela);
-		ScoreModel img_2_estrelas = new ScoreModel(2, R.drawable.img_2_estrelas);
-		ScoreModel img_3_estrelas = new ScoreModel(3, R.drawable.img_3_estrelas);
-		ScoreModel img_4_estrelas = new ScoreModel(4, R.drawable.img_4_estrelas);
-		ScoreModel img_5_estrelas = new ScoreModel(5, R.drawable.img_5_estrelas);
+		ScoreModel img0Star = new ScoreModel(0, R.drawable.img_0_estrelas);
+		ScoreModel img1Star = new ScoreModel(1, R.drawable.img_1_estrela);
+		ScoreModel img2Star = new ScoreModel(2, R.drawable.img_2_estrelas);
+		ScoreModel img3Star = new ScoreModel(3, R.drawable.img_3_estrelas);
+		ScoreModel img4Star = new ScoreModel(4, R.drawable.img_4_estrelas);
+		ScoreModel img5Star = new ScoreModel(5, R.drawable.img_5_estrelas);
 
-		cadastreImgStars.add(img_0_estrelas);
-		cadastreImgStars.add(img_1_estrela);
-		cadastreImgStars.add(img_2_estrelas);
-		cadastreImgStars.add(img_3_estrelas);
-		cadastreImgStars.add(img_4_estrelas);
-		cadastreImgStars.add(img_5_estrelas);
+		cadastreImgStars.add(img0Star);
+		cadastreImgStars.add(img1Star);
+		cadastreImgStars.add(img2Star);
+		cadastreImgStars.add(img3Star);
+		cadastreImgStars.add(img4Star);
+		cadastreImgStars.add(img5Star);
 
 		if (cadastreImgStars.isEmpty())
 			return -1;
