@@ -42,6 +42,11 @@ public class LearnPersistence {
 			instance = new LearnPersistence();
 			instance.atualizaCadastro();
 		}
+		
+		else{
+			//nothing to do here
+		}
+		
 		return instance;
 	}
 
@@ -123,6 +128,10 @@ public class LearnPersistence {
 		
 		if(registrationLetter.isEmpty())
 			return -1;
+		
+		else {
+			// nothing to do here
+		}
 				
 		return 0;
 	}
@@ -137,9 +146,15 @@ public class LearnPersistence {
 			
 			String nome = am.getName();
 			
-			if(nome.equalsIgnoreCase(letra))
+			if(nome.equalsIgnoreCase(letra)){
 				return am;
+				}
+			
+			else{
+				//nothing to do here
+			}
 		}
+			
 		
 		return null;
 	}
@@ -154,8 +169,12 @@ public class LearnPersistence {
 			
 			String nome = am.getName();
 			
-			if(nome.equalsIgnoreCase(numero))
+			if(nome.equalsIgnoreCase(numero)){
 				return am;
+				}
+			else{
+				// nothing to do here
+			}
 		}
 		
 		return null;
