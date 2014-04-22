@@ -33,93 +33,73 @@ import android.widget.TextView;
 
 public class Score extends Activity {
 
-	// Declaração das variáveis, textView e Bundle.
-
-	private TextView sucesses_field; // Campo que informa quantidade de acertos
-									// realizados no jogo.
-	private TextView mistakes_field; // Campo que informa quantidade de erros
-									// realizados no jogo.
-	private ImageView stars; // Imagem de estrela que varia de acordo com a
-								// porcentagem de acertos realizados no jogo.
-	private ImageView bt_back; // Imagem utilizada como botão para retornar
-									// para tela anterior.
-	private Bundle params; // Declaração de variável do tipo Bundle para
-							// manipulação de parâmetros.
-	private int qtd_sucesses; // Declaração de variável int para armazenar a
-								// quantidade de acertos realizados no jogo.
-	private int qtd_mistakes; // Declaração de variável int para armazenar a
-							// quantidade de erros realizados no jogo.
-	private float porcentageSucesses; // Declaração de variável float para
-										// armazenar a procentagem de acertos.
+	private TextView sucessesField; 
+	private TextView mistakesField; 
+	private ImageView starsImage; 
+	private ImageView buttonBack; 
+	private Bundle params; 
+	private int quantitySucesses; 
+	private int quantityMistakes;
+	private float porcentageSucesses; 
 	private ScoreController controller;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.score_activity); // Setando XML score_activity
-													// na Tela.
+		setContentView(R.layout.score_activity); // Setting XML score_activity on screen.
 
 		controller = new ScoreController();
-		inicializarComponentes(); // Chamando função para iniciar os
-									// componentes de tela utilizando ID.
-		params = obterParametros(); // Obtendo os parametros que a activity de
-									// jogo passou para o Bundle.
-		qtd_sucesses = setandoNumerosAcertosTela(params);// Setando na tela, no
-														// campo de acertos a
-														// quantidade obtida.
-		qtd_mistakes = setandoNumerosErrosTela(params); // Setando na tela, no
-														// campo de erros a
-														// quantidade obtida.
-		porcentageSucesses = calculaPorcentagemAcertos(qtd_sucesses, qtd_mistakes); // Calculando
-																				// porcentagem
-																				// de
-																				// acertos.
+		initializeComponents(); 
+		params = obtainParameters();
+		quantitySucesses = settingSucessesNumberScreen(params);
+		quantityMistakes = settingMistakesNumberScreen(params);
+		porcentageSucesses = calculateSucessesPorcentage(quantitySucesses, quantityMistakes);
 		definirImgEstrelas(porcentageSucesses);
-		definirEventos(); // Definindo evento do botão voltar.
+		defineEvents();
 	}
 
-	private void inicializarComponentes() {
-		stars = (ImageView) findViewById(R.id.estrelas);
-		bt_back = (ImageView) findViewById(R.id.bt_voltar);
-		sucesses_field = (TextView) findViewById(R.id.campo_acertos);
-		mistakes_field = (TextView) findViewById(R.id.campo_erros);
+	private void initializeComponents() {
+		starsImage = (ImageView) findViewById(R.id.estrelas);
+		buttonBack = (ImageView) findViewById(R.id.bt_voltar);
+		sucessesField = (TextView) findViewById(R.id.campo_acertos);
+		mistakesField = (TextView) findViewById(R.id.campo_erros);
 	}
 
-	private Bundle obterParametros() {
+	private Bundle obtainParameters() {
 		Intent intent = getIntent();
 		Bundle params = intent.getExtras();
 		return params;
 	}
 
-	private int setandoNumerosAcertosTela(Bundle params) {
+	private int settingSucessesNumberScreen(Bundle params) {
 		if (params != null)
 			;
 		{
-			int mostraacertos = params.getInt("acertos");
-			String acertos = Integer.toString(mostraacertos);
-			sucesses_field.setText(acertos);
-			return mostraacertos;
+			int showsucesses = params.getInt("acertos");
+			String sucesses = Integer.toString(showsucesses);
+			sucessesField.setText(sucesses);
+			return showsucesses;
 		}
 	}
 
-	private int setandoNumerosErrosTela(Bundle params) {
+	private int settingMistakesNumberScreen(Bundle params) {
 		if (params != null)
 			;
 		{
-			int mostraerros = params.getInt("erros");
-			String erros = Integer.toString(mostraerros);
-			mistakes_field.setText(erros);
-			return mostraerros;
+			int showMistakes = params.getInt("erros");
+			String mistakes = Integer.toString(showMistakes);
+			mistakesField.setText(mistakes);
+			return showMistakes;
 		}
 	}
 
-	private float calculaPorcentagemAcertos(int qtd_acertos, int qtd_erros) {
-		float porcentagem = controller.calculaPorcentagemAcertos(qtd_acertos,
-				qtd_erros);
-		return porcentagem;
+	private float calculateSucessesPorcentage(int quantitySucesses, int quantityMistakes) {
+		float porcentage = controller.calculaPorcentagemAcertos(quantitySucesses,
+				quantityMistakes);
+		return porcentage;
 	}
 
-	private void definirEventos() {
-		bt_back.setOnClickListener(new View.OnClickListener() {
+	private void defineEvents() {
+		buttonBack.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 				finish();
@@ -128,7 +108,7 @@ public class Score extends Activity {
 	}
 
 	private void definirImgEstrelas(float porcentagemAcertos) {
-		stars.setImageDrawable(getResources().getDrawable(
+		starsImage.setImageDrawable(getResources().getDrawable(
 				controller.definirImgEstrelas(porcentagemAcertos)));
 	}
 
