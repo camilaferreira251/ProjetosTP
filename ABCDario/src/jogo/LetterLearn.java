@@ -62,9 +62,13 @@ public class LetterLearn extends Activity{
 		soundButton = (ImageView) findViewById(R.id.bt_som);
 		image = (ImageView) findViewById(R.id.imagem_selecionada);
 		
-		if(letter == null)
+		if(letter == null){
 			letter = obtainParameter();
+		}
 		
+		else {
+			// nothing to do here
+		}
 		id = controller.defineLetter(letter);
 		
 		defineImage(id[0]);
