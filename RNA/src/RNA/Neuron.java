@@ -25,24 +25,24 @@ package RNA;
 
 public class Neuron {
 
-	private double[] pesos = null;
+	private double[] weights = null;
 	private double bias = 1;
 
 	public Neuron(int connections, int bias) {
-		pesos = new double[connections];
+		weights = new double[connections];
 		this.bias = bias;
 	}
 
-	public int getTamanho() {
-		return pesos.length;
+	public int getLenght() {
+		return weights.length;
 	}
 
-	public double getPeso(int index) {
-		return pesos[index];
+	public double getWeight(int index) {
+		return weights[index];
 	}
 
-	public void setPeso(int index, double peso) {
-		pesos[index] = peso;
+	public void setWeight(int index, double weight) {
+		weights[index] = weight;
 	}
 
 	public double getBias() {
@@ -53,29 +53,29 @@ public class Neuron {
 		bias = b;
 	}
 
-	public void corrigirPeso(int i, double delta) {
-		pesos[i] += delta;
+	public void correctWeight(int i, double delta) {
+		weights[i] += delta;
 	}
 
-	public void corrigirBias(double delta) {
+	public void correctBias(double delta) {
 		bias += delta;
 	}
 
-	protected void randomizarPesos(int opcao) {
-		switch (opcao) {
+	protected void randomizeWeights(int option) {
+		switch (option) {
 		case 0:
-			for (int i = 0; i < pesos.length; i++) {
-				pesos[i] = Math.random();
+			for (int i = 0; i < weights.length; i++) {
+				weights[i] = Math.random();
 			}
 			break;
 		case 1:
-			for (int i = 0; i < pesos.length; i++) {
-				pesos[i] = (Math.random() - 1 / 2) * 2;
+			for (int i = 0; i < weights.length; i++) {
+				weights[i] = (Math.random() - 1 / 2) * 2;
 			}
 			break;
 		case 2:
-			for (int i = 0; i < pesos.length; i++) {
-				pesos[i] = Math.random() - 1;
+			for (int i = 0; i < weights.length; i++) {
+				weights[i] = Math.random() - 1;
 			}
 			break;
 		default:
