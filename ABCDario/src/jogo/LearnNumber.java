@@ -32,7 +32,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
-public class NumberLearn extends Activity {
+public class LearnNumber extends Activity {
 
 	private LearnController controller;
 
@@ -95,7 +95,7 @@ public class NumberLearn extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(NumberLearn.this, Learn123.class));
+				startActivity(new Intent(LearnNumber.this, Learn123.class));
 			}
 		});
 
