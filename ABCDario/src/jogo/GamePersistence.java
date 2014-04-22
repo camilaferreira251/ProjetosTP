@@ -49,6 +49,11 @@ public class GamePersistence {
 			instance = new GamePersistence();
 			instance.updatesRegister();
 		}
+		
+		else{
+			// nothing to do here
+		}
+		
 		return instance;
 	}
 
@@ -506,9 +511,14 @@ public class GamePersistence {
 		registrationNumber.add(sixthChoiceNumber9);
 
 		// verification
-		if (registrationLetter.isEmpty() || registrationNumber.isEmpty())
+		if (registrationLetter.isEmpty() || registrationNumber.isEmpty()){
 			return -1;
-
+		}
+		
+		else{
+			//nothing to do here
+		}
+		
 		return 0;
 	}
 
@@ -525,8 +535,12 @@ public class GamePersistence {
 
 			String name = jm.getName();
 
-			if (name.equalsIgnoreCase(number))
+			if (name.equalsIgnoreCase(number)){
 				return jm;
+				}
+			else{
+				// nothing to do here
+			}
 		}
 
 		return null;
@@ -546,8 +560,10 @@ public class GamePersistence {
 			String name = jm.getName();
 
 			if (name.equalsIgnoreCase(letter)) {
-
 				return jm;
+			}
+			else{
+				// nothing to do here
 			}
 		}
 
