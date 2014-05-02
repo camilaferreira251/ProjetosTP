@@ -23,11 +23,13 @@
 
 package RNA;
 
+import java.util.ResourceBundle;
 import javax.swing.JLabel;
 import javax.swing.JToggleButton;
 
 @SuppressWarnings("serial")
 public class MainWindow extends javax.swing.JFrame {
+    ResourceBundle internationalizationMainWindow = ResourceBundle.getBundle("RNA/InternationalizationMainWindow");
 
     MainWindow essaJanela;
     public MainWindow() {
@@ -57,7 +59,7 @@ public class MainWindow extends javax.swing.JFrame {
         jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
         jToggleButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(0, 204, 255));
-        jToggleButton1.setText("Treinar");
+        jToggleButton1.setText(internationalizationMainWindow.getString("TREINAR"));
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -66,13 +68,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 204, 255));
-        jLabel2.setText("Assistente de Doação de Orgãos");
+        jLabel2.setText(internationalizationMainWindow.getString("ASSISTENTE DE DOAÇÃO DE ORGÃOS"));
         jLabel2.setToolTipText("");
 
         botaoUtilizar.setBackground(new java.awt.Color(0, 0, 0));
         botaoUtilizar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botaoUtilizar.setForeground(new java.awt.Color(0, 204, 255));
-        botaoUtilizar.setText("Utilizar*");
+        botaoUtilizar.setText(internationalizationMainWindow.getString("UTILIZAR*"));
         botaoUtilizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoUtilizarActionPerformed(evt);
@@ -82,7 +84,7 @@ public class MainWindow extends javax.swing.JFrame {
         jToggleButton5.setBackground(new java.awt.Color(0, 0, 0));
         jToggleButton5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jToggleButton5.setForeground(new java.awt.Color(0, 204, 255));
-        jToggleButton5.setText("Sair");
+        jToggleButton5.setText(internationalizationMainWindow.getString("SAIR"));
         jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton5ActionPerformed(evt);
@@ -90,7 +92,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         textoUtilizar.setForeground(new java.awt.Color(0, 204, 255));
-        textoUtilizar.setText("*Treine a rede para utilizar essa funcionalidade");
+        textoUtilizar.setText(internationalizationMainWindow.getString("*TREINE A REDE PARA UTILIZAR ESSA FUNCIONALIDADE"));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
