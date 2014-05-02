@@ -24,9 +24,11 @@
 package RNA;
 
 import RNA.Operator;
+import java.util.ResourceBundle;
 
 @SuppressWarnings("serial")
 public class QuestionWindows extends javax.swing.JDialog {
+    ResourceBundle internationalizationQuestionWindow = ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow");
 
 	public QuestionWindows(java.awt.Frame parent, boolean modal) {
 		super(parent, modal);
@@ -108,20 +110,20 @@ public class QuestionWindows extends javax.swing.JDialog {
 		p3pancreas = new javax.swing.JCheckBox();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-		setTitle("Questionário - Parte 1/2");
+		setTitle(internationalizationQuestionWindow.getString("QUESTIONÁRIO - PARTE 1/2"));
 
 		jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 		jPanel1.setLayout(null);
 
 		jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel1.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel1.setText("Doador Maior de Idade ou com autorização?");
+		jLabel1.setText(internationalizationQuestionWindow.getString("DOADOR MAIOR DE IDADE OU COM AUTORIZAÇÃO?"));
 		jPanel1.add(jLabel1);
 		jLabel1.setBounds(10, 20, 330, 20);
 
 		naoP6.setBackground(new java.awt.Color(0, 0, 0));
 		naoP6.setForeground(new java.awt.Color(0, 204, 255));
-		naoP6.setText("Não");
+		naoP6.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP6.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP6ActionPerformed(evt);
@@ -132,7 +134,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		simP6.setBackground(new java.awt.Color(0, 0, 0));
 		simP6.setForeground(new java.awt.Color(0, 204, 255));
-		simP6.setText("Sim");
+		simP6.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP6.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP6ActionPerformed(evt);
@@ -143,13 +145,13 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel2.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel2.setText("Doador compatível?");
+		jLabel2.setText(internationalizationQuestionWindow.getString("DOADOR COMPATÍVEL?"));
 		jPanel1.add(jLabel2);
 		jLabel2.setBounds(90, 160, 150, 17);
 
 		simP7.setBackground(new java.awt.Color(0, 0, 0));
 		simP7.setForeground(new java.awt.Color(0, 204, 255));
-		simP7.setText("Sim");
+		simP7.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP7.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP7ActionPerformed(evt);
@@ -160,7 +162,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP7.setBackground(new java.awt.Color(0, 0, 0));
 		naoP7.setForeground(new java.awt.Color(0, 204, 255));
-		naoP7.setText("Não");
+		naoP7.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP7.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP7ActionPerformed(evt);
@@ -171,19 +173,19 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel3.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel3.setText("ou autorização judicial?");
+		jLabel3.setText(internationalizationQuestionWindow.getString("OU AUTORIZAÇÃO JUDICIAL?"));
 		jPanel1.add(jLabel3);
 		jLabel3.setBounds(80, 100, 170, 20);
 
 		jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel4.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel4.setText("Parentesco até 4º grau, conjugue");
+		jLabel4.setText(internationalizationQuestionWindow.getString("PARENTESCO ATÉ 4º GRAU, CONJUGUE"));
 		jPanel1.add(jLabel4);
 		jLabel4.setBounds(50, 80, 240, 20);
 
 		simP10.setBackground(new java.awt.Color(0, 0, 0));
 		simP10.setForeground(new java.awt.Color(0, 204, 255));
-		simP10.setText("Sim");
+		simP10.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP10.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP10ActionPerformed(evt);
@@ -194,7 +196,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP10.setBackground(new java.awt.Color(0, 0, 0));
 		naoP10.setForeground(new java.awt.Color(0, 204, 255));
-		naoP10.setText("Não");
+		naoP10.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP10.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP10ActionPerformed(evt);
@@ -205,13 +207,13 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel6.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel6.setText("insuficiência de múltiplos órgãos?");
+		jLabel6.setText(internationalizationQuestionWindow.getString("INSUFICIÊNCIA DE MÚLTIPLOS ÓRGÃOS?"));
 		jPanel1.add(jLabel6);
 		jLabel6.setBounds(50, 390, 230, 17);
 
 		simP11.setBackground(new java.awt.Color(0, 0, 0));
 		simP11.setForeground(new java.awt.Color(0, 204, 255));
-		simP11.setText("Sim");
+		simP11.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP11.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP11ActionPerformed(evt);
@@ -222,7 +224,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP11.setBackground(new java.awt.Color(0, 0, 0));
 		naoP11.setForeground(new java.awt.Color(0, 204, 255));
-		naoP11.setText("Não");
+		naoP11.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP11.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP11ActionPerformed(evt);
@@ -233,7 +235,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP8.setBackground(new java.awt.Color(0, 0, 0));
 		naoP8.setForeground(new java.awt.Color(0, 204, 255));
-		naoP8.setText("Não");
+		naoP8.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP8.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP8ActionPerformed(evt);
@@ -244,7 +246,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		simP8.setBackground(new java.awt.Color(0, 0, 0));
 		simP8.setForeground(new java.awt.Color(0, 204, 255));
-		simP8.setText("Sim");
+		simP8.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP8.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP8ActionPerformed(evt);
@@ -255,7 +257,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		simP9.setBackground(new java.awt.Color(0, 0, 0));
 		simP9.setForeground(new java.awt.Color(0, 204, 255));
-		simP9.setText("Sim");
+		simP9.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP9.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP9ActionPerformed(evt);
@@ -266,7 +268,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP9.setBackground(new java.awt.Color(0, 0, 0));
 		naoP9.setForeground(new java.awt.Color(0, 204, 255));
-		naoP9.setText("Não");
+		naoP9.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP9.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP9ActionPerformed(evt);
@@ -277,32 +279,32 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel13.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel13.setText("Possui alguma doença que afeta ");
+		jLabel13.setText(internationalizationQuestionWindow.getString("POSSUI ALGUMA DOENÇA QUE AFETA "));
 		jPanel1.add(jLabel13);
 		jLabel13.setBounds(40, 220, 240, 20);
 
 		jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel14.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel14.setText("o órgão em questão?");
+		jLabel14.setText(internationalizationQuestionWindow.getString("O ÓRGÃO EM QUESTÃO?"));
 		jPanel1.add(jLabel14);
 		jLabel14.setBounds(70, 240, 170, 20);
 
 		jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel16.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel16.setText("Possui alguma doença contagiosa?");
+		jLabel16.setText(internationalizationQuestionWindow.getString("POSSUI ALGUMA DOENÇA CONTAGIOSA?"));
 		jPanel1.add(jLabel16);
 		jLabel16.setBounds(40, 300, 240, 20);
 
 		jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel15.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel15.setText("Possui infecção generalizada ou ");
+		jLabel15.setText(internationalizationQuestionWindow.getString("POSSUI INFECÇÃO GENERALIZADA OU "));
 		jPanel1.add(jLabel15);
 		jLabel15.setBounds(50, 370, 230, 17);
 
 		jToggleButton2.setBackground(new java.awt.Color(0, 0, 0));
 		jToggleButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 		jToggleButton2.setForeground(new java.awt.Color(0, 204, 255));
-		jToggleButton2.setText("Avançar");
+		jToggleButton2.setText(internationalizationQuestionWindow.getString("AVANÇAR"));
 		jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jToggleButton2ActionPerformed(evt);
@@ -316,13 +318,13 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel7.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel7.setText("O doador está vivo?");
+		jLabel7.setText(internationalizationQuestionWindow.getString("O DOADOR ESTÁ VIVO?"));
 		jPanel2.add(jLabel7);
 		jLabel7.setBounds(80, 20, 138, 17);
 
 		naoP1.setBackground(new java.awt.Color(0, 0, 0));
 		naoP1.setForeground(new java.awt.Color(0, 204, 255));
-		naoP1.setText("Não");
+		naoP1.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP1ActionPerformed(evt);
@@ -333,7 +335,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		simP1.setBackground(new java.awt.Color(0, 0, 0));
 		simP1.setForeground(new java.awt.Color(0, 204, 255));
-		simP1.setText("Sim");
+		simP1.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP1ActionPerformed(evt);
@@ -344,13 +346,13 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel8.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel8.setText("Qual órgão deseja doar?");
+		jLabel8.setText(internationalizationQuestionWindow.getString("QUAL ÓRGÃO DESEJA DOAR?"));
 		jPanel2.add(jLabel8);
 		jLabel8.setBounds(80, 160, 180, 17);
 
 		simP2.setBackground(new java.awt.Color(0, 0, 0));
 		simP2.setForeground(new java.awt.Color(0, 204, 255));
-		simP2.setText("Sim");
+		simP2.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP2ActionPerformed(evt);
@@ -361,7 +363,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP2.setBackground(new java.awt.Color(0, 0, 0));
 		naoP2.setForeground(new java.awt.Color(0, 204, 255));
-		naoP2.setText("Não");
+		naoP2.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP2ActionPerformed(evt);
@@ -372,13 +374,13 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel9.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel9.setText("sanidade mental?");
+		jLabel9.setText(internationalizationQuestionWindow.getString("SANIDADE MENTAL?"));
 		jPanel2.add(jLabel9);
 		jLabel9.setBounds(90, 100, 130, 20);
 
 		p3figado.setBackground(new java.awt.Color(0, 0, 0));
 		p3figado.setForeground(new java.awt.Color(0, 204, 255));
-		p3figado.setText("Fígado");
+		p3figado.setText(internationalizationQuestionWindow.getString("FÍGADO"));
 		p3figado.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3figadoActionPerformed(evt);
@@ -389,7 +391,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3pulmao.setBackground(new java.awt.Color(0, 0, 0));
 		p3pulmao.setForeground(new java.awt.Color(0, 204, 255));
-		p3pulmao.setText("Pulmão");
+		p3pulmao.setText(internationalizationQuestionWindow.getString("PULMÃO"));
 		p3pulmao.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3pulmaoActionPerformed(evt);
@@ -400,7 +402,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3corneas.setBackground(new java.awt.Color(0, 0, 0));
 		p3corneas.setForeground(new java.awt.Color(0, 204, 255));
-		p3corneas.setText("Córneas");
+		p3corneas.setText(internationalizationQuestionWindow.getString("CÓRNEAS"));
 		p3corneas.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3corneasActionPerformed(evt);
@@ -411,7 +413,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3ossos.setBackground(new java.awt.Color(0, 0, 0));
 		p3ossos.setForeground(new java.awt.Color(0, 204, 255));
-		p3ossos.setText("Ossos");
+		p3ossos.setText(internationalizationQuestionWindow.getString("OSSOS"));
 		p3ossos.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3ossosActionPerformed(evt);
@@ -422,7 +424,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3coracao.setBackground(new java.awt.Color(0, 0, 0));
 		p3coracao.setForeground(new java.awt.Color(0, 204, 255));
-		p3coracao.setText("Coração");
+		p3coracao.setText(internationalizationQuestionWindow.getString("CORAÇÃO"));
 		p3coracao.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3coracaoActionPerformed(evt);
@@ -433,7 +435,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3medula.setBackground(new java.awt.Color(0, 0, 0));
 		p3medula.setForeground(new java.awt.Color(0, 204, 255));
-		p3medula.setText("Medula óssea");
+		p3medula.setText(internationalizationQuestionWindow.getString("MEDULA ÓSSEA"));
 		p3medula.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3medulaActionPerformed(evt);
@@ -444,7 +446,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3valvula.setBackground(new java.awt.Color(0, 0, 0));
 		p3valvula.setForeground(new java.awt.Color(0, 204, 255));
-		p3valvula.setText("Valv. Cardíaca");
+		p3valvula.setText(internationalizationQuestionWindow.getString("VALV. CARDÍACA"));
 		p3valvula.setToolTipText("");
 		p3valvula.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,7 +458,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3pele.setBackground(new java.awt.Color(0, 0, 0));
 		p3pele.setForeground(new java.awt.Color(0, 204, 255));
-		p3pele.setText("Pele");
+		p3pele.setText(internationalizationQuestionWindow.getString("PELE"));
 		p3pele.setToolTipText("");
 		p3pele.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -468,7 +470,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3rins.setBackground(new java.awt.Color(0, 0, 0));
 		p3rins.setForeground(new java.awt.Color(0, 204, 255));
-		p3rins.setText("Rins");
+		p3rins.setText(internationalizationQuestionWindow.getString("RINS"));
 		p3rins.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3rinsActionPerformed(evt);
@@ -479,19 +481,19 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel10.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel10.setText("Se encontra em perfeita ");
+		jLabel10.setText(internationalizationQuestionWindow.getString("SE ENCONTRA EM PERFEITA "));
 		jPanel2.add(jLabel10);
 		jLabel10.setBounds(70, 80, 170, 20);
 
 		jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel11.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel11.setText("É gestante?");
+		jLabel11.setText(internationalizationQuestionWindow.getString("É GESTANTE?"));
 		jPanel2.add(jLabel11);
 		jLabel11.setBounds(110, 320, 90, 17);
 
 		simP4.setBackground(new java.awt.Color(0, 0, 0));
 		simP4.setForeground(new java.awt.Color(0, 204, 255));
-		simP4.setText("Sim");
+		simP4.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP4.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP4ActionPerformed(evt);
@@ -502,7 +504,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP4.setBackground(new java.awt.Color(0, 0, 0));
 		naoP4.setForeground(new java.awt.Color(0, 204, 255));
-		naoP4.setText("Não");
+		naoP4.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP4.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP4ActionPerformed(evt);
@@ -513,13 +515,13 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel12.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel12.setText("Oferece risco ao feto?");
+		jLabel12.setText(internationalizationQuestionWindow.getString("OFERECE RISCO AO FETO?"));
 		jPanel2.add(jLabel12);
 		jLabel12.setBounds(80, 380, 160, 17);
 
 		simP5.setBackground(new java.awt.Color(0, 0, 0));
 		simP5.setForeground(new java.awt.Color(0, 204, 255));
-		simP5.setText("Sim");
+		simP5.setText(internationalizationQuestionWindow.getString("SIM"));
 		simP5.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP5ActionPerformed(evt);
@@ -530,7 +532,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		naoP5.setBackground(new java.awt.Color(0, 0, 0));
 		naoP5.setForeground(new java.awt.Color(0, 204, 255));
-		naoP5.setText("Não");
+		naoP5.setText(internationalizationQuestionWindow.getString("NÃO"));
 		naoP5.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP5ActionPerformed(evt);
@@ -542,7 +544,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 		jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
 		jToggleButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 		jToggleButton1.setForeground(new java.awt.Color(0, 204, 255));
-		jToggleButton1.setText("Menu");
+		jToggleButton1.setText(internationalizationQuestionWindow.getString("MENU"));
 		jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jToggleButton1ActionPerformed(evt);
@@ -553,7 +555,7 @@ public class QuestionWindows extends javax.swing.JDialog {
 
 		p3pancreas.setBackground(new java.awt.Color(0, 0, 0));
 		p3pancreas.setForeground(new java.awt.Color(0, 204, 255));
-		p3pancreas.setText("Pâncreas");
+		p3pancreas.setText(internationalizationQuestionWindow.getString("PÂNCREAS"));
 		p3pancreas.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p3pancreasActionPerformed(evt);
