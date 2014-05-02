@@ -46,7 +46,7 @@ public class Layer {
 
         for (int i = 0; i < neurons.length; i++) {
             neurons[i] = new Neuron(conexoes,bias);
-            neurons[i].randomizarPesos(intervalo);
+            neurons[i].randomizeWeights(intervalo);
         }
     }
 
@@ -74,14 +74,14 @@ public class Layer {
     }
 
     public int getTamanhoNeuronio() {
-        return neurons[0].getTamanho();
+        return neurons[0].getLenght();
     }
 
     private double rede(int neuronio, double[] entradas) {
         double u = 0;
 
         for (int i = 0; i < entradas.length; i++) {
-            u += entradas[i] * neurons[neuronio].getPeso(i);
+            u += entradas[i] * neurons[neuronio].getWeight(i);
         }
         
         u -= neurons[neuronio].getBias();

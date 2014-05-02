@@ -116,7 +116,7 @@ public class BackPropagation {
 				for (int k = 0; k < layer[i + 1].getSize(); k++) {
 
 					double pesoNeuronio = m.getLayer(i + 1).getNeuronio(k)
-							.getPeso(j);
+							.getWeight(j);
 					double erroNeuronio = layer[i + 1].getError(k);
 					error += pesoNeuronio * erroNeuronio;
 				}
@@ -153,10 +153,10 @@ public class BackPropagation {
 		for (i = 0; i < m.getSize(); i++) {
 			for (j = 0; j < m.getLayer(i).getSize(); j++) {
 				Neuron n = m.getLayer(i).getNeuronio(j);
-				for (k = 0; k < n.getTamanho(); k++) {
-					n.corrigirPeso(k, layer[i].getNeuronBackPropagation(j).getDeltaw(k));
+				for (k = 0; k < n.getLenght(); k++) {
+					n.correctWeight(k, layer[i].getNeuronBackPropagation(j).getDeltaw(k));
 				}
-				n.corrigirBias(layer[i].getNeuronBackPropagation(j).getDeltaBias());
+				n.correctBias(layer[i].getNeuronBackPropagation(j).getDeltaBias());
 			}
 		}
 	}
