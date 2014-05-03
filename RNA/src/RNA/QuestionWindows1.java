@@ -96,7 +96,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 		jToggleButton1 = new javax.swing.JToggleButton();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-		setTitle("Questionário - Parte 2/2");
+		setTitle(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("QUESTIONÁRIO - PARTE 2/2"));
 
 		jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 		jPanel1.setLayout(null);
@@ -104,7 +104,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 		jToggleButton2.setBackground(new java.awt.Color(0, 0, 0));
 		jToggleButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 		jToggleButton2.setForeground(new java.awt.Color(0, 204, 255));
-		jToggleButton2.setText("Resultado");
+		jToggleButton2.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("RESULTADO"));
 		jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jToggleButton2ActionPerformed(evt);
@@ -115,25 +115,25 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel21.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel21.setText("que avaliem o estado do");
+		jLabel21.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("QUE AVALIEM O ESTADO DO"));
 		jPanel1.add(jLabel21);
 		jLabel21.setBounds(80, 40, 170, 17);
 
 		jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel12.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel12.setText("tronco cerebral?");
+		jLabel12.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("TRONCO CEREBRAL?"));
 		jPanel1.add(jLabel12);
 		jLabel12.setBounds(110, 60, 120, 17);
 
 		jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel20.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel20.setText("Passou por dois exames neurológicos");
+		jLabel20.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("PASSOU POR DOIS EXAMES NEUROLÓGICOS"));
 		jPanel1.add(jLabel20);
 		jLabel20.setBounds(40, 20, 270, 17);
 
 		simP17.setBackground(new java.awt.Color(0, 0, 0));
 		simP17.setForeground(new java.awt.Color(0, 204, 255));
-		simP17.setText("Sim");
+		simP17.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SIM"));
 		simP17.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP17ActionPerformed(evt);
@@ -144,7 +144,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		naoP17.setBackground(new java.awt.Color(0, 0, 0));
 		naoP17.setForeground(new java.awt.Color(0, 204, 255));
-		naoP17.setText("Não");
+		naoP17.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("NÃO"));
 		naoP17.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP17ActionPerformed(evt);
@@ -155,25 +155,25 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel22.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel22.setText("Submeteu-se a exame complementar");
+		jLabel22.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SUBMETEU-SE A EXAME COMPLEMENTAR"));
 		jPanel1.add(jLabel22);
 		jLabel22.setBounds(30, 120, 270, 17);
 
 		jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel23.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel23.setText("que demonstre a morte ");
+		jLabel23.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("QUE DEMONSTRE A MORTE "));
 		jPanel1.add(jLabel23);
 		jLabel23.setBounds(80, 140, 170, 17);
 
 		jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel13.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel13.setText("encefálica?");
+		jLabel13.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ENCEFÁLICA?"));
 		jPanel1.add(jLabel13);
 		jLabel13.setBounds(130, 160, 90, 20);
 
 		simP18.setBackground(new java.awt.Color(0, 0, 0));
 		simP18.setForeground(new java.awt.Color(0, 204, 255));
-		simP18.setText("Sim");
+		simP18.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SIM"));
 		simP18.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP18ActionPerformed(evt);
@@ -184,7 +184,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		naoP18.setBackground(new java.awt.Color(0, 0, 0));
 		naoP18.setForeground(new java.awt.Color(0, 204, 255));
-		naoP18.setText("Não");
+		naoP18.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("NÃO"));
 		naoP18.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP18ActionPerformed(evt);
@@ -195,13 +195,13 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel14.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel14.setText("Qual o tempo de retirada do órgão?");
+		jLabel14.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("QUAL O TEMPO DE RETIRADA DO ÓRGÃO?"));
 		jPanel1.add(jLabel14);
 		jLabel14.setBounds(50, 220, 260, 17);
 
 		p19_1.setBackground(new java.awt.Color(0, 0, 0));
 		p19_1.setForeground(new java.awt.Color(0, 204, 255));
-		p19_1.setText("Antes da PC e até 6h fora do corpo");
+		p19_1.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ANTES DA PC E ATÉ 6H FORA DO CORPO"));
 		p19_1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p19_1ActionPerformed(evt);
@@ -212,7 +212,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		p19_2.setBackground(new java.awt.Color(0, 0, 0));
 		p19_2.setForeground(new java.awt.Color(0, 204, 255));
-		p19_2.setText("Antes da PC e até 24h fora do corpo");
+		p19_2.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ANTES DA PC E ATÉ 24H FORA DO CORPO"));
 		p19_2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p19_2ActionPerformed(evt);
@@ -223,7 +223,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		p19_5.setBackground(new java.awt.Color(0, 0, 0));
 		p19_5.setForeground(new java.awt.Color(0, 204, 255));
-		p19_5.setText("Até 30m após PC e até 48h fora do corpo");
+		p19_5.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ATÉ 30M APÓS PC E ATÉ 48H FORA DO CORPO"));
 		p19_5.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p19_5ActionPerformed(evt);
@@ -234,7 +234,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		p19_3.setBackground(new java.awt.Color(0, 0, 0));
 		p19_3.setForeground(new java.awt.Color(0, 204, 255));
-		p19_3.setText("Até 6 h após PC e até 7 dias fora do corpo");
+		p19_3.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ATÉ 6 H APÓS PC E ATÉ 7 DIAS FORA DO CORPO"));
 		p19_3.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p19_3ActionPerformed(evt);
@@ -245,7 +245,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		p19_4.setBackground(new java.awt.Color(0, 0, 0));
 		p19_4.setForeground(new java.awt.Color(0, 204, 255));
-		p19_4.setText("Até 6 h após PC e até 5 anos fora do corpo");
+		p19_4.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ATÉ 6 H APÓS PC E ATÉ 5 ANOS FORA DO CORPO"));
 		p19_4.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p19_4ActionPerformed(evt);
@@ -256,7 +256,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		p19_6.setBackground(new java.awt.Color(0, 0, 0));
 		p19_6.setForeground(new java.awt.Color(0, 204, 255));
-		p19_6.setText("Doador vivo");
+		p19_6.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("DOADOR VIVO"));
 		p19_6.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				p19_6ActionPerformed(evt);
@@ -267,7 +267,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel1.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
 		jLabel1.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel1.setText("*PC = Parada Cardíaca");
+		jLabel1.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("*PC = PARADA CARDÍACA"));
 		jPanel1.add(jLabel1);
 		jLabel1.setBounds(190, 370, 120, 14);
 
@@ -276,13 +276,13 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel7.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel7.setText("ou doença degenerativa crônica?");
+		jLabel7.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("OU DOENÇA DEGENERATIVA CRÔNICA?"));
 		jPanel2.add(jLabel7);
 		jLabel7.setBounds(50, 40, 230, 17);
 
 		naoP12.setBackground(new java.awt.Color(0, 0, 0));
 		naoP12.setForeground(new java.awt.Color(0, 204, 255));
-		naoP12.setText("Não");
+		naoP12.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("NÃO"));
 		naoP12.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP12ActionPerformed(evt);
@@ -293,7 +293,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		simP12.setBackground(new java.awt.Color(0, 0, 0));
 		simP12.setForeground(new java.awt.Color(0, 204, 255));
-		simP12.setText("Sim");
+		simP12.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SIM"));
 		simP12.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP12ActionPerformed(evt);
@@ -304,13 +304,13 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel8.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel8.setText("Possui identificação e registro hospitalar?");
+		jLabel8.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("POSSUI IDENTIFICAÇÃO E REGISTRO HOSPITALAR?"));
 		jPanel2.add(jLabel8);
 		jLabel8.setBounds(20, 160, 283, 17);
 
 		simP13.setBackground(new java.awt.Color(0, 0, 0));
 		simP13.setForeground(new java.awt.Color(0, 204, 255));
-		simP13.setText("Sim");
+		simP13.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SIM"));
 		simP13.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP13ActionPerformed(evt);
@@ -321,7 +321,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		naoP13.setBackground(new java.awt.Color(0, 0, 0));
 		naoP13.setForeground(new java.awt.Color(0, 204, 255));
-		naoP13.setText("Não");
+		naoP13.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("NÃO"));
 		naoP13.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP13ActionPerformed(evt);
@@ -332,19 +332,19 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel10.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel10.setText("Houve morte encefálica do doador?");
+		jLabel10.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("HOUVE MORTE ENCEFÁLICA DO DOADOR?"));
 		jPanel2.add(jLabel10);
 		jLabel10.setBounds(40, 90, 250, 20);
 
 		jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel11.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel11.setText("do sistema nervoso central?");
+		jLabel11.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("DO SISTEMA NERVOSO CENTRAL?"));
 		jPanel2.add(jLabel11);
 		jLabel11.setBounds(60, 320, 210, 17);
 
 		simP16.setBackground(new java.awt.Color(0, 0, 0));
 		simP16.setForeground(new java.awt.Color(0, 204, 255));
-		simP16.setText("Sim");
+		simP16.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SIM"));
 		simP16.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP16ActionPerformed(evt);
@@ -355,7 +355,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		naoP16.setBackground(new java.awt.Color(0, 0, 0));
 		naoP16.setForeground(new java.awt.Color(0, 204, 255));
-		naoP16.setText("Não");
+		naoP16.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("NÃO"));
 		naoP16.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP16ActionPerformed(evt);
@@ -366,13 +366,13 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel17.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel17.setText("Doador Possui tumor maligno");
+		jLabel17.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("DOADOR POSSUI TUMOR MALIGNO"));
 		jPanel2.add(jLabel17);
 		jLabel17.setBounds(60, 20, 230, 17);
 
 		naoP14.setBackground(new java.awt.Color(0, 0, 0));
 		naoP14.setForeground(new java.awt.Color(0, 204, 255));
-		naoP14.setText("Não");
+		naoP14.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("NÃO"));
 		naoP14.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP14ActionPerformed(evt);
@@ -383,7 +383,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		simP14.setBackground(new java.awt.Color(0, 0, 0));
 		simP14.setForeground(new java.awt.Color(0, 204, 255));
-		simP14.setText("Sim");
+		simP14.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SIM"));
 		simP14.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP14ActionPerformed(evt);
@@ -394,13 +394,13 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel9.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel9.setText("Motivo da morte cerebral é conhecido?");
+		jLabel9.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("MOTIVO DA MORTE CEREBRAL É CONHECIDO?"));
 		jPanel2.add(jLabel9);
 		jLabel9.setBounds(20, 220, 280, 17);
 
 		naoP15.setBackground(new java.awt.Color(0, 0, 0));
 		naoP15.setForeground(new java.awt.Color(0, 204, 255));
-		naoP15.setText("Não");
+		naoP15.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("NÃO"));
 		naoP15.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				naoP15ActionPerformed(evt);
@@ -411,7 +411,7 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		simP15.setBackground(new java.awt.Color(0, 0, 0));
 		simP15.setForeground(new java.awt.Color(0, 204, 255));
-		simP15.setText("Sim");
+		simP15.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("SIM"));
 		simP15.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				simP15ActionPerformed(evt);
@@ -422,20 +422,20 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 
 		jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel18.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel18.setText("Apresenta hipotermia, hipotensão arterial");
+		jLabel18.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("APRESENTA HIPOTERMIA, HIPOTENSÃO ARTERIAL"));
 		jPanel2.add(jLabel18);
 		jLabel18.setBounds(20, 280, 300, 17);
 
 		jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 		jLabel19.setForeground(new java.awt.Color(0, 204, 255));
-		jLabel19.setText("ou está sob efeito de drogas depressoras");
+		jLabel19.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("OU ESTÁ SOB EFEITO DE DROGAS DEPRESSORAS"));
 		jPanel2.add(jLabel19);
 		jLabel19.setBounds(20, 300, 300, 17);
 
 		jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
 		jToggleButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 		jToggleButton1.setForeground(new java.awt.Color(0, 204, 255));
-		jToggleButton1.setText("Voltar");
+		jToggleButton1.setText(java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("VOLTAR"));
 		jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jToggleButton1ActionPerformed(evt);
@@ -523,9 +523,9 @@ public class QuestionWindows1 extends javax.swing.JDialog {
 		}
 
 		JOptionPane.showMessageDialog(null,
-				(Operator.operate() > 0.5 ? "Órgão pode ser doado!!"
-						: "Órgão não pode ser doado!!"),
-				"Resultado da Consulta", 1);
+				(Operator.operate() > 0.5 ? java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ÓRGÃO PODE SER DOADO!!")
+						: java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("ÓRGÃO NÃO PODE SER DOADO!!")),
+				java.util.ResourceBundle.getBundle("RNA/InternationalizationQuestionWindow1").getString("RESULTADO DA CONSULTA"), 1);
 		this.dispose();
 
 	}// GEN-LAST:event_jToggleButton2ActionPerformed
