@@ -1,4 +1,4 @@
-/* Class JanelaPrincipal
+/*Class MainWindow
  * RNA is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -21,15 +21,13 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
+
 package RNA;
 
-import java.util.ResourceBundle;
 import javax.swing.JLabel;
 import javax.swing.JToggleButton;
 
-@SuppressWarnings("serial")
 public class MainWindow extends javax.swing.JFrame {
-    ResourceBundle internationalizationMainWindow = ResourceBundle.getBundle("RNA/InternationalizationMainWindow");
 
     MainWindow essaJanela;
     public MainWindow() {
@@ -38,6 +36,8 @@ public class MainWindow extends javax.swing.JFrame {
         essaJanela=this;
     }
 
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -59,7 +59,8 @@ public class MainWindow extends javax.swing.JFrame {
         jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
         jToggleButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(0, 204, 255));
-        jToggleButton1.setText(internationalizationMainWindow.getString("TREINAR"));
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("RNA/InternationalizationMainWindow"); // NOI18N
+        jToggleButton1.setText(bundle.getString("TREINAR")); // NOI18N
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -68,13 +69,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 204, 255));
-        jLabel2.setText(internationalizationMainWindow.getString("ASSISTENTE DE DOAÇÃO DE ORGÃOS"));
+        jLabel2.setText(bundle.getString("ASSISTENTE DE DOAÇÃO DE ORGÃOS")); // NOI18N
         jLabel2.setToolTipText("");
 
         botaoUtilizar.setBackground(new java.awt.Color(0, 0, 0));
         botaoUtilizar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         botaoUtilizar.setForeground(new java.awt.Color(0, 204, 255));
-        botaoUtilizar.setText(internationalizationMainWindow.getString("UTILIZAR*"));
+        botaoUtilizar.setText(bundle.getString("UTILIZAR*")); // NOI18N
         botaoUtilizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoUtilizarActionPerformed(evt);
@@ -84,7 +85,7 @@ public class MainWindow extends javax.swing.JFrame {
         jToggleButton5.setBackground(new java.awt.Color(0, 0, 0));
         jToggleButton5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jToggleButton5.setForeground(new java.awt.Color(0, 204, 255));
-        jToggleButton5.setText(internationalizationMainWindow.getString("SAIR"));
+        jToggleButton5.setText(bundle.getString("SAIR")); // NOI18N
         jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton5ActionPerformed(evt);
@@ -92,7 +93,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         textoUtilizar.setForeground(new java.awt.Color(0, 204, 255));
-        textoUtilizar.setText(internationalizationMainWindow.getString("*TREINE A REDE PARA UTILIZAR ESSA FUNCIONALIDADE"));
+        textoUtilizar.setText(bundle.getString("*TREINE A REDE PARA UTILIZAR ESSA FUNCIONALIDADE")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
