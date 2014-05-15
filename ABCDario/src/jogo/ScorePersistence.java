@@ -23,6 +23,11 @@
 
 package jogo;
 
+/*
+ * This class was create to do the persistence of the Score's images and the Stars' array
+ * that will be showed.
+ */
+
 import java.util.ArrayList;
 import fga.mds.abcdario.R;
 
