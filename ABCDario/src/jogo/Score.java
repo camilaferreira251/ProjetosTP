@@ -23,6 +23,11 @@
 
 package jogo;
 
+/*
+ * This class was create to set the Score at the end of the game. For mount the Star's image
+ * this class receive the quantity of Mistakes and Sucesses during the game.
+ */
+
 import fga.mds.abcdario.R;
 import android.os.Bundle;
 import android.app.Activity;
