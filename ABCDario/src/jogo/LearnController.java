@@ -23,6 +23,10 @@
 
 package jogo; 
 
+/*
+ * This class was create to control the process of define an image and a audio 
+ * to a letter and a number.
+ */
 public class LearnController {
 
 	public LearnController() {
@@ -33,7 +37,7 @@ public class LearnController {
 	private LearnModel screen;
 
 
-	// Defines an image and audio to the letter
+	// Defines an image and audio to the letter.
 	public int[] defineLetter(String letter) {
 
 		int id[] = new int[2];
