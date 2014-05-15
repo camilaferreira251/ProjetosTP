@@ -23,6 +23,10 @@
 
 package jogo; 
 
+/*
+ * This class was create to set the letters grid on screen 
+ */
+
 import fga.mds.abcdario.R;
 import android.content.Context;
 import android.view.View;
@@ -36,7 +40,7 @@ public class GridLetters extends BaseAdapter {
 
 	private Context context;
 
-	// Initializing buttons on grid
+	// Initializing Letter's buttons on grid
 	public Integer[] buttonsLetters = { R.drawable.bt_a, R.drawable.bt_b,
 			R.drawable.bt_c, R.drawable.bt_d, R.drawable.bt_e, R.drawable.bt_f,
 			R.drawable.bt_g, R.drawable.bt_h, R.drawable.bt_i, R.drawable.bt_j,
