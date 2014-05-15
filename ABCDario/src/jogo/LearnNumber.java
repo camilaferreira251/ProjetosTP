@@ -23,6 +23,10 @@
 
 package jogo;
 
+/*
+ * This class was create to set the screen of LearnNumber mode and its define the 
+ * possibles interactions between user and this part of the software
+ */
 import fga.mds.abcdario.R;
 import android.app.Activity;
 import android.content.Intent;
@@ -54,8 +58,8 @@ public class LearnNumber extends Activity {
 
 	public void initializeComponents(String number) {
 
-		controller = new LearnController();// instantiating the controller learn
-
+		controller = new LearnController();
+		
 		nextButton = (ImageView) findViewById(R.id.bt_proximo);
 		previousButton = (ImageView) findViewById(R.id.bt_anterior);
 		backButton = (ImageView) findViewById(R.id.bt_voltar);
