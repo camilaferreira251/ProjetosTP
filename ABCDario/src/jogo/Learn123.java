@@ -22,6 +22,10 @@
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
 package jogo;
+/*
+ * This class was create the option to learn number in the game
+ * to number
+ */
 
 import android.content.Intent;
 import android.os.Bundle;
