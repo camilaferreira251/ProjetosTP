@@ -22,7 +22,9 @@
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
 package jogo;
-
+/*
+ * This class have the options for numbers and letters 
+ */
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -49,7 +51,7 @@ public class LearnPersistence {
 		
 		return instance;
 	}
-
+// Opcions for letters and numbers
 	private int atualizaCadastro() {
 		
 		LearnModel letra_a = new LearnModel("a",R.drawable.a_abelha, R.raw.a_aviao);		
