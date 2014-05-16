@@ -87,6 +87,7 @@ public class LetterGame extends AbstractActivity {
 		}
 	}
 
+	// reloads the image
 	private void refreshImage(int id) {
 		centralImage.setImageResource(id);
 	}
@@ -124,7 +125,6 @@ public class LetterGame extends AbstractActivity {
 					alertDialogBuilder.setTitle(" ");
 
 					alertDialogBuilder
-
 							.setIcon(R.drawable.img_resposta_certa)
 							.setCancelable(false)
 							.setNegativeButton("Voltar",
