@@ -23,6 +23,11 @@
 
 package RNA;
 
+/*
+ * This class was create to set the abstracts methods for the functions that will
+ * be used  to do the backPropagation Training
+ */
+
 public abstract class Function {
 	public abstract double function(double x);
 
