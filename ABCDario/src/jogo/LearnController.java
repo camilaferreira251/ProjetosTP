@@ -63,11 +63,13 @@ public class LearnController {
 		return id;
 	}
 
+	// Returns the next letter
 	public char nextLetter(char letter) {
 
 		return 'a';
 	}
 
+	// Returns the previous letter
 	public char previousLetter(char letter) {
 
 		return 'a';
