@@ -23,6 +23,7 @@
 
 package jogo;
 
+/* This class was created to instantiate the parameters of LearnModel */
 public class LearnModel {
 
 	private String name;

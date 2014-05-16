@@ -1,5 +1,5 @@
-﻿/*Classe LearnController
- * Abcd�rio is free software: you can redistribute it and / or
+﻿/* Class LearnController
+ * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -21,7 +21,10 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo; 
+package jogo;
+
+import jogo.LearnModel;
+import jogo.LearnPersistence;
 
 /*
  * This class was create to control the process of define an image and a audio 
