@@ -1,5 +1,5 @@
 /*Classe GridNumbers
- * Abcdário is free software: you can redistribute it and / or
+ * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -22,6 +22,10 @@
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
 package jogo;
+
+/*
+ * This class was create to set the numbers grid on screen 
+ */
 
 import fga.mds.abcdario.R;
 import android.content.Context;
