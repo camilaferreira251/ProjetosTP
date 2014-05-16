@@ -23,6 +23,11 @@
 
 package jogo;
 
+/*
+ * This class was create to set the screen of Leter's game mode and its define the 
+ * possibles interactions between user and this part of the software
+ */
+
 import fga.mds.abcdario.R;
 import android.os.Bundle;
 import android.app.Activity;
