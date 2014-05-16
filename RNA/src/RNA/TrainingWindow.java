@@ -24,8 +24,10 @@
 package RNA;
 
 import RNA.Operator;
+import java.awt.HeadlessException;
 
 import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 
 @SuppressWarnings("serial")
 public class TrainingWindow extends javax.swing.JDialog {
@@ -309,39 +311,55 @@ public class TrainingWindow extends javax.swing.JDialog {
 
     private void buttonTrainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTreinarActionPerformed
 
-
-        try {
-            if (Double.parseDouble(boxError.getText()) >= 0.1) {
-                if (JOptionPane.showConfirmDialog(null, "Erro inserido relativamente alto. \nDeseja Continuar?", "Treinamento Finalizado!", 1) == 0) {
-                    Operator.train((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
-                    if (Operator.test() >= 0) {
-                        pai.getBotaoUtilizar().setEnabled(true);
-                        pai.getBotaoUtilizar().setText("Utilizar");
+   	try {
+    		final double erroAlto = 0.1;  
+    		final double resultadosIncorretos = 0;
+    		final int confirmDialogButtonsOptions = 0;
+    		final int showMessageDialogIcone = 1;
+    		double erroEscolhido = (Double.parseDouble(boxError.getText()));
+    		int quantidadeInteracoes = Integer.parseInt(boxIterations.getText());
+    		int valorIntervalo = rangeSelector.getSelectedIndex();
+    		int funcaoEscolhida = functionSelector.getSelectedIndex();
+    		int usaBias = boxBias.isSelected() ? 1 : 0;
+    		double taxaAprendizadoEscolhida = (double) (sliderRate.getValue() / 100.0);
+    		double valorMomentoEscolhido =  (double) (sliderTime.getValue() / 100.0);
+    		int exibeMensagem = JOptionPane.showConfirmDialog(null, "Erro inserido relativamente alto. \nDeseja Continuar?",                		
+                    "Treinamento Finalizado!", confirmDialogButtonsOptions);
+    		
+            if (!((erroEscolhido) >= erroAlto) ||
+                exibeMensagem ==0) {
+            	 Operator.train(taxaAprendizadoEscolhida, 
+            			           valorMomentoEscolhido,
+            			           usaBias, 
+            			           funcaoEscolhida, 
+            			           valorIntervalo, 
+            			           quantidadeInteracoes, 
+            			           erroEscolhido );
+            	 
+                    JToggleButton botaoUtilizar = pai.getBotaoUtilizar();
+                    
+					if (Operator.test()== resultadosIncorretos) {
+                        botaoUtilizar.setEnabled(true);
+                        botaoUtilizar.setText("Utilizar");
                         pai.getTextoUtilizar().setText("");
-                    } else {
-                        pai.getBotaoUtilizar().setEnabled(false);
-                        pai.getBotaoUtilizar().setText("*Utilizar");
+                    } 
+                    else {
+                        botaoUtilizar.setEnabled(false);
+                        botaoUtilizar.setText("*Utilizar");
                     }
 
-                    JOptionPane.showMessageDialog(null, (Operator.test() < 0 ? "Treinamento Falhou!" : ("Teste realizado para 86 entradas distintas. \nIterações realizadas: " + Operator.madeIterations + "\nErro mínimo alcançado: " + Operator.errorCalculation + "\nResultados incorretos: ") + Operator.test()), "Treinamento Finalizado!", 1);
+                    JOptionPane.showMessageDialog(null, (Operator.test() > resultadosIncorretos ? "Treinamento Falhou!" :
+                    	                          ("Teste realizado para 86 entradas distintas. "+
+                    	                           "\nIteraÃ§Ãµes realizadas: " + 
+                    	                           Operator.madeIterations + 
+                    	                           "\nErro mÃ­nimo alcanÃ§ado: " + 
+                    	                           Operator.errorCalculation + 
+                    	                           "\nResultados incorretos: ") + 
+                    	                            Operator.test()), "Treinamento Finalizado!", showMessageDialogIcone);
                     this.dispose();
                 }
-            } else {
-                Operator.train((double) (sliderRate.getValue() / 100.0), (double) (sliderTime.getValue() / 100.0), boxBias.isSelected() ? 1 : 0, functionSelector.getSelectedIndex(), rangeSelector.getSelectedIndex(), Integer.parseInt(boxIterations.getText()), Double.parseDouble(boxError.getText()));
-                if (Operator.test() >= 0) {
-                    pai.getBotaoUtilizar().setEnabled(true);
-                    pai.getBotaoUtilizar().setText("Utilizar");
-                    pai.getTextoUtilizar().setText("");
-                } else {
-                    pai.getBotaoUtilizar().setEnabled(false);
-                    pai.getBotaoUtilizar().setText("*Utilizar");
-                }
-
-                JOptionPane.showMessageDialog(null, (Operator.test() < 0 ? "Treinamento Falhou!" : ("Teste realizado para 86 entradas distintas. \nIterações realizadas: " + Operator.madeIterations + "\nErro mínimo alcançado: " + Operator.errorCalculation + "\nResultados incorretos: ") + Operator.test()), "Treinamento Finalizado!", 1);
-                this.dispose();
-            }
-        } catch (Exception e) {
-        }
+        } catch (NumberFormatException | HeadlessException e) {
+    }
 
     }//GEN-LAST:event_botaoTreinarActionPerformed
 

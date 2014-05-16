@@ -22,6 +22,10 @@
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
 package jogo;
+/*
+ * This class was create the option to learn letter in the game
+ * to letter
+ */
 
 import android.app.Activity;
 import android.content.Intent;
