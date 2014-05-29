@@ -52,7 +52,7 @@ public class LearnPersistence {
 		return instance;
 	}
 // Opcions for letters and numbers
-	private int atualizaCadastro() {
+	public int atualizaCadastro() {
 		
 		LearnModel letra_a = new LearnModel("a",R.drawable.a_abelha, R.raw.a_aviao);		
 		LearnModel letra_b = new LearnModel("b", R.drawable.b_de_borboleta, R.raw.b_borboleta); 		
@@ -161,7 +161,7 @@ public class LearnPersistence {
 		return null;
 	}
 
-	public LearnModel getModelNumber(String numero) {
+	public LearnModel getModelNumber(String j) {
 		
 		Iterator<LearnModel> i = registrationNumber.iterator();
 		
@@ -171,7 +171,7 @@ public class LearnPersistence {
 			
 			String nome = am.getName();
 			
-			if(nome.equalsIgnoreCase(numero)){
+			if(nome.equalsIgnoreCase(j)){
 				return am;
 				}
 			else{
