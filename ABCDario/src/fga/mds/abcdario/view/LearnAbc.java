@@ -21,8 +21,11 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo;
+package fga.mds.abcdario.view;
 
+import jogo.AbstractActivity;
+import jogo.GridLetters;
+import jogo.SelectModeABC;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

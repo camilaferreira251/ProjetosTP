@@ -29,6 +29,7 @@ package jogo;
  */
 import fga.mds.abcdario.R;
 import fga.mds.abcdario.control.LearnController;
+import fga.mds.abcdario.view.Learn123;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;

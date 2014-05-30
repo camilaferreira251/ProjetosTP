@@ -21,12 +21,15 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo;
+package fga.mds.abcdario.view;
 /*
  * This class was create the option to learn number in the game
  * to number
  */
 
+import jogo.AbstractActivity;
+import jogo.GridNumbers;
+import jogo.LearnNumber;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

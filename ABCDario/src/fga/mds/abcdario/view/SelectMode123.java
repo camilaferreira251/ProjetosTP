@@ -21,13 +21,14 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo;
+package fga.mds.abcdario.view;
 
 /*
  * This class was create to set the screen of Number's game mode and its define the 
  * possibles interactions between user and this part of the software
  */
 
+import jogo.Select;
 import fga.mds.abcdario.R;
 import android.os.Bundle;
 import android.app.Activity;

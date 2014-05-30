@@ -24,6 +24,7 @@
 package jogo;
 
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.view.SelectMode123;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
