@@ -28,6 +28,7 @@ package jogo;
  * possibles interactions between user and this part of the software
  */
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.control.LearnController;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
