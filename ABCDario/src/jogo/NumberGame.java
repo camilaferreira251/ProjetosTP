@@ -31,6 +31,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.control.GameController;
 
 public class NumberGame extends AbstractActivity {
 

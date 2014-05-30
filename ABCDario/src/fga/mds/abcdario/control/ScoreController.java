@@ -1,5 +1,6 @@
-package jogo;
+package fga.mds.abcdario.control;
 
+import jogo.ScorePersistence;
 import fga.mds.abcdario.R;
 
 public class ScoreController {

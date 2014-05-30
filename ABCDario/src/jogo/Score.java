@@ -29,6 +29,7 @@ package jogo;
  */
 
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.control.ScoreController;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
