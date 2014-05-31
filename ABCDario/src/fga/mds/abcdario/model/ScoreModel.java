@@ -25,8 +25,8 @@ package fga.mds.abcdario.model;
 
 public class ScoreModel {
 
-	private int amount;
-	private int starImage;
+	public int amount;
+	public int starImage;
 
 	public ScoreModel(int amount, int starImage) {
 		setStarImage(starImage);
