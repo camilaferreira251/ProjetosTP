@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import fga.mds.abcdario.model.LearnModel;
+
 public class TestLearnPersistence {
 
 	@Test

@@ -1,5 +1,5 @@
 /*Classe GameControler
- * Abcdário is free software: you can redistribute it and / or
+ * Abcdï¿½rio is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -28,7 +28,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import jogo.GameModel;
+import fga.mds.abcdario.model.GameModel;
+
 import jogo.GamePersistence;
 
 

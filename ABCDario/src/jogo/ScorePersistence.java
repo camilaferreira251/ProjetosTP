@@ -30,6 +30,7 @@ package jogo;
 
 import java.util.ArrayList;
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.model.ScoreModel;
 
 public class ScorePersistence {
 

@@ -29,6 +29,7 @@ import java.util.Collections;
 import java.util.Iterator;
 
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.model.GameModel;
 
 public class GamePersistence {
 

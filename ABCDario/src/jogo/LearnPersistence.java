@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.model.LearnModel;
 
 public class LearnPersistence {
 

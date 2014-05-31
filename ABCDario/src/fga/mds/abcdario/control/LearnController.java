@@ -23,7 +23,7 @@
 
 package fga.mds.abcdario.control;
 
-import jogo.LearnModel;
+import fga.mds.abcdario.model.LearnModel;
 import jogo.LearnPersistence;
 
 /*
