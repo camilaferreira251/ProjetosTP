@@ -24,7 +24,6 @@
 package fga.mds.abcdario.view;
 
 import jogo.AbstractActivity;
-import jogo.GridLetters;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
