@@ -28,7 +28,6 @@ package fga.mds.abcdario.view;
  */
 
 import jogo.AbstractActivity;
-import jogo.GridNumbers;
 import jogo.LearnNumber;
 import android.content.Intent;
 import android.os.Bundle;
