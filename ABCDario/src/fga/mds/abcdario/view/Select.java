@@ -1,4 +1,4 @@
-/*Class SelectModeABC
+/*Class Select
  * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
@@ -23,12 +23,7 @@
 
 package fga.mds.abcdario.view;
 
-/*
- * This class was create to set the screen of Leter's game mode and its define the 
- * possibles interactions between user and this part of the software
- */
-
-import jogo.LetterGame;
+import jogo.FirstActivity;
 import fga.mds.abcdario.R;
 import android.os.Bundle;
 import android.app.Activity;
@@ -36,54 +31,51 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
-public class SelectModeABC extends Activity {
+public class Select extends Activity {
 
-	private ImageView backButton, learnButton, playButton;
+	private ImageView numbersButton, lettersBbutton, backButton;
 
+	// This is the first function to be executed when an Activity is launched
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.menu_abc);
+		setContentView(R.layout.escolha);
 
 		initializeComponents();
 		defineEvents();
-
 	}
 
-	private void initializeComponents() {
+	// Initializes the components used in activity
+	public void initializeComponents() {
+		numbersButton = (ImageView) findViewById(R.imgV.bt_123);
+		lettersBbutton = (ImageView) findViewById(R.imgV.bt_abc);
 		backButton = (ImageView) findViewById(R.imgV.bt_voltar);
-		learnButton = (ImageView) findViewById(R.imgV.bt_aprender);
-		playButton = (ImageView) findViewById(R.imgV.bt_jogar);
 	}
 
-	private void defineEvents() {
+	// Defines the events of activity
+	public void defineEvents() {
+		numbersButton.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View view) {
+				startActivity(new Intent(Select.this, SelectMode123.class));
+
+			}
+		});
+
+		lettersBbutton.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View view) {
+				startActivity(new Intent(Select.this, SelectModeABC.class));
+
+			}
+		});
 
 		backButton.setOnClickListener(new View.OnClickListener() {
 
-			public void onClick(View v) {
-				startActivity(new Intent(SelectModeABC.this, Select.class));
+			public void onClick(View view) {
+				startActivity(new Intent(Select.this, FirstActivity.class));
 
 			}
-		});
-
-		learnButton.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-
-				startActivity(new Intent(SelectModeABC.this, LearnAbc.class));
-
-			}
-
-		});
-
-		playButton.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-
-				startActivity(new Intent(SelectModeABC.this, LetterGame.class));
-			}
-
 		});
 
 	}
-
 }

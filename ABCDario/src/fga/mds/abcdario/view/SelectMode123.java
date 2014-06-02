@@ -28,7 +28,6 @@ package fga.mds.abcdario.view;
  * possibles interactions between user and this part of the software
  */
 
-import jogo.Select;
 import fga.mds.abcdario.R;
 import android.os.Bundle;
 import android.app.Activity;

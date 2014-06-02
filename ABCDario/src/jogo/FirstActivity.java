@@ -29,6 +29,7 @@ package jogo;
  */
 
 import fga.mds.abcdario.R;
+import fga.mds.abcdario.view.Select;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
