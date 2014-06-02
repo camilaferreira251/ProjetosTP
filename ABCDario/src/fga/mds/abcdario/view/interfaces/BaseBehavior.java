@@ -1,5 +1,5 @@
-/*Classe AbstractActivity
- * Abcd�rio is free software: you can redistribute it and / or
+/*Class BaseBehavior
+ * Abcdario is free software: you can redistribute it and / or
 
      modify it under the terms of the GNU General Public License as
 
@@ -21,16 +21,15 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo;
+package fga.mds.abcdario.view.interfaces;
 
-import fga.mds.abcdario.view.interfaces.BaseBehavior;
-import android.app.Activity;
+public interface BaseBehavior {
 
-public abstract class AbstractActivity extends Activity implements BaseBehavior {
+	// Initializes the components used in activity
+	public void initializeComponents();
 
-	@Override
-	public abstract void initializeComponents();
+	// Defines the events of activity
+	public void defineEvents();
 
-	@Override
-	public abstract void defineEvents();
 }
+
