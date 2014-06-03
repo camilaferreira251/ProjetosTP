@@ -36,4 +36,15 @@ public class TestGameController {
 		assertNotNull(id);
 	}
 	
+
+	@Test
+	public void testGetIdBotaoNumero(){
+		GameController test = new GameController();
+		int id;
+		
+		id = test.getIdBotaoNumero();
+		
+		assertNotNull(id);
+	}
+	
 }
