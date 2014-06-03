@@ -15,5 +15,14 @@ public class TestGameController {
 		assertNotNull(test);
 	}
 	
+	@Test
+	public void testGetModelNumero(){
+		GameController test = new GameController();
+		int id[] = new int[2];
+		
+		id = test.getModelNumero();
+		
+		assertNotNull(id);
+	}
 	
 }
