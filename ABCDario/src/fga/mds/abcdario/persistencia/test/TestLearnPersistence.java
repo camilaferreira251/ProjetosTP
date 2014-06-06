@@ -11,26 +11,26 @@ import fga.mds.abcdario.persistencia.LearnPersistence;
 public class TestLearnPersistence {
 	@Test
 	public void testGetInstance() {
-    	LearnPersistence instancia = LearnPersistence.getInstance();
-    	LearnPersistence instancia2 = LearnPersistence.getInstance();
+    	LearnPersistence firstinstance = LearnPersistence.getInstance();
+    	LearnPersistence secondInstance = LearnPersistence.getInstance();
 		
-		assertEquals(instancia, instancia2);
+		assertEquals(firstinstance, secondInstance);
 	}
 
 	@Test
-	public void testCadastro(){
-		LearnPersistence teste = LearnPersistence.getInstance();
-		int retorno;
+	public void testRegister(){
+		LearnPersistence test = LearnPersistence.getInstance();
+		int returnRegister;
 		
-		retorno = teste.atualizaCadastro();
+		returnRegister = test.updatesRegister();
 		
-		assertEquals(0, retorno);
+		assertEquals(0, returnRegister);
 	}
 	@Test
-	public void testGetModelNumero(){
+	public void testGetModelNumber(){
 		
-		LearnPersistence instancia = LearnPersistence.getInstance();		
-		LearnModel objeto = instancia.getModelNumber(0);
+		LearnPersistence instance = LearnPersistence.getInstance();		
+		LearnModel objeto = instance.getModelNumber(0);
 		
 		assertEquals("1", objeto.getName());		
 		assertEquals(R.raw.um , objeto.getAudio());
@@ -39,10 +39,10 @@ public class TestLearnPersistence {
 	
 
 	@Test
-	public void testGetModelLetra(){
+	public void testGetModelLetter(){
 		
-		LearnPersistence instancia = LearnPersistence.getInstance();		
-		LearnModel objeto = instancia.getModelLetter(0);
+		LearnPersistence instance = LearnPersistence.getInstance();		
+		LearnModel objeto = instance.getModelLetter(0);
 		
 		assertEquals("a", objeto.getName());		
 		assertEquals(R.raw.a_aviao , objeto.getAudio());		
