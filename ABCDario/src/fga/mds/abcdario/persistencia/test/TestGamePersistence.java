@@ -17,5 +17,15 @@ public class TestGamePersistence {
 		
 		assertEquals(firstInstance, secondInstance);
 	}
-
+	
+	@Test
+	public void testRegister(){
+		GamePersistence test = GamePersistence.getInstance();
+		int returnRegister;
+		
+		returnRegister = test.updatesRegister();
+		
+		assertEquals(0, returnRegister);
+	}
+	
 }
