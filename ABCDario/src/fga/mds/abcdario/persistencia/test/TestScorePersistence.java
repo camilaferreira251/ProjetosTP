@@ -14,5 +14,14 @@ public class TestScorePersistence {
 		
 		assertEquals(firstTest, secondTest);
 	}
-
+	
+	@Test
+	public void testCreatesAndStoresImagesArraylist(){
+		ScorePersistence test = ScorePersistence.getInstance();
+		int returnImage;
+		
+		returnImage = test.criaEarmazenaArrayListDeImagens();
+		
+		assertEquals(0, returnImage);
+	}
 }
