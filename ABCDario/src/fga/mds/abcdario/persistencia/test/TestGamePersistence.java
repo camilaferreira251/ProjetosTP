@@ -27,5 +27,16 @@ public class TestGamePersistence {
 		
 		assertEquals(0, returnRegister);
 	}
+
+	@Test
+	public void testGetModelNumber(){
+		
+		GamePersistence instance = GamePersistence.getInstance();		
+		GameModel object = instance.getModelNumero("1");
+		
+		assertEquals("1", object.getName());		
+		assertEquals(R.drawable.bt_1 , object.getButton());
+		
+	}
 	
 }
