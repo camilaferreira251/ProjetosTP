@@ -26,5 +26,16 @@ public class TestLearnPersistence {
 		
 		assertEquals(0, retorno);
 	}
+	@Test
+	public void testGetModelNumero(){
+		
+		LearnPersistence instancia = LearnPersistence.getInstance();
+		
+		LearnModel objeto = instancia.getModelNumber(0);
+		
+		assertEquals("1", objeto.getName());		
+		assertEquals(R.raw.um , objeto.getAudio());
+		assertEquals(R.drawable.num_1_um, objeto.getImage());
+	}
 	
 }
