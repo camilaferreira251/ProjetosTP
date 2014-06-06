@@ -24,4 +24,14 @@ public class TestScorePersistence {
 		
 		assertEquals(0, returnImage);
 	}
+
+	@Test
+	public void testGetModelStarImage(){
+		ScorePersistence test = ScorePersistence.getInstance();
+		int id;
+		
+		id = test.getModelImagemEstrela(2);
+		
+		assertEquals(R.drawable.img_2_estrelas, id);
+	}
 }
