@@ -21,7 +21,7 @@
 
      Free (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA */
 
-package jogo;
+package fga.mds.abcdario.persistencia;
 
 /*
  * This class was create to do the persistence of the Score's images and the Stars' array
