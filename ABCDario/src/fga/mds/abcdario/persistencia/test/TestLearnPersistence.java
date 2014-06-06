@@ -29,8 +29,7 @@ public class TestLearnPersistence {
 	@Test
 	public void testGetModelNumero(){
 		
-		LearnPersistence instancia = LearnPersistence.getInstance();
-		
+		LearnPersistence instancia = LearnPersistence.getInstance();		
 		LearnModel objeto = instancia.getModelNumber(0);
 		
 		assertEquals("1", objeto.getName());		
@@ -38,4 +37,16 @@ public class TestLearnPersistence {
 		assertEquals(R.drawable.num_1_um, objeto.getImage());
 	}
 	
+
+	@Test
+	public void testGetModelLetra(){
+		
+		LearnPersistence instancia = LearnPersistence.getInstance();		
+		LearnModel objeto = instancia.getModelLetter(0);
+		
+		assertEquals("a", objeto.getName());		
+		assertEquals(R.raw.a_aviao , objeto.getAudio());		
+		assertEquals(R.drawable.a_abelha, objeto.getImage());
+	}
+
 }
