@@ -17,4 +17,14 @@ public class TestLearnPersistence {
 		assertEquals(instancia, instancia2);
 	}
 
+	@Test
+	public void testCadastro(){
+		LearnPersistence teste = LearnPersistence.getInstance();
+		int retorno;
+		
+		retorno = teste.atualizaCadastro();
+		
+		assertEquals(0, retorno);
+	}
+	
 }
