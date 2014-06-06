@@ -49,4 +49,12 @@ public class TestGamePersistence {
 		
 	}
 	
+	@Test
+	public void testGetModelLetter(){
+		
+		GamePersistence instance = GamePersistence.getInstance();		
+		GameModel object = instance.getModelLetra("a");
+		
+		assertEquals("a", object.getName());
+	}
 }
