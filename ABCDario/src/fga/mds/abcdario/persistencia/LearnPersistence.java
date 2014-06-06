@@ -45,7 +45,7 @@ public class LearnPersistence {
 	public static LearnPersistence getInstance() {
 		if (instance == null) {
 			instance = new LearnPersistence();
-			instance.atualizaCadastro();
+			instance.updatesRegister();
 		}
 
 		else {
@@ -55,8 +55,8 @@ public class LearnPersistence {
 		return instance;
 	}
 
-	// Opcions for letters and numbers
-	public int atualizaCadastro() {
+	// Options for letters and numbers
+	public int updatesRegister() {
 
 		LearnModel letra_a = new LearnModel("a", R.drawable.a_abelha,
 				R.raw.a_aviao);
