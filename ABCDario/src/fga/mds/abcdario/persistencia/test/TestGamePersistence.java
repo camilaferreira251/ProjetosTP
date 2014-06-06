@@ -57,4 +57,13 @@ public class TestGamePersistence {
 		
 		assertEquals("a", object.getName());
 	}
+
+	@Test
+	public void testGetModelLetterNull(){
+		
+		GamePersistence instance = GamePersistence.getInstance();		
+		GameModel object = instance.getModelLetra("1");
+		
+		assertNull(object);
+	}
 }
